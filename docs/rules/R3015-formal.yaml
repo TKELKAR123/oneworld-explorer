@@ -1,0 +1,969 @@
+# oneworld Explorer Rule 3015 — formal specification
+# Source: oneworld_Explorer_27_FEB_26.pdf (Rule 3015, 12 pages)
+rulesVersion: "2026-02-27"
+
+rules:
+  # ── §0 Application and other conditions ─────────────────────────────────────
+
+  - id: R3015-0-purchase
+    pdfRef: "§0 Other Conditions, page 1"
+    naturalLanguage: >
+      Fares apply only if purchased prior to departure.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        purchasedBeforeDeparture(ticket) = true
+    ambiguities:
+      - "Purchase timestamp vs ticketing deadline — use complete ticketing date per §5(a) when both known."
+    tests:
+      - tests/rules/R3015-0-purchase.test.ts
+
+  - id: R3015-0-fare-class
+    pdfRef: "§0 Other Conditions, page 1"
+    naturalLanguage: >
+      The fare to be charged is determined by the highest class travelled on the itinerary.
+    category: pricing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        chargedClass(I) = max({ bookingClass(seg) | seg ∈ I, isFlightSegment(seg) })
+    ambiguities:
+      - "Premium Economy is a surcharge on Economy Explorer fare, not a separate fare basis row — treat as economy for basis code with PE surcharge flag."
+    tests:
+      - tests/rules/R3015-0-fare-class.test.ts
+
+  - id: R3015-0-continent-count
+    pdfRef: "§0 Other Conditions, page 1"
+    naturalLanguage: >
+      The fare to be charged is determined by the number of geographic continents in the
+      itinerary including the continent of origin and continents transited.
+    category: pricing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        continentsCharged(I) ∈ {3, 4, 5, 6}
+        ∧ continentsCharged(I) = |continentsVisited(I)|
+        -- subject to R3015-0-swp-eu-via-asia adjustment
+    ambiguities:
+      - "Transit-only continent visits count per PDF §0 — includes connections and surface sectors."
+    tests:
+      - tests/rules/R3015-0-continent-count.test.ts
+
+  - id: R3015-0-fare-basis
+    pdfRef: "§0 Fare Basis table, page 1"
+    naturalLanguage: >
+      The Fare Basis corresponds to the number of continents and class purchased
+      (LONE3–LONE6 economy, DONE3–DONE6 / IONE3 business, AONE3–AONE6 first).
+    category: pricing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        fareBasis(I) = BASIS(continentsCharged(I), chargedClass(I))
+        WHERE BASIS(3,economy)=LONE3, BASIS(3,business)∈{IONE3,DONE3}, BASIS(3,first)=AONE3, ...
+    ambiguities:
+      - "IONE3 vs DONE3 for 3-continent business — see R3015-0-IONE3-markets."
+    tests:
+      - tests/rules/R3015-0-fare-basis.test.ts
+
+  - id: R3015-0-IONE3-markets
+    pdfRef: "§0 Fare Basis table footnote, page 1"
+    naturalLanguage: >
+      IONE3 (3-continent business) is offered from select markets only.
+    category: sales
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        (continentsCharged(I) = 3 ∧ chargedClass(I) = business ∧ fareBasis(I) = IONE3)
+          → marketOf(salePoint(ticket)) ∈ IONE3_MARKETS
+    ambiguities:
+      - "Select markets not enumerated in PDF — maintain external IONE3_MARKETS table with provenance."
+    tests:
+      - tests/rules/R3015-0-IONE3-markets.test.ts
+
+  - id: R3015-0-swp-eu-via-asia
+    pdfRef: "§0 Other Conditions, page 1"
+    naturalLanguage: >
+      Travel between South West Pacific and Europe/Middle East on a single flight number
+      or by surface (e.g. LON–SYD/MEL/PER vv, DOH–ADL/AKL/CBR/MEL/PER/SYD vv) is
+      considered travelling via Asia. Continents South West Pacific, Asia and
+      Europe/Middle East must each be counted.
+    category: pricing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        IF swpEuViaAsiaPattern(I) THEN
+          continentsCharged(I) ≥ 3
+          ∧ asia ∈ continentsVisited(I)
+          ∧ europe-middle-east ∈ continentsVisited(I)
+          ∧ south-west-pacific ∈ continentsVisited(I)
+        WHERE swpEuViaAsiaPattern(I) ⟺
+          (∃ seg : singleFlightNumber(seg) ∧ {continentOf(from(seg)), continentOf(to(seg))}
+            = {south-west-pacific, europe-middle-east})
+          ∨ (∃ surface seg matching PDF listed city-pair patterns)
+    ambiguities:
+      - "When is Asia implicitly traversed beyond listed examples? Match PDF examples only until expanded."
+      - "Round-trip (vv) surface on listed patterns — both directions trigger Asia counting."
+    tests:
+      - tests/rules/R3015-0-swp-eu-via-asia.test.ts
+
+  - id: R3015-0-tc-def
+    pdfRef: "§0 Continents / TC definition, page 1"
+    naturalLanguage: >
+      Traffic conferences comprise TC1 (North America + South America),
+      TC2 (Europe/Middle East + Africa), and TC3 (South West Pacific + Asia).
+    category: geography
+    enforceInV01: false
+    formal:
+      predicate: |
+        tcOf(p) = TC1 ⟺ continentOf(p) ∈ {north-america, south-america}
+        ∧ tcOf(p) = TC2 ⟺ continentOf(p) ∈ {europe-middle-east, africa}
+        ∧ tcOf(p) = TC3 ⟺ continentOf(p) ∈ {south-west-pacific, asia}
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-0-tc-def.test.ts
+
+  - id: R3015-0-continent-def
+    pdfRef: "§0 Continents are defined as, page 1"
+    naturalLanguage: >
+      Explorer pricing uses six continents: Europe-Middle East, Africa, Asia,
+      South West Pacific, North America, and South America.
+    category: geography
+    enforceInV01: false
+    formal:
+      predicate: |
+        Continent = { europe-middle-east, africa, asia, south-west-pacific,
+                     north-america, south-america }
+        ∧ ∀ p : continentOf(p) ∈ Continent
+    ambiguities:
+      - "PDF lists continent names; country-to-continent mapping delegated to COUNTRY-MAP.json."
+    tests:
+      - tests/rules/R3015-0-continent-def.test.ts
+
+  - id: R3015-0-eu-me-zones
+    pdfRef: "§0 Europe-Middle East zones, page 2"
+    naturalLanguage: >
+      The continent of Europe-Middle East consists of two zones: Europe (including
+      Algeria, Morocco, Russia west of the Urals, and Tunisia) and Middle East
+      (including Egypt, Libya, and Sudan).
+    category: geography
+    enforceInV01: false
+    formal:
+      predicate: |
+        subZoneOf(p) = europe ⟺ countryOf(p) ∈ EU_ZONE
+        ∧ subZoneOf(p) = middle-east ⟺ countryOf(p) ∈ ME_ZONE
+        WHERE EU_ZONE ⊇ {DZ, MA, TN} ∪ EUROPE_ISO
+          ∧ ME_ZONE ⊇ {EG, LY, SD}
+          ∧ continentOf(p) = europe-middle-east → subZoneOf(p) ∈ {europe, middle-east}
+    ambiguities:
+      - "Full Europe ISO set not enumerated in PDF — use COUNTRY-MAP with pdf-explicit overrides for DZ, MA, TN, EG, LY, SD."
+      - "Russia split at Urals (~60°E) requires airport-level longitude, not country alone."
+    tests:
+      - tests/rules/R3015-0-eu-me-zones.test.ts
+
+  - id: R3015-0-asia-countries
+    pdfRef: "§0 Asia includes, page 2"
+    naturalLanguage: >
+      The continent of Asia includes Kazakhstan, Kyrgyzstan, Russia east of the Urals,
+      Tajikistan, Turkmenistan, and Uzbekistan (in addition to other Asian countries
+      per geography research).
+    category: geography
+    enforceInV01: false
+    formal:
+      predicate: |
+        countryOf(p) ∈ {KZ, KG, TJ, TM, UZ} → continentOf(p) = asia
+        ∧ (countryOf(p) = RU ∧ longitude(p) ≥ URALS_LONGITUDE) → continentOf(p) = asia
+    ambiguities:
+      - "Indian subcontinent and remainder of Asia not exhaustively listed — fill via COUNTRY-MAP minus SWP and EU/ME overrides."
+    tests:
+      - tests/rules/R3015-0-asia-countries.test.ts
+
+  - id: R3015-0-na-includes
+    pdfRef: "§0 North America includes, page 2"
+    naturalLanguage: >
+      The continent of North America includes the Caribbean, Central America, and Panama.
+    category: geography
+    enforceInV01: false
+    formal:
+      predicate: |
+        countryOf(p) ∈ {US, CA, MX} ∪ CARIBBEAN_ISO ∪ CENTRAL_AMERICA_ISO ∪ {PA}
+          → continentOf(p) = north-america
+        ∧ countryOf(p) ∈ SOUTH_AMERICA_ISO \ {PA} → continentOf(p) = south-america
+    ambiguities:
+      - "Caribbean and Central America country lists not enumerated in PDF — use IATA sub-area inference with provenance tag iata-inferred."
+      - "Panama is North America, not South America — critical for continent counting."
+    tests:
+      - tests/rules/R3015-0-na-includes.test.ts
+
+  # ── §4 Flight application / routings ──────────────────────────────────────────
+
+  - id: R3015-4-carriers
+    pdfRef: "§4 intro, page 2"
+    naturalLanguage: >
+      Fares only apply on AA, AS, AT, AY, BA, CX, FJ, IB, JL, MH, NU, QF, QR, RJ, UL, WY flights.
+    category: carrier
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ seg ∈ I : isFlightSegment(seg) → isPermittedSegment(seg)
+        WHERE isPermittedSegment(seg) ⟺ isSurfaceSegment(seg)
+          ∨ isPermittedCodeshare(flight(seg))
+    ambiguities:
+      - "v0.1 has no flight/carrier data — warn only if user optionally tags carrier."
+    tests:
+      - tests/rules/R3015-4-carriers.test.ts
+
+  - id: R3015-4a
+    pdfRef: "§4(a), page 2"
+    naturalLanguage: >
+      Travel must be via the Atlantic and Pacific Oceans and only one crossing of each
+      ocean is permitted.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        LET atl = { seg ∈ I : crossesAtlantic(seg) }
+        LET pac = { seg ∈ I : crossesPacific(seg) }
+        IN |atl| = 1 ∧ |pac| = 1
+    ambiguities:
+      - "Does a fuel stop count as crossing? Assumption: TC transition on flown segment defines crossing."
+    tests:
+      - tests/rules/R3015-4a.test.ts
+
+  - id: R3015-4b-direction
+    pdfRef: "§4(b), page 2"
+    naturalLanguage: >
+      Travel must be in a continuous forward direction between TC1, TC2, and TC3.
+      Backtracking within a continent is permitted except as noted in R3015-4b-hawaii.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        LET tcSeq = map(tcOf, pointsInOrder(I))
+        IN ∀ i < j : tcStep(tcSeq[i], tcSeq[j]) ≥ 0
+        -- tcStep measures eastbound TC1→TC2→TC3 progression; 0 = same TC
+        -- backtracking within same TC allowed; cross-TC backtrack forbidden
+    ambiguities:
+      - "TC transition on surface segments — yes, surface still connects points."
+      - "How to order points when itinerary doubles back within TC — use chronological segment order."
+    tests:
+      - tests/rules/R3015-4b-direction.test.ts
+
+  - id: R3015-4b-hawaii
+    pdfRef: "§4(b) exception, page 2"
+    naturalLanguage: >
+      Backtracking between Hawaii and other points in North America is not permitted.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ¬∃ seg1, seg2 ∈ I :
+          (isHawaii(from(seg1)) ∧ isNorthAmericaNonHawaii(to(seg1))
+           ∧ isNorthAmericaNonHawaii(from(seg2)) ∧ isHawaii(to(seg2)))
+          ∨ (isNorthAmericaNonHawaii(from(seg1)) ∧ isHawaii(to(seg1))
+             ∧ isHawaii(from(seg2)) ∧ isNorthAmericaNonHawaii(to(seg2)))
+    ambiguities:
+      - "Hawaii airport set — all HI points treated as Hawaii; IATA TC1/NA per geography layer."
+    tests:
+      - tests/rules/R3015-4b-hawaii.test.ts
+
+  - id: R3015-4c-origin
+    pdfRef: "§4(c) intro, page 2"
+    naturalLanguage: >
+      Travel may originate at any published point and must terminate at the same point,
+      except for permitted origin-destination surface segments listed in §4(c)(a)–(g).
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        originPoint(I) = terminationPoint(I)
+        ∨ openJawPermitted(originCountry(I), originPoint(I), terminationPoint(I), I)
+    ambiguities:
+      - "Same point = same IATA airport unless open-jaw exception applies."
+    tests:
+      - tests/rules/R3015-4c-origin.test.ts
+
+  - id: R3015-4c-open-jaw-a
+    pdfRef: "§4(c)(a), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted within the country of origin.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = within-origin-country ⟺
+          countryOf(originPoint(I)) = countryOf(terminationPoint(I))
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities:
+      - "Surface sector must be between origin-area endpoints — validate against full itinerary shape."
+    tests:
+      - tests/rules/R3015-4c-open-jaw-a.test.ts
+
+  - id: R3015-4c-open-jaw-b
+    pdfRef: "§4(c)(b), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted within the Middle East.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = within-middle-east ⟺
+          subZoneOf(originPoint(I)) = middle-east
+          ∧ subZoneOf(terminationPoint(I)) = middle-east
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4c-open-jaw-b.test.ts
+
+  - id: R3015-4c-open-jaw-c
+    pdfRef: "§4(c)(c), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted between the United States and Canada.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = us-canada ⟺
+          {countryOf(originPoint(I)), countryOf(terminationPoint(I))} = {US, CA}
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4c-open-jaw-c.test.ts
+
+  - id: R3015-4c-open-jaw-d
+    pdfRef: "§4(c)(d), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted between HKG and China.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = hkg-china ⟺
+          {originPoint(I), terminationPoint(I)} ⊆ HKG_CHINA_OPEN_JAW_POINTS
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities:
+      - "China mainland airport set — all CN points plus HKG per geography layer."
+    tests:
+      - tests/rules/R3015-4c-open-jaw-d.test.ts
+
+  - id: R3015-4c-open-jaw-e
+    pdfRef: "§4(c)(e), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted between Malaysia and Singapore.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = my-sin ⟺
+          {countryOf(originPoint(I)), countryOf(terminationPoint(I))} = {MY, SG}
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4c-open-jaw-e.test.ts
+
+  - id: R3015-4c-open-jaw-f
+    pdfRef: "§4(c)(f), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted within Africa.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = within-africa ⟺
+          continentOf(originPoint(I)) = africa
+          ∧ continentOf(terminationPoint(I)) = africa
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4c-open-jaw-f.test.ts
+
+  - id: R3015-4c-open-jaw-g
+    pdfRef: "§4(c)(g), page 2"
+    naturalLanguage: >
+      Origin-destination surface segments are permitted between Maldives and Sri Lanka/India.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        openJawType(I) = mv-lk-in ⟺
+          {countryOf(originPoint(I)), countryOf(terminationPoint(I))}
+            ⊆ {MV, LK, IN} ∧ |{countryOf(originPoint(I)), countryOf(terminationPoint(I))}| = 2
+          ∧ isSurfaceOpenJaw(I)
+    ambiguities:
+      - "India includes all IN points; Maldives MV only."
+    tests:
+      - tests/rules/R3015-4c-open-jaw-g.test.ts
+
+  - id: R3015-4d-no-via-origin
+    pdfRef: "§4(d), page 2"
+    naturalLanguage: >
+      Travel may not be via the point of origin (except as origin/termination).
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        LET o = originPoint(I)
+        IN ∀ seg ∈ I \ {first(I), last(I)} :
+          from(seg) ≠ o ∧ to(seg) ≠ o
+        ∧ ∀ transferPoint p ∈ I : (p = o → p is origin or termination only)
+    ambiguities:
+      - "Via includes stopover and transfer at origin point mid-itinerary."
+    tests:
+      - tests/rules/R3015-4d-no-via-origin.test.ts
+
+  - id: R3015-4e-intercon
+    pdfRef: "§4(e) intro, page 2–3"
+    naturalLanguage: >
+      Only one intercontinental departure and one intercontinental arrival are permitted
+      in each continent, subject to exceptions for North America, Asia, and
+      Europe/Middle East travel to/from/via Africa.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ c ∈ Continent \ EXCEPTION_CONTINENTS :
+          intercontinentalDepartures(c, I) ≤ 1
+          ∧ intercontinentalArrivals(c, I) ≤ 1
+        WHERE EXCEPTION_CONTINENTS handled by R3015-4e-1-na, R3015-4e-2-asia, R3015-4e-3-africa-eu
+    ambiguities:
+      - "Define intercontinental departure/arrival as continent-boundary crossing events along itinerary timeline."
+    tests:
+      - tests/rules/R3015-4e-intercon.test.ts
+
+  - id: R3015-4e-1-na
+    pdfRef: "§4(e)(1), page 3"
+    naturalLanguage: >
+      Two intercontinental departures and two intercontinental arrivals are permitted in North America.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        intercontinentalDepartures(north-america, I) ≤ 2
+        ∧ intercontinentalArrivals(north-america, I) ≤ 2
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4e-1-na.test.ts
+
+  - id: R3015-4e-2-asia
+    pdfRef: "§4(e)(2), page 3"
+    naturalLanguage: >
+      Two intercontinental departures and two intercontinental arrivals are permitted in Asia.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        intercontinentalDepartures(asia, I) ≤ 2
+        ∧ intercontinentalArrivals(asia, I) ≤ 2
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4e-2-asia.test.ts
+
+  - id: R3015-4e-3-africa-eu
+    pdfRef: "§4(e)(3), page 3"
+    naturalLanguage: >
+      Two intercontinental departures and arrivals are permitted in Europe/Middle East for
+      travel to/from/via Africa. If travel is to/from Europe in both directions, the
+      itinerary may not include Mauritius or South Africa.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        (africa ∈ continentsVisited(I))
+          → intercontinentalDepartures(europe-middle-east, I) ≤ 2
+            ∧ intercontinentalArrivals(europe-middle-east, I) ≤ 2
+        ∧ (europeBothDirections(I) ∧ africa ∈ continentsVisited(I))
+          → countryOf(p) ∉ {MU, ZA} for all points p ∈ points(I)
+        WHERE europeBothDirections(I) ⟺
+          ∃ intercon dep from europe subZone ∧ ∃ intercon arr to europe subZone
+    ambiguities:
+      - "Europe both directions — interpret as intercontinental travel touching Europe sub-zone in both outbound and inbound hemispheres."
+    tests:
+      - tests/rules/R3015-4e-3-africa-eu.test.ts
+
+  - id: R3015-4f-origin-intl
+    pdfRef: "§4(f), page 3"
+    naturalLanguage: >
+      Only one international departure and one international arrival from/to the country
+      of origin are permitted. No more than four international transfers from the one
+      country are permitted.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        intlDeparturesFrom(originCountry(I), I) ≤ 1
+        ∧ intlArrivalsTo(originCountry(I), I) ≤ 1
+        ∧ intlTransfersFrom(originCountry(I), I) ≤ 4
+        -- subject to R3015-4f-usa-exception
+    ambiguities:
+      - "International defined as country boundary crossing by flight segment."
+    tests:
+      - tests/rules/R3015-4f-origin-intl.test.ts
+
+  - id: R3015-4f-usa-exception
+    pdfRef: "§4(f) EXCEPTION, page 3"
+    naturalLanguage: >
+      Two international departures/arrivals from/to the USA are permitted when one
+      arrival-departure pair is a transfer without stopover.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        (originCountry(I) = US)
+          → (intlDeparturesFrom(US, I) ≤ 2 ∧ intlArrivalsTo(US, I) ≤ 2)
+            ∧ (intlDeparturesFrom(US, I) = 2 → ∃ transferWithoutStopoverAt(US_point, I))
+    ambiguities:
+      - "Requires schedule timestamps to distinguish transfer vs stopover — v0.1 uses geometry-only approximation or defers to v0.2."
+    tests:
+      - tests/rules/R3015-4f-usa-exception.test.ts
+
+  - id: R3015-4f-us-ca-domestic
+    pdfRef: "§4(f) NOTE, page 3"
+    naturalLanguage: >
+      Travel between the USA and Canada is not counted as international for §4(f) purposes.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        isInternational(seg) ⟺ countryOf(from(seg)) ≠ countryOf(to(seg))
+          ∧ ¬({countryOf(from(seg)), countryOf(to(seg))} = {US, CA})
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4f-us-ca-domestic.test.ts
+
+  - id: R3015-4g-surface
+    pdfRef: "§4(g), page 3"
+    naturalLanguage: >
+      Intermediate surface sectors are permitted at the passenger's expense.
+      Transoceanic surface sectors between TC1–TC2 and TC1–TC3 are not permitted,
+      except for SWP origin exception in R3015-4g-swp-transoceanic.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ seg ∈ I : isSurfaceSegment(seg) ∧ isTransoceanic(seg)
+          → swpOriginTransoceanicSurfacePermitted(seg, I)
+        WHERE isTransoceanic(seg) ⟺ crossesAtlantic(seg) ∨ crossesPacific(seg)
+    ambiguities:
+      - "Surface sector between two airports — user-declared surface flag on segment."
+    tests:
+      - tests/rules/R3015-4g-surface.test.ts
+
+  - id: R3015-4g-swp-transoceanic
+    pdfRef: "§4(g) EXCEPTION, page 3"
+    naturalLanguage: >
+      For travel originating in the South West Pacific, one transoceanic surface sector
+      between TC1–TC2 or TC1–TC3 is permitted.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        IF continentOf(originPoint(I)) = south-west-pacific THEN
+          |{ seg ∈ I : isSurfaceSegment(seg) ∧ isTransoceanic(seg) }| ≤ 1
+        ELSE
+          |{ seg ∈ I : isSurfaceSegment(seg) ∧ isTransoceanic(seg) }| = 0
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4g-swp-transoceanic.test.ts
+
+  - id: R3015-4h-segment-count
+    pdfRef: "§4(h) intro, page 3"
+    naturalLanguage: >
+      A minimum of 3 and maximum of 16 segments, including surface segments between
+      any two airports, are permitted for the entire journey.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        3 ≤ |I| ≤ 16
+    ambiguities:
+      - "Segment = direct flight or surface connection between two airports per user entry."
+    tests:
+      - tests/rules/R3015-4h-segment-count.test.ts
+
+  - id: R3015-4h-continent-limits
+    pdfRef: "§4(h) table, page 3"
+    naturalLanguage: >
+      Free flight segments within each continent are limited to 4 (6 in North America):
+      Africa 4, Asia 4, Europe/Middle East 4, North America 6, South America 4,
+      South West Pacific 4.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ c ∈ Continent :
+          freeFlightSegmentsUsed(c, I) ≤ LIMIT(c)
+        WHERE LIMIT = { north-america: 6, africa: 4, asia: 4,
+                       europe-middle-east: 4, south-america: 4, south-west-pacific: 4 }
+        AND freeFlightSegmentsUsed(c, I) =
+          |{ seg ∈ I : isFlightSegment(seg) ∧ continentOf(from(seg)) = c
+                      ∧ continentOf(to(seg)) = c }|
+    ambiguities:
+      - "Intercontinental flights do not consume per-continent free segment allowance."
+      - "Connecting flights within same continent on separate user segments each count."
+    tests:
+      - tests/rules/R3015-4h-continent-limits.test.ts
+
+  - id: R3015-4i-duplicate-sector
+    pdfRef: "§4(i), page 3"
+    naturalLanguage: >
+      The same city pairs/sectors cannot be flown more than once in the same direction.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ seg1, seg2 ∈ I : isFlightSegment(seg1) ∧ isFlightSegment(seg2) ∧ seg1 ≠ seg2
+          → (cityOf(from(seg1)), cityOf(to(seg1))) ≠ (cityOf(from(seg2)), cityOf(to(seg2)))
+        -- reverse direction (B→A after A→B) is permitted
+    ambiguities:
+      - "City pair uses metropolitan city, not airport — e.g. LON includes LHR/LGW/STN."
+    tests:
+      - tests/rules/R3015-4i-duplicate-sector.test.ts
+
+  - id: R3015-4j-codeshare
+    pdfRef: "§4(j), page 3"
+    naturalLanguage: >
+      Travel on codeshare services is permitted only when operated by eligible Explorer
+      carriers (AA/AS/AT/AY/BA/CX/FJ/IB/JL/MH/NU/QF/QR/RJ/UL/WY). Other codeshare
+      services are not permitted except QF/JQ and QF/QQ per R3015-4j-jq-qq.
+    category: carrier
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ seg ∈ I : isFlightSegment(seg) → isPermittedCodeshare(flight(seg))
+        WHERE isPermittedCodeshare(f) ⟺
+          (marketingCarrier(f) = operatingCarrier(f)
+           ∧ isEligibleExplorerCarrier(marketingCarrier(f)))
+          ∨ (isEligibleExplorerCarrier(marketingCarrier(f))
+             ∧ isEligibleExplorerCarrier(operatingCarrier(f)))
+          ∨ isCodeshareException(f)
+          ∨ isPermittedAffiliateOperator(f)
+    ambiguities:
+      - "Default deny all codeshares not matching eligible-on-eligible or explicit exceptions."
+    tests:
+      - tests/rules/R3015-4j-codeshare.test.ts
+
+  - id: R3015-4j-jq-qq
+    pdfRef: "§4(j) exceptions, page 3"
+    naturalLanguage: >
+      QF codeshare services operated by Jetstar (JQ) and QF services operated by
+      Alliance Airlines (QQ) are permitted exceptions to the codeshare restriction.
+    category: carrier
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        isCodeshareException(f) ⟺
+          (marketingCarrier(f) = QF ∧ operatingCarrier(f) ∈ {JQ, QQ})
+    ambiguities:
+      - "No other marketing/operating pairs beyond QF→JQ and QF→QQ unless PDF amended."
+    tests:
+      - tests/rules/R3015-4j-jq-qq.test.ts
+
+  - id: R3015-4-affiliates
+    pdfRef: "§4 affiliates table, page 4"
+    naturalLanguage: >
+      Travel is permitted on listed affiliated airlines operating on behalf of eligible
+      parent carriers: Alaska (QX/OO), American Eagle (MQ/PT/OH/YX/OO), BA CityFlyer/Euroflyer,
+      Fiji Link, Nordic Regional Airlines, Air Nostrum/Iberia Express, J-Air/HAC/JAC,
+      Qantaslink operators, Royal Air Maroc Express.
+    category: carrier
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        isPermittedAffiliateOperator(f) ⟺
+          ∃ parent : isAffiliateOf(operatingCarrier(f), parent)
+            ∧ isEligibleExplorerCarrier(parent)
+        -- affiliate registry: AS→{QX,OO}, AA→{MQ,PT,OH,YX,OO}, BA→{CJ,TH}, FJ→{FJ_link},
+        -- AY→{N7}, IB→{YW,I2}, JL→{JLJ,HAC,JAC}, QF→{QF_link operators}, AT→{AT_express}
+    ambiguities:
+      - "Resolve affiliate marketing names to IATA codes in CARRIER-REGISTRY.json."
+      - "Schedule APIs may return parent code only — apply registry inference (debate D5)."
+    tests:
+      - tests/rules/R3015-4-affiliates.test.ts
+
+  - id: R3015-4-no-ground-transport
+    pdfRef: "§4 ground transport, page 4"
+    naturalLanguage: >
+      Ground transportation services operated by or for BA/QF may not be included as
+      part of the oneworld Explorer.
+    category: routing
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ seg ∈ I : ¬isGroundTransport(seg)
+        WHERE isGroundTransport(seg) ⟺
+          flight(seg) uses BA_or_QF_rail_or_bus_product_codes
+    ambiguities:
+      - "Exact flight number ranges and equipment codes for BA Eurostar/bus products require research."
+    tests:
+      - tests/rules/R3015-4-no-ground-transport.test.ts
+
+  - id: R3015-4k-us-transcon
+    pdfRef: "§4(k), page 4"
+    naturalLanguage: >
+      Within the USA/Canada only one nonstop or single-plane-service transcontinental
+      flight is permitted. A transcontinental flight is travel between a Column A state
+      and a Column B state as listed in the rule.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        |{ seg ∈ I : isTranscontinentalUS(seg) }| ≤ 1
+        WHERE isTranscontinentalUS(seg) ⟺
+          countryOf(from(seg)) ∈ {US, CA} ∧ countryOf(to(seg)) ∈ {US, CA}
+          ∧ usStateOf(from(seg)) ∈ COLUMN_A ∧ usStateOf(to(seg)) ∈ COLUMN_B
+          ∨ usStateOf(from(seg)) ∈ COLUMN_B ∧ usStateOf(to(seg)) ∈ COLUMN_A
+          ∧ (isNonstop(seg) ∨ isSinglePlaneService(seg))
+    ambiguities:
+      - "Single-plane service with intermediate stop — counts if same flight number and no change of aircraft per PDF intent."
+    tests:
+      - tests/rules/R3015-4k-us-transcon.test.ts
+
+  - id: R3015-4k-alaska
+    pdfRef: "§4(k) Alaska, page 4"
+    naturalLanguage: >
+      Only one flight to the State of Alaska and one flight from the State of Alaska
+      are permitted within the USA/Canada portion of the itinerary.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        alaskaArrivals(I) ≤ 1 ∧ alaskaDepartures(I) ≤ 1
+        WHERE alaskaArrivals counts segments with to(seg) in AK
+          ∧ alaskaDepartures counts segments with from(seg) in AK
+    ambiguities: []
+    tests:
+      - tests/rules/R3015-4k-alaska.test.ts
+
+  - id: R3015-4l-australia
+    pdfRef: "§4(l), page 4"
+    naturalLanguage: >
+      Within Australia only one nonstop/single-plane-service flight is permitted between
+      each listed set of points: BME–BNE/MEL/SYD, DRW–CBR/MEL/SYD, KTA–BNE/MEL/SYD,
+      and PER–BNE/CBR/CNS/SYD/MEL.
+    category: routing
+    enforceInV01: true
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ group ∈ AUSTRALIA_LIMITED_GROUPS :
+          |{ seg ∈ I : isAustraliaLimitedSector(seg, group) }| ≤ 1
+        WHERE each group is a hub (BME|DRW|KTA|PER) paired with listed Australian metros
+    ambiguities:
+      - "Applies to flight segments where both endpoints are in Australia."
+    tests:
+      - tests/rules/R3015-4l-australia.test.ts
+
+  # ── §5 Reservations and ticketing ───────────────────────────────────────────
+
+  - id: R3015-5-reservations
+    pdfRef: "§5(a), page 4–5"
+    naturalLanguage: >
+      Reservations for the first international flight and all preceding flights must be
+      made prior to departure. Subsequent segments may be open-dated. Complete ticketing
+      deadlines apply based on days before departure (25 days / 3 or 7 days / 24 hours).
+      OSI YY OW RTW must be inserted into PNR.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        reservedBeforeDeparture(firstInternationalSegment(I))
+        ∧ completeTicketingBy(deadline(reservationDate, departureDate))
+        ∧ pnrContainsOSI(ticket, "YY OW RTW")
+    ambiguities:
+      - "Open-dated subsequent segments — booking system constraint, not route geometry."
+      - "Ticketing deadline table has three bands — implement as function of days-before-departure."
+    tests:
+      - tests/rules/R3015-5-reservations.test.ts
+
+  - id: R3015-5b-booking
+    pdfRef: "§5(b), page 5"
+    naturalLanguage: >
+      Each eligible carrier has mandated booking classes for First (A), Business (D/I),
+      and Economy (L), with carrier-specific Premium Economy classes (P/T/R/E/W) and
+      domestic/international variants for AY, JL, and NU. Lower-class downgrade and
+      Y/B/H exceptions apply when higher class unavailable.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        ∀ seg ∈ I : isFlightSegment(seg) →
+          bookingClass(seg) ∈ ALLOWED_RBD(marketingCarrier(seg), chargedClass(I), seg)
+        -- ALLOWED_RBD from §5(b) table + downgrade/exception clauses
+    ambiguities:
+      - "Availability not in scope — v0.2 may warn on RBD mismatch when class declared."
+      - "QR A-class exception for Middle East sectors without business cabin."
+    tests:
+      - tests/rules/R3015-5b-booking.test.ts
+
+  # ── §6–§9 Stay, stopover, transfers ───────────────────────────────────────────
+
+  - id: R3015-6-min-stay
+    pdfRef: "§6, page 5"
+    naturalLanguage: >
+      No minimum stay except for fares originating in TC1: travel on the last
+      international sector must commence no earlier than 10 days after commencement
+      of the first international sector.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        (tcOf(originPoint(I)) = TC1)
+          → departureTime(lastInternationalSector(I))
+              ≥ departureTime(firstInternationalSector(I)) + 10 days
+        ELSE true
+    ambiguities:
+      - "Requires scheduled departure timestamps — not enforceable in v0.1 geometry-only mode."
+    tests:
+      - tests/rules/R3015-6-min-stay.test.ts
+
+  - id: R3015-7-max-stay
+    pdfRef: "§7, page 5"
+    naturalLanguage: >
+      Return travel from the last stopover point must commence no later than 12 months
+      after departure from the point of origin.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        departureTime(lastStopoverSector(I))
+          ≤ departureTime(origin(I)) + 12 months
+    ambiguities:
+      - "Last stopover point vs last sector — PDF says last stopover point; if no stopovers, use last international sector."
+    tests:
+      - tests/rules/R3015-7-max-stay.test.ts
+
+  - id: R3015-8-stopovers
+    pdfRef: "§8, page 5"
+    naturalLanguage: >
+      Stopovers are permitted. Minimum 2 stopovers required. Maximum 2 stopovers
+      permitted in the continent of origin. A stopover is a connection exceeding 24 hours
+      per §8 NOTE cross-reference to industry practice.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        stopoverCount(I) ≥ 2
+        ∧ stopoverCountInContinent(I, continentOf(originPoint(I))) ≤ 2
+        WHERE isStopover(p, I) ⟺ scheduledGap(p, I) > 24 hours
+    ambiguities:
+      - "Minimum 2 stopovers — unusually strict; confirm against PDF NOTE numbering (items 1 and 2)."
+      - "Requires timestamps — v0.1 emits warning only when times absent."
+    tests:
+      - tests/rules/R3015-8-stopovers.test.ts
+
+  - id: R3015-9-transfers
+    pdfRef: "§9, page 5"
+    naturalLanguage: >
+      Unlimited online/interline transfers are permitted between eligible Explorer
+      carriers (AA/AS/AT/AY/BA/CX/FJ/IB/JL/MH/NU/QF/QR/RJ/UL/WY).
+    category: routing
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        ∀ connection c in I :
+          isTransfer(c) → carriers(c) ⊆ ELIGIBLE_3015_LIST
+        -- transfers are connections ≤24h; unlimited count permitted
+    ambiguities:
+      - "Interline beyond oneworld online partners — PDF says between listed carriers only."
+    tests:
+      - tests/rules/R3015-9-transfers.test.ts
+
+  # ── §15 Sales restrictions ──────────────────────────────────────────────────
+
+  - id: R3015-15-stock
+    pdfRef: "§15, page 8"
+    naturalLanguage: >
+      Tickets must be issued on the stock of AA, AS, AT, AY, BA, CX, FJ, IB, JL, MH,
+      QF, QR, RJ, UL, or WY (NU excluded from stock list in §15 though eligible for travel).
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        validatingCarrier(ticket) ∈ STOCK_CARRIERS
+        WHERE STOCK_CARRIERS = {AA, AS, AT, AY, BA, CX, FJ, IB, JL, MH, QF, QR, RJ, UL, WY}
+    ambiguities:
+      - "NU is eligible for flight but absent from §15 stock list — treat as non-validating carrier."
+      - "Requires ticketing context — defer to v0.3 validating-carrier model."
+    tests:
+      - tests/rules/R3015-15-stock.test.ts
+
+  - id: R3015-15-stock-jq
+    pdfRef: "§15 EXCEPTION, page 8"
+    naturalLanguage: >
+      When JQ-operated QF-marketed service is included in an itinerary, IB and WY ticket
+      stock cannot be utilized.
+    category: ticketing
+    enforceInV01: false
+    enforceInV02: false
+    formal:
+      predicate: |
+        (∃ seg ∈ I : marketingCarrier(flight(seg)) = QF ∧ operatingCarrier(flight(seg)) = JQ)
+          → validatingCarrier(ticket) ∉ {IB, WY}
+    ambiguities:
+      - "Requires validating carrier and operating carrier from ticket — v0.3 scope."
+    tests:
+      - tests/rules/R3015-15-stock-jq.test.ts
+
+  - id: R3015-15-cuba
+    pdfRef: "§15 Cuba restriction, page 8"
+    naturalLanguage: >
+      If a ticket includes travel to/from/via Cuba it may not also include flight segments
+      on American Airlines, American Eagle (Envoy, Piedmont, PSA, Republic, SkyWest),
+      Alaska Airlines, or Horizon Air due to U.S. Government restrictions.
+    category: sales
+    enforceInV01: false
+    enforceInV02: true
+    formal:
+      predicate: |
+        hasCubaItinerary(I) → ¬hasOperatedBy(I, {AA, AS} ∪ AA_EAGLE_OPS ∪ {QX})
+        WHERE hasCubaItinerary(I) ⟺ ∃ p ∈ points(I) : countryOf(p) = CU
+          ∧ hasOperatedBy checks operatingCarrier on flight segments
+    ambiguities:
+      - "To/from/via Cuba — via includes connections at Cuban points."
+      - "v0.1 without carrier data — warn when Cuba points present."
+    tests:
+      - tests/rules/R3015-15-cuba.test.ts

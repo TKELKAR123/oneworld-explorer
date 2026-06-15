@@ -1,0 +1,41 @@
+{
+  "eligible": [
+    { "iata": "AA", "name": "American Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "AS", "name": "Alaska Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "AT", "name": "Royal Air Maroc", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "AY", "name": "Finnair", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "BA", "name": "British Airways", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "CX", "name": "Cathay Pacific", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "FJ", "name": "Fiji Airways", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "IB", "name": "Iberia", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "JL", "name": "Japan Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "MH", "name": "Malaysia Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "NU", "name": "Japan Transocean Air", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "QF", "name": "Qantas", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "QR", "name": "Qatar Airways", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "RJ", "name": "Royal Jordanian", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "UL", "name": "SriLankan Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
+    { "iata": "WY", "name": "Oman Air", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" }
+  ],
+  "codeshareExceptions": [
+    { "marketing": "QF", "operating": "JQ", "pdfRef": "§4(j)" },
+    { "marketing": "QF", "operating": "QQ", "pdfRef": "§4(j)" }
+  ],
+  "affiliates": [
+    { "iata": "QX", "parent": "AS", "name": "Horizon Air", "pdfRef": "§4 affiliates" },
+    { "iata": "OO", "parent": "AA", "name": "SkyWest (AA Eagle)", "pdfRef": "§4 affiliates" },
+    { "iata": "MQ", "parent": "AA", "name": "Envoy Air", "pdfRef": "§4 affiliates" },
+    { "iata": "PT", "parent": "AA", "name": "Piedmont Airlines", "pdfRef": "§4 affiliates" },
+    { "iata": "OH", "parent": "AA", "name": "PSA Airlines", "pdfRef": "§4 affiliates" },
+    { "iata": "YX", "parent": "AA", "name": "Republic Airways", "pdfRef": "§4 affiliates" },
+    { "iata": "CJ", "parent": "BA", "name": "BA CityFlyer", "pdfRef": "§4 affiliates" },
+    { "iata": "A0", "parent": "BA", "name": "BA Euroflyer", "pdfRef": "§4 affiliates" },
+    { "iata": "JC", "parent": "FJ", "name": "Fiji Link", "pdfRef": "§4 affiliates" },
+    { "iata": "N7", "parent": "AY", "name": "Nordic Regional Airlines", "pdfRef": "§4 affiliates" },
+    { "iata": "YW", "parent": "IB", "name": "Air Nostrum", "pdfRef": "§4 affiliates" },
+    { "iata": "I2", "parent": "IB", "name": "Iberia Express", "pdfRef": "§4 affiliates" },
+    { "iata": "JLJ", "parent": "JL", "name": "J-Air", "pdfRef": "§4 affiliates" },
+    { "iata": "QQ", "parent": "QF", "name": "Alliance Airlines", "pdfRef": "§4 affiliates" },
+    { "iata": "ATR", "parent": "AT", "name": "Royal Air Maroc Express", "pdfRef": "§4 affiliates" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "SC-004",
+  "source": "FlyerTalk — excessive intra-Asia segments",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "BKK" },
+    { "from": "BKK", "to": "HKG" },
+    { "from": "HKG", "to": "NRT" },
+    { "from": "NRT", "to": "KUL" },
+    { "from": "KUL", "to": "DEL" },
+    { "from": "DEL", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4h-continent-limits"]
+}

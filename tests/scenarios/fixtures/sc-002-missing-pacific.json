@@ -1,0 +1,11 @@
+{
+  "id": "SC-002",
+  "source": "Rule 3015 §4(a) — missing Pacific crossing",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4a"]
+}

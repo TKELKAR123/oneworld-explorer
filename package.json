@@ -1,0 +1,30 @@
+{
+  "name": "oneworld-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plan and validate oneworld Explorer round-the-world fare routes",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @oneworld-explorer/core && npm run build -w @oneworld-explorer/schedules && npm run build -w @oneworld-explorer/web",
+    "dev": "npm run dev -w @oneworld-explorer/web",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:smoke": "vitest run tests/smoke",
+    "test:e2e": "playwright test",
+    "typecheck": "npm run build -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/web && npm run typecheck -w @oneworld-explorer/schedules",
+    "validate:country-map": "tsx scripts/validate-country-map.ts",
+    "validate:traceability": "tsx scripts/validate-traceability.ts",
+    "validate": "npm run validate:country-map && npm run validate:traceability"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "tsx": "^4.20.3",
+    "vitest": "^3.2.3",
+    "typescript": "^5.8.3",
+    "yaml": "^2.8.0"
+  }
+}

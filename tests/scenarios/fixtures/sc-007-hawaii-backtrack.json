@@ -1,0 +1,13 @@
+{
+  "id": "SC-007",
+  "source": "FlyerTalk — Hawaii backtrack §4(b)",
+  "segments": [
+    { "from": "HNL", "to": "LAX" },
+    { "from": "LAX", "to": "HNL" },
+    { "from": "HNL", "to": "NRT" },
+    { "from": "NRT", "to": "SYD" },
+    { "from": "SYD", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4b-hawaii"]
+}

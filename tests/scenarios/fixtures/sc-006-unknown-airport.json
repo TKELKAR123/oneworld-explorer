@@ -1,0 +1,7 @@
+{
+  "id": "SC-006",
+  "source": "Unknown airport — structured parse error",
+  "segments": [{ "from": "ZZZ", "to": "JFK" }],
+  "expectValid": false,
+  "expectIssueCodes": ["UNKNOWN_AIRPORT"]
+}

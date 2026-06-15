@@ -1,0 +1,11 @@
+{
+  "id": "SC-003",
+  "source": "Rule 3015 §0 — fewer than 3 continents",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "CDG" },
+    { "from": "CDG", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-0-continent-count"]
+}

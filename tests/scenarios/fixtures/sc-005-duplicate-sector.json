@@ -1,0 +1,15 @@
+{
+  "id": "SC-005",
+  "source": "Rule 3015 §4(i) — duplicate city pair",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" },
+    { "from": "JFK", "to": "LHR" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4i-duplicate-sector"]
+}

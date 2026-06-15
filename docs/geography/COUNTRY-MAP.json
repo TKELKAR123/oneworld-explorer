@@ -1,0 +1,4702 @@
+[
+  {
+    "iso": "AD",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "AE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AF",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AG",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AI",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AL",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AM",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AO",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AQ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Antarctica has no commercial Explorer market; mapped to Africa/TC2 geographically for ISO completeness. Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "AR",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AS",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AT",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "AU",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Australia is South West Pacific."
+  },
+  {
+    "iso": "AW",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15",
+        "derivedFrom": "Netherlands Antilles"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Successor to Netherlands Antilles (Qantas: North America)."
+  },
+  {
+    "iso": "AX",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "AZ",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BB",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BD",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BF",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BG",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BH",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BI",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BJ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BL",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "BM",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BN",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BO",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BQ",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Successor to Netherlands Antilles (Qantas: North America)."
+  },
+  {
+    "iso": "BR",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BS",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BT",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BV",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "BW",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BY",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "BZ",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CA",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CC",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "geography",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "CD",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CF",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CG",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CH",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CI",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CK",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CL",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CM",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CN",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CO",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CR",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CU",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CV",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "CW",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Successor to Netherlands Antilles (Qantas: North America)."
+  },
+  {
+    "iso": "CX",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "geography",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "CY",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Geographically near Middle East; Explorer groups Cyprus in Europe sub-zone."
+  },
+  {
+    "iso": "CZ",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DJ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DK",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DM",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DO",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "DZ",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "europe",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: North Africa (Algeria) counts as Europe sub-zone, not Africa."
+  },
+  {
+    "iso": "EC",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "EE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "EG",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "middle-east",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Egypt counts as Middle East sub-zone within Europe/ME, not Africa."
+  },
+  {
+    "iso": "EH",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Western Sahara; grouped with Africa pending political recognition. Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "ER",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ES",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ET",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "FI",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "FJ",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "FK",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "FM",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "conflicts": [
+      {
+        "field": "explorerContinent",
+        "values": {
+          "priorInference": "south-west-pacific",
+          "qantasGuide": "asia"
+        },
+        "note": "Prior community inference superseded by Qantas agent guide."
+      }
+    ],
+    "notes": "Qantas guide lists under Asia (not South West Pacific); Micronesia bloc treated as Asia."
+  },
+  {
+    "iso": "FO",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "FR",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GA",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GB",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GD",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GF",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "French Guiana grouped with South America despite EU membership."
+  },
+  {
+    "iso": "GG",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "GH",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GI",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GL",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Greenland (Denmark) grouped with North America for Explorer/TC1. Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "GM",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GN",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GP",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GQ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GR",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GS",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "GT",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GU",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "conflicts": [
+      {
+        "field": "explorerContinent",
+        "values": {
+          "priorInference": "south-west-pacific",
+          "qantasGuide": "asia"
+        },
+        "note": "Prior community inference superseded by Qantas agent guide."
+      }
+    ],
+    "notes": "Qantas guide lists under Asia (not South West Pacific); Micronesia bloc treated as Asia."
+  },
+  {
+    "iso": "GW",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "GY",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "HK",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "HM",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "geography",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "HN",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "HR",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "HT",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "HU",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ID",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Indonesia is Asia, not South West Pacific."
+  },
+  {
+    "iso": "IE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IL",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IM",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "IN",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IO",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "British Indian Ocean Territory grouped with Asia (TC3). Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "IQ",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IR",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IS",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "IT",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "JE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "JM",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "JO",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "JP",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KE",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KG",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "rule3015": {
+        "explorerContinent": "asia",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF explicitly lists Kyrgyzstan under Asia."
+  },
+  {
+    "iso": "KH",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KI",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KM",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KN",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KP",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "KR",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KW",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KY",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "KZ",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "rule3015": {
+        "explorerContinent": "asia",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF explicitly lists Kazakhstan under Asia."
+  },
+  {
+    "iso": "LA",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LB",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LC",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LI",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "LK",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LR",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LS",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LT",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LU",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LV",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "LY",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "middle-east",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Libya counts as Middle East sub-zone within Europe/ME, not Africa."
+  },
+  {
+    "iso": "MA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "europe",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Morocco counts as Europe sub-zone, not Africa."
+  },
+  {
+    "iso": "MC",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "MD",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ME",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MF",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "MG",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MH",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "conflicts": [
+      {
+        "field": "explorerContinent",
+        "values": {
+          "priorInference": "south-west-pacific",
+          "qantasGuide": "asia"
+        },
+        "note": "Prior community inference superseded by Qantas agent guide."
+      }
+    ],
+    "notes": "Qantas guide lists under Asia (not South West Pacific); Micronesia bloc treated as Asia."
+  },
+  {
+    "iso": "MK",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ML",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MM",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MN",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MO",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MP",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "conflicts": [
+      {
+        "field": "explorerContinent",
+        "values": {
+          "priorInference": "south-west-pacific",
+          "qantasGuide": "asia"
+        },
+        "note": "Prior community inference superseded by Qantas agent guide."
+      }
+    ],
+    "notes": "Qantas guide lists under Asia (not South West Pacific); Micronesia bloc treated as Asia."
+  },
+  {
+    "iso": "MQ",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MR",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MS",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MT",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MU",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MV",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MW",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MX",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MY",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "MZ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NA",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NC",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NE",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NF",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NG",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NI",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NL",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NO",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NP",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NR",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NU",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "NZ",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "New Zealand is South West Pacific."
+  },
+  {
+    "iso": "OM",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PA",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "rule3015": {
+        "explorerContinent": "north-america",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Panama is North America; remainder of Central America and Caribbean also NA."
+  },
+  {
+    "iso": "PE",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PF",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PG",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PH",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PK",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PL",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PM",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "PN",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "geography",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "PR",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15",
+        "derivedFrom": "USA (including Alaska, Hawaii & Puerto Rico)"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Covered under \"USA (including Alaska, Hawaii & Puerto Rico)\" in Qantas guide."
+  },
+  {
+    "iso": "PS",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "PT",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "PW",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "conflicts": [
+      {
+        "field": "explorerContinent",
+        "values": {
+          "priorInference": "south-west-pacific",
+          "qantasGuide": "asia"
+        },
+        "note": "Prior community inference superseded by Qantas agent guide."
+      }
+    ],
+    "notes": "Qantas guide lists under Asia (not South West Pacific); Micronesia bloc treated as Asia."
+  },
+  {
+    "iso": "PY",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "QA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "RE",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Réunion grouped with Africa despite EU outermost region status."
+  },
+  {
+    "iso": "RO",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "RS",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "RU",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "europe",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "Transcontinental; western Russia (e.g. MOW, LED) priced as Europe sub-zone; Siberia/Far East airports may behave as Asia in practice — PDF lists RU under Europe/ME."
+  },
+  {
+    "iso": "RW",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "SA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SB",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SC",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SD",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "middle-east",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Sudan counts as Middle East sub-zone within Europe/ME, not Africa."
+  },
+  {
+    "iso": "SE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SG",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SH",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "SI",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SJ",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "SK",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SL",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SM",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "SN",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SO",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SR",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SS",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "ST",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SV",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SX",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Successor to Netherlands Antilles (Qantas: North America)."
+  },
+  {
+    "iso": "SY",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "SZ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TC",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TD",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TF",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "TG",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TH",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TJ",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "rule3015": {
+        "explorerContinent": "asia",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF explicitly lists Tajikistan under Asia."
+  },
+  {
+    "iso": "TK",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "geography",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "TL",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TM",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "rule3015": {
+        "explorerContinent": "asia",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF explicitly lists Turkmenistan under Asia."
+  },
+  {
+    "iso": "TN",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "rule3015": {
+        "explorerContinent": "europe-middle-east",
+        "explorerSubZone": "europe",
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF: Tunisia counts as Europe sub-zone, not Africa."
+  },
+  {
+    "iso": "TO",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TR",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Transcontinental; Explorer fares treat Turkey as Middle East sub-zone."
+  },
+  {
+    "iso": "TT",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TV",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TW",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "TZ",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "UA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "UG",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "UM",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "US Minor Outlying Islands span Pacific (SWP) and Caribbean (NA); default SWP for Pacific atolls. Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "US",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "UY",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "UZ",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "rule3015": {
+        "explorerContinent": "asia",
+        "explorerSubZone": null,
+        "citation": "oneworld Rule 3015 / Explorer PDF (27 Feb 2026)"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "rule3015",
+    "notes": "PDF explicitly lists Uzbekistan under Asia."
+  },
+  {
+    "iso": "VA",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "VC",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "VE",
+    "explorerContinent": "south-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-america",
+        "regionLabel": "South America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "VG",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "VI",
+    "explorerContinent": "north-america",
+    "explorerSubZone": null,
+    "trafficZone": "TC1",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC1"
+      },
+      "qantasGuide": {
+        "explorerContinent": "north-america",
+        "regionLabel": "North America",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "VN",
+    "explorerContinent": "asia",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "asia",
+        "regionLabel": "Asia",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "VU",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "WF",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "WS",
+    "explorerContinent": "south-west-pacific",
+    "explorerSubZone": null,
+    "trafficZone": "TC3",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC3"
+      },
+      "qantasGuide": {
+        "explorerContinent": "south-west-pacific",
+        "regionLabel": "South West Pacific",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "XK",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "europe",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      }
+    },
+    "resolvedFrom": "iata",
+    "notes": "Kosovo uses user-assigned XK code; grouped with Europe sub-zone. Not listed in Qantas continent guide; resolved via IATA TC / geographic inference."
+  },
+  {
+    "iso": "YE",
+    "explorerContinent": "europe-middle-east",
+    "explorerSubZone": "middle-east",
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "europe-middle-east",
+        "regionLabel": "Europe-Middle East",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "YT",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide",
+    "notes": "Mayotte grouped with Africa."
+  },
+  {
+    "iso": "ZA",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ZM",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  },
+  {
+    "iso": "ZW",
+    "explorerContinent": "africa",
+    "explorerSubZone": null,
+    "trafficZone": "TC2",
+    "sources": {
+      "iata": {
+        "trafficZone": "TC2"
+      },
+      "qantasGuide": {
+        "explorerContinent": "africa",
+        "regionLabel": "Africa",
+        "guideUrl": "https://www.qantas.com/content/dam/qac/oneworld-clue-cards/ow-rtw-continents.pdf",
+        "guideVersion": "undated",
+        "transcribedAt": "2026-06-15"
+      }
+    },
+    "resolvedFrom": "qantasGuide"
+  }
+]
