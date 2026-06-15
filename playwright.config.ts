@@ -4,12 +4,16 @@ export default defineConfig({
   testDir: "tests/e2e",
   fullyParallel: false,
   forbidOnly: Boolean(process.env.CI),
-  retries: process.env.CI ? 1 : 0,
+  retries: process.env.CI ? 2 : 0,
   workers: 1,
-  reporter: "list",
+  timeout: 30_000,
+  reporter: process.env.CI
+    ? [["github"], ["html", { open: "never" }], ["list"]]
+    : "list",
   use: {
     baseURL: "http://127.0.0.1:3458",
-    trace: "on-first-retry",
+    trace: "retain-on-failure",
+    screenshot: "only-on-failure",
   },
   webServer: {
     command: "npm run start -w @oneworld-explorer/web -- -p 3458",

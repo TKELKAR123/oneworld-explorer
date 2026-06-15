@@ -15,6 +15,7 @@
     "test:watch": "vitest",
     "test:smoke": "vitest run --config vitest.smoke.config.ts",
     "test:e2e": "playwright test",
+    "test:ci": "npm run validate && npm test && npm run build && npm run test:smoke && npm run test:e2e",
     "typecheck": "npm run build -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/web && npm run typecheck -w @oneworld-explorer/schedules",
     "validate:country-map": "tsx scripts/validate-country-map.ts",
     "validate:traceability": "tsx scripts/validate-traceability.ts",

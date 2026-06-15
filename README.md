@@ -49,7 +49,7 @@ See [docs/TESTING.md](docs/TESTING.md) for the full pyramid.
 | API smoke | `npm run test:smoke` | Next.js route handlers + built app over HTTP |
 | UI E2E | `npm run test:e2e` | Real browser: autocomplete, segments, validate, traces |
 
-CI runs validate → unit tests → build → smoke → Playwright E2E.
+CI runs five parallel jobs (validate, unit, build, smoke, e2e) — see [docs/TESTING.md](docs/TESTING.md). Local mirror: `npm run test:ci`.
 
 ## Validation API
 
