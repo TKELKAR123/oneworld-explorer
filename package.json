@@ -13,7 +13,7 @@
     "dev": "npm run dev -w @oneworld-explorer/web",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:smoke": "vitest run tests/smoke",
+    "test:smoke": "vitest run --config vitest.smoke.config.ts",
     "test:e2e": "playwright test",
     "typecheck": "npm run build -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/web && npm run typecheck -w @oneworld-explorer/schedules",
     "validate:country-map": "tsx scripts/validate-country-map.ts",
