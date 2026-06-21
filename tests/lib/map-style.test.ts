@@ -54,6 +54,32 @@ describe("map-style", () => {
     expect(style.capColor).toContain("30");
   });
 
+  it("tc-zones mode uses TC3 color for eastern Russia", () => {
+    const easternRu: CountryAtlasEntry = {
+      iso: "RU",
+      name: "Russia (east of Urals)",
+      explorerContinent: "asia",
+      explorerSubZone: null,
+      trafficZone: "TC3",
+      geometry: { type: "Polygon", coordinates: [] },
+    };
+    const style = styleCountryPolygon(easternRu, "tc-zones");
+    expect(style.capColor).toContain("34"); // r channel of #22c55e
+  });
+
+  it("continents mode uses asia hue for eastern Russia", () => {
+    const easternRu: CountryAtlasEntry = {
+      iso: "RU",
+      name: "Russia (east of Urals)",
+      explorerContinent: "asia",
+      explorerSubZone: null,
+      trafficZone: "TC3",
+      geometry: { type: "Polygon", coordinates: [] },
+    };
+    const style = styleCountryPolygon(easternRu, "continents");
+    expect(style.capColor).toContain("34"); // r channel of #22c55e (asia green)
+  });
+
   it("graticule hidden in minimal mode", () => {
     expect(styleGraticule("minimal").visible).toBe(false);
     expect(styleGraticule("continents").visible).toBe(true);

@@ -13,6 +13,7 @@ describe("globe-controls", () => {
       enableDamping: false,
       dampingFactor: 0,
       rotateSpeed: 1,
+      enableZoom: true,
       minPolarAngle: 0,
       maxPolarAngle: Math.PI,
       minDistance: 0,
@@ -22,6 +23,7 @@ describe("globe-controls", () => {
     expect(controls.minPolarAngle).toBe(DEFAULT_GLOBE_CONTROLS.minPolarAngle);
     expect(controls.maxPolarAngle).toBeCloseTo(Math.PI - 0.05);
     expect(controls.enableDamping).toBe(true);
+    expect(controls.enableZoom).toBe(false);
   });
 
   it("caps fan arc destinations at 25 by carrier count", () => {

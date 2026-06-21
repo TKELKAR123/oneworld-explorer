@@ -3,8 +3,8 @@ import type { RouteSegment, ValidateOptions } from "@oneworld-explorer/core";
 
 export const CLASSIC_RTW: RouteSegment[] = [
   { from: "JFK", to: "LHR" },
-  { from: "LHR", to: "DXB" },
-  { from: "DXB", to: "SIN" },
+  { from: "LHR", to: "DOH" },
+  { from: "DOH", to: "SIN" },
   { from: "SIN", to: "SYD" },
   { from: "SYD", to: "LAX" },
   { from: "LAX", to: "JFK" },
@@ -13,8 +13,8 @@ export const CLASSIC_RTW: RouteSegment[] = [
 /** JFK origin, LHR return — no permitted §4(c) pair */
 export const INVALID_OPEN_JAW_RTW: RouteSegment[] = [
   { from: "JFK", to: "LHR" },
-  { from: "LHR", to: "DXB" },
-  { from: "DXB", to: "SIN" },
+  { from: "LHR", to: "DOH" },
+  { from: "DOH", to: "SIN" },
   { from: "SIN", to: "SYD" },
   { from: "SYD", to: "LAX" },
   { from: "LAX", to: "LHR" },

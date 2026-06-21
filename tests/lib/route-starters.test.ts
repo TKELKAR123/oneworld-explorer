@@ -4,7 +4,7 @@ import { getRouteStarter } from "../../apps/web/lib/route-starters";
 describe("route-starters", () => {
   it("includes SC-001 classic RTW", () => {
     const s = getRouteStarter("SC-001");
-    expect(s?.stops).toEqual(["JFK", "LHR", "DXB", "SIN", "SYD", "LAX", "JFK"]);
+    expect(s?.stops).toEqual(["JFK", "LHR", "DOH", "SIN", "SYD", "LAX", "JFK"]);
   });
 
   it("SC-079 westbound from Sydney", () => {

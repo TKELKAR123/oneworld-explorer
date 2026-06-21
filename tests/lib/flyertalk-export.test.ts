@@ -7,14 +7,14 @@ describe("buildFlyerTalkExport", () => {
   it("formats SC-001 classic RTW", () => {
     const result = validateRoute(CLASSIC_RTW);
     const text = buildFlyerTalkExport({
-      stops: ["JFK", "LHR", "DXB", "SIN", "SYD", "LAX", "JFK"],
+      stops: ["JFK", "LHR", "DOH", "SIN", "SYD", "LAX", "JFK"],
       legDetails: [],
       stopIntents: Array(7).fill("unknown"),
       result,
       travelClass: "economy",
     });
     expect(text).toMatch(/LONE4/);
-    expect(text).toMatch(/JFK-LHR-DXB-SIN-SYD-LAX-JFK/);
+    expect(text).toMatch(/JFK-LHR-DOH-SIN-SYD-LAX-JFK/);
     expect(text).toMatch(/ticketReady|valid \(geometry\)/);
   });
 

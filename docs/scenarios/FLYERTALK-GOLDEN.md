@@ -4,7 +4,7 @@ Canonical routes derived from the [Oneworld Explorer User Guide (2008084)](https
 
 | ID | Theme | Route / intent | Expected |
 |----|-------|----------------|----------|
-| SC-001 | Classic RTW | JFK→LHR→DXB→SIN→SYD→LAX→JFK | Valid LONE4 |
+| SC-001 | Classic RTW | JFK→LHR→DOH→SIN→SYD→LAX→JFK | Valid LONE4 |
 | SC-023 | Implicit open jaw | JFK→…→ORD | Valid §4(c)(a) |
 | SC-017 | Invalid O-D | JFK out, LHR return | Invalid |
 | SC-007 | Hawaii backtrack | HNL ↔ mainland reverse | Invalid §4(b) |

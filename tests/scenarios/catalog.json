@@ -9,10 +9,10 @@
       },
       {
         "from": "LHR",
-        "to": "DXB"
+        "to": "DOH"
       },
       {
-        "from": "DXB",
+        "from": "DOH",
         "to": "SIN"
       },
       {

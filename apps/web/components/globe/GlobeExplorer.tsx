@@ -152,6 +152,7 @@ function GlobeExplorerBody(props: GlobeExplorerProps) {
     lng: number;
     altitude?: number;
   } | null>(null);
+  const flyClearRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [internalZoom, setInternalZoom] = useState(1);
   const zoom = props.zoom ?? internalZoom;
   const setZoom = props.onZoomChange ?? setInternalZoom;
@@ -166,6 +167,14 @@ function GlobeExplorerBody(props: GlobeExplorerProps) {
     else props.onAirportClick(iata);
   }
 
+  function scheduleFlyClear() {
+    if (flyClearRef.current) clearTimeout(flyClearRef.current);
+    flyClearRef.current = setTimeout(() => {
+      setFlyTarget(null);
+      flyClearRef.current = null;
+    }, 850);
+  }
+
   function handleResetView() {
     setZoom(1);
     const resetAltitude = zoomToAltitude(1);
@@ -175,11 +184,15 @@ function GlobeExplorerBody(props: GlobeExplorerProps) {
     } else {
       setFlyTarget({ lat: 51.47, lng: -0.4543, altitude: resetAltitude });
     }
+    scheduleFlyClear();
   }
 
   function handleSearchSelect(iata: string) {
     const node = networkNodes.find((n) => n.iata === iata);
-    if (node) setFlyTarget({ lat: node.lat, lng: node.lon });
+    if (node) {
+      setFlyTarget({ lat: node.lat, lng: node.lon });
+      scheduleFlyClear();
+    }
     props.onAirportClick(iata);
   }
 

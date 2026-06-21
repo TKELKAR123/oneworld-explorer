@@ -18,5 +18,6 @@ test.describe("UX audit — globe wheel zoom", () => {
 
     const zoomAfter = await readZoomPercent(page);
     expect(zoomAfter).not.toBe(zoomBefore);
+    expect(zoomAfter).toBeGreaterThanOrEqual(zoomBefore);
   });
 });

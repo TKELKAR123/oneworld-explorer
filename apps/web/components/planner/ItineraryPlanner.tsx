@@ -270,12 +270,6 @@ export function ItineraryPlanner({
         </div>
       </details>
 
-      {onPreviewFutureMembersChange && agentDetailsOpen && (
-        <p className="rounded-lg border border-surface-border bg-surface-card/30 px-3 py-2 text-xs text-surface-muted">
-          Philippine Airlines preview moved to globe <strong>Network options</strong>.
-        </p>
-      )}
-
       {isValidIata(originIata) && (
         <details
           className="rounded-lg border border-surface-border bg-surface-card/30"

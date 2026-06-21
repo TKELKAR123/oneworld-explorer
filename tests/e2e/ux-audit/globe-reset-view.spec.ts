@@ -23,8 +23,14 @@ test.describe("UX audit — globe reset view", () => {
     await expect.poll(() => readZoomPercent(page)).toBeGreaterThan(100);
 
     await page.getByTestId("globe-reset-view").click();
-    await page.waitForTimeout(300);
-
     await expect.poll(() => readZoomPercent(page)).toBe(100);
+    await page.waitForTimeout(1000);
+
+    const shell = page.getByTestId("globe-canvas");
+    const latBefore = Number((await shell.getAttribute("data-globe-pov-lat")) ?? "0");
+    await dragGlobe(page, 0, -80);
+    await page.waitForTimeout(400);
+    const latAfter = Number((await shell.getAttribute("data-globe-pov-lat")) ?? "0");
+    expect(Math.abs(latAfter - latBefore)).toBeGreaterThan(2);
   });
 });

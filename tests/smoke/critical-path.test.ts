@@ -8,8 +8,8 @@ import { POST } from "../../apps/web/app/api/validate/route.js";
 
 const CLASSIC_RTW = [
   { from: "JFK", to: "LHR" },
-  { from: "LHR", to: "DXB" },
-  { from: "DXB", to: "SIN" },
+  { from: "LHR", to: "DOH" },
+  { from: "DOH", to: "SIN" },
   { from: "SIN", to: "SYD" },
   { from: "SYD", to: "LAX" },
   { from: "LAX", to: "JFK" },

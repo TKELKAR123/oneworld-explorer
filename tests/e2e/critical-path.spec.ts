@@ -10,6 +10,7 @@ test.describe("critical path — ship gate", () => {
     await page.getByTestId("route-starter-select").selectOption("SC-001");
     await waitForValidation(page);
     await expect(routeHero(page)).toContainText("Valid");
+    await expect(page.getByTestId("route-shape-pills")).toContainText(/\d+ continents/);
     await expect(page.getByTestId("segment-ledger")).toBeVisible();
     await expect(page.getByTestId("cabin-fare-tracker")).toContainText(/LONE4/i);
     await openHealthDrawer(page);
@@ -56,7 +57,7 @@ test.describe("critical path — ship gate", () => {
     const validate = await request.post("/api/validate", {
       data: {
         travelClass: "economy",
-        stops: ["JFK", "LHR", "DXB", "SIN", "SYD", "LAX", "JFK"],
+        stops: ["JFK", "LHR", "DOH", "SIN", "SYD", "LAX", "JFK"],
       },
     });
     expect(validate.ok()).toBeTruthy();

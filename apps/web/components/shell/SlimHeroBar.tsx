@@ -10,6 +10,7 @@ import { buildFlyerTalkExport, buildRouteChainExport } from "../../lib/flyertalk
 import { cabinFareTrackerLabel } from "../../lib/fare-hint";
 import type { LegBookingDetails } from "../../lib/segment-booking";
 import { SegmentLedgerCompact } from "../planner/SegmentLedgerCompact";
+import { RouteShapePills } from "./RouteShapePills";
 import { Badge, Button } from "../ui";
 
 export interface SlimHeroBarProps {
@@ -112,12 +113,18 @@ export function SlimHeroBar({
 
       {stops.length > 0 && (
         <div
-          className="mt-2 flex flex-wrap items-center gap-2 border-t border-surface-border/60 pt-2"
+          className="mt-2 flex flex-col gap-2 border-t border-surface-border/60 pt-2"
         >
-          <SegmentLedgerCompact analysis={analysis} onHighlightLegs={onHighlightLegs} />
-          <span className="text-xs text-slate-400" data-testid="cabin-fare-tracker">
-            {cabinFareTrackerLabel(analysis, travelClass)}
-          </span>
+          <RouteShapePills
+            analysis={analysis}
+            originReturn={analysis?.originReturn ?? null}
+          />
+          <div className="flex flex-wrap items-center gap-2">
+            <SegmentLedgerCompact analysis={analysis} onHighlightLegs={onHighlightLegs} />
+            <span className="text-xs text-slate-400" data-testid="cabin-fare-tracker">
+              {cabinFareTrackerLabel(analysis, travelClass)}
+            </span>
+          </div>
         </div>
       )}
     </div>

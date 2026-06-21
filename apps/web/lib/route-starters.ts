@@ -22,7 +22,7 @@ export const ROUTE_STARTERS: RouteStarter[] = [
     id: "SC-001",
     label: "Classic eastbound RTW",
     description: "JFK → Europe → Middle East → Asia → Australia → US → home",
-    stops: ["JFK", "LHR", "DXB", "SIN", "SYD", "LAX", "JFK"],
+    stops: ["JFK", "LHR", "DOH", "SIN", "SYD", "LAX", "JFK"],
     legTypes: ["flight", "flight", "flight", "flight", "flight", "flight"],
     travelClass: "economy",
   },

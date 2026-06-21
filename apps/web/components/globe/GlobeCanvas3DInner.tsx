@@ -80,6 +80,7 @@ export default function GlobeCanvas3DInner({
 }: GlobeCanvas3DInnerProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const syncingZoomRef = useRef(false);
+  const lastAppliedZoomRef = useRef(zoom);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const anchorNode = exploreAnchorIata
@@ -161,35 +162,40 @@ export default function GlobeCanvas3DInner({
   useEffect(() => {
     const globe = globeRef.current;
     if (!globe) return;
+    const targetAlt = zoomToAltitude(zoom);
+    if (Math.abs(lastAppliedZoomRef.current - zoom) < 0.01) return;
+    lastAppliedZoomRef.current = zoom;
     syncingZoomRef.current = true;
     const pov = globe.pointOfView();
-    const targetAlt = zoomToAltitude(zoom);
     if (Math.abs(pov.altitude - targetAlt) > 0.02) {
-      globe.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: targetAlt }, 200);
+      globe.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: targetAlt }, 0);
     }
     const t = setTimeout(() => {
       syncingZoomRef.current = false;
-    }, 300);
+    }, 500);
     return () => clearTimeout(t);
   }, [zoom]);
 
   useEffect(() => {
     if (!flyTo || !globeRef.current) return;
     syncingZoomRef.current = true;
-    const pov = globeRef.current.pointOfView();
+    const altitude = flyTo.altitude ?? zoomToAltitude(lastAppliedZoomRef.current);
     globeRef.current.pointOfView(
       {
         lat: flyTo.lat,
         lng: flyTo.lng,
-        altitude: flyTo.altitude ?? pov.altitude ?? zoomToAltitude(zoom),
+        altitude,
       },
       800,
     );
+    if (flyTo.altitude != null) {
+      lastAppliedZoomRef.current = altitudeToZoom(flyTo.altitude);
+    }
     const t = setTimeout(() => {
       syncingZoomRef.current = false;
     }, 900);
     return () => clearTimeout(t);
-  }, [flyTo, zoom]);
+  }, [flyTo]);
 
   function handleGlobeReady(globe: GlobeInstance) {
     globeRef.current = globe;
@@ -198,11 +204,14 @@ export default function GlobeCanvas3DInner({
     const controls = globe.controls();
     applyGlobeControls(controls);
     controls.addEventListener("change", () => {
-      if (syncingZoomRef.current || !onZoomChange) return;
       const next = globe.pointOfView();
-      onZoomChange(altitudeToZoom(next.altitude));
       const el = containerRef.current;
       if (el) el.dataset.globePovLat = String(next.lat);
+      if (syncingZoomRef.current || !onZoomChange) return;
+      const nextZoom = altitudeToZoom(next.altitude);
+      if (Math.abs(nextZoom - lastAppliedZoomRef.current) < 0.03) return;
+      lastAppliedZoomRef.current = nextZoom;
+      onZoomChange(nextZoom);
     });
     const el = containerRef.current;
     if (el) el.dataset.globePovLat = String(pov.lat);

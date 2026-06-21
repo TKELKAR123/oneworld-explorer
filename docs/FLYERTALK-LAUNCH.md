@@ -16,7 +16,7 @@ Post only after `npm run test:ci` is green (unit + smoke + functional E2E + visu
 
 ## Demo routes
 
-1. Classic RTW — SC-001 (JFK→LHR→DXB→SIN→SYD→LAX→JFK) — copy FlyerTalk export
+1. Classic RTW — SC-001 (JFK→LHR→DOH→SIN→SYD→LAX→JFK) — copy FlyerTalk export
 2. Implicit open jaw — SC-023 (last stop ORD)
 3. Invalid O-D — SC-017
 4. Carrier fail — SC-026 (UA on leg 1 via **Flight details**)

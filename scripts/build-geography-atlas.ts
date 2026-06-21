@@ -44,6 +44,63 @@ function numericIdToAlpha2(id: string | number): string | null {
   return row?.alpha2 ?? null;
 }
 
+/** Urals split — west of 60°E → Europe/TC2; east → Asia/TC3 (matches resolve-airport). */
+const RU_URAL_LNG = 60;
+
+function ringCentroidLng(ring: number[][]): number {
+  let sum = 0;
+  let n = 0;
+  for (const [lng] of ring) {
+    sum += lng;
+    n += 1;
+  }
+  return n > 0 ? sum / n : 0;
+}
+
+function polygonsFromGeometry(
+  geom: GeoJSON.Polygon | GeoJSON.MultiPolygon,
+): number[][][][] {
+  if (geom.type === "Polygon") return [geom.coordinates];
+  return geom.coordinates;
+}
+
+function splitRussiaEntry(
+  base: Omit<CountryAtlasEntry, "geometry">,
+  geom: GeoJSON.Polygon | GeoJSON.MultiPolygon,
+): CountryAtlasEntry[] {
+  const west: number[][][][] = [];
+  const east: number[][][][] = [];
+
+  for (const poly of polygonsFromGeometry(geom)) {
+    const lng = ringCentroidLng(poly[0] ?? []);
+    if (lng < RU_URAL_LNG) west.push(poly);
+    else east.push(poly);
+  }
+
+  const entries: CountryAtlasEntry[] = [];
+  if (west.length > 0) {
+    entries.push({
+      ...base,
+      name: "Russia (west of Urals)",
+      explorerContinent: "europe-middle-east",
+      explorerSubZone: "europe",
+      trafficZone: "TC2",
+      geometry: { type: "MultiPolygon", coordinates: west },
+    });
+  }
+  if (east.length > 0) {
+    entries.push({
+      ...base,
+      name: "Russia (east of Urals)",
+      explorerContinent: "asia",
+      explorerSubZone: null,
+      trafficZone: "TC3",
+      geometry: { type: "MultiPolygon", coordinates: east },
+    });
+  }
+  return entries.length > 0 ? entries : [{ ...base, geometry: geom as CountryAtlasEntry["geometry"] }];
+}
+
 function buildGeographyAtlas(): GeographyAtlas {
   const countryMap = JSON.parse(readFileSync(countryMapPath, "utf8")) as CountryMapRow[];
   const mapByIso = new Map(countryMap.map((r) => [r.iso, r]));
@@ -87,12 +144,21 @@ function buildGeographyAtlas(): GeographyAtlas {
     const geom = feat.geometry;
     if (!geom || (geom.type !== "Polygon" && geom.type !== "MultiPolygon")) continue;
 
-    countries.push({
+    const baseEntry = {
       iso,
       name: String((feat.properties as { name?: string })?.name ?? iso),
       explorerContinent: mapping.explorerContinent,
       explorerSubZone: mapping.explorerSubZone ?? null,
       trafficZone: mapping.trafficZone,
+    };
+
+    if (iso === "RU") {
+      countries.push(...splitRussiaEntry(baseEntry, geom));
+      continue;
+    }
+
+    countries.push({
+      ...baseEntry,
       geometry: geom as CountryAtlasEntry["geometry"],
     });
   }
