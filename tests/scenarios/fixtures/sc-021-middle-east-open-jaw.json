@@ -1,0 +1,16 @@
+{
+  "id": "SC-021",
+  "source": "Middle East open jaw via surface (§4c-b)",
+  "segments": [
+    { "from": "DXB", "to": "RUH", "surface": true },
+    { "from": "RUH", "to": "LHR" },
+    { "from": "LHR", "to": "JFK" },
+    { "from": "JFK", "to": "NRT" },
+    { "from": "NRT", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "RUH" }
+  ],
+  "expectValid": false,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-b", "R3015-4c-origin"]
+}

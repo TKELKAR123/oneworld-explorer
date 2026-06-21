@@ -1,0 +1,12 @@
+{
+  "id": "SC-010",
+  "source": "Africa + Gulf — DXB alone should not trigger §4e-3 Europe ban",
+  "segments": [
+    { "from": "JNB", "to": "DXB" },
+    { "from": "DXB", "to": "CPT" },
+    { "from": "CPT", "to": "LHR" },
+    { "from": "LHR", "to": "JFK" },
+    { "from": "JFK", "to": "JNB" }
+  ],
+  "expectValid": false
+}

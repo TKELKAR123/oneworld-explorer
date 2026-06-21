@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { CLASSIC_RTW, ruleErrors, validate } from "../helpers/route.js";
+import { INVALID_OPEN_JAW_RTW, ruleErrors, validate } from "../helpers/route.js";
 
 describe("R3015-4c-open-jaw-e", () => {
   it("passes valid itinerary", () => {
@@ -8,7 +8,7 @@ describe("R3015-4c-open-jaw-e", () => {
   });
 
   it("fails invalid itinerary", () => {
-    const result = validate([{ from: 'KUL', to: 'LHR' }, { from: 'LHR', to: 'SIN' }]);
-    expect(ruleErrors(result, 'R3015-4c-origin').length > 0).toBe(true);
+    const result = validate(INVALID_OPEN_JAW_RTW);
+    expect(ruleErrors(result, "R3015-4c-origin").length).toBeGreaterThan(0);
   });
 });

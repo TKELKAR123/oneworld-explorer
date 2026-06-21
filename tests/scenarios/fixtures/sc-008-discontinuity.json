@@ -1,0 +1,13 @@
+{
+  "id": "SC-008",
+  "source": "Disconnected segments — DXB/SIN gap",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-itinerary-continuity"]
+}

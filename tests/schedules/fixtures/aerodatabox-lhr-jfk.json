@@ -1,0 +1,39 @@
+{
+  "departures": [
+    {
+      "number": "BA 178",
+      "codeshareStatus": "IsOperator",
+      "airline": {
+        "iata": "BA",
+        "name": "British Airways"
+      },
+      "operatingAirline": {
+        "iata": "BA",
+        "name": "British Airways"
+      },
+      "departure": {
+        "airport": {
+          "iata": "LHR"
+        },
+        "scheduledTime": {
+          "utc": "2026-09-15T10:00:00Z"
+        },
+        "terminal": "5"
+      },
+      "arrival": {
+        "airport": {
+          "iata": "JFK"
+        },
+        "scheduledTime": {
+          "utc": "2026-09-15T18:30:00Z"
+        },
+        "terminal": "7"
+      }
+    }
+  ],
+  "route": {
+    "from": "LHR",
+    "to": "JFK",
+    "date": "2026-09-15"
+  }
+}

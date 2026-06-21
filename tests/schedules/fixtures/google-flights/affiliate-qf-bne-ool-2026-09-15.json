@@ -1,0 +1,138 @@
+{
+  "queryId": "affiliate-qf-bne-ool",
+  "category": "affiliate-edge",
+  "from": "BNE",
+  "to": "OOL",
+  "date": "2026-09-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 5,
+  "htmlMeta": {
+    "htmlLength": 2091586,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 10,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "NZ",
+      "QF",
+      "VA"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "VA",
+      "operatingCarrier": "VA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "BNE",
+        "time": "2026-09-15T06:05:00"
+      },
+      "arrival": {
+        "point": "SYD",
+        "time": "2026-09-15T07:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:46.837851+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia"
+      ]
+    },
+    {
+      "marketingCarrier": "VA",
+      "operatingCarrier": "VA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-09-15T08:20:00"
+      },
+      "arrival": {
+        "point": "OOL",
+        "time": "2026-09-15T09:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:46.837897+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia"
+      ]
+    },
+    {
+      "marketingCarrier": "VA",
+      "operatingCarrier": "VA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "BNE",
+        "time": "2026-09-15T07:05:00"
+      },
+      "arrival": {
+        "point": "SYD",
+        "time": "2026-09-15T08:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:46.837918+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia"
+      ]
+    },
+    {
+      "marketingCarrier": "VA",
+      "operatingCarrier": "VA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-09-15T09:20:00"
+      },
+      "arrival": {
+        "point": "OOL",
+        "time": "2026-09-15T10:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:46.837925+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia"
+      ]
+    },
+    {
+      "marketingCarrier": "VA",
+      "operatingCarrier": "VA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "BNE",
+        "time": "2026-09-15T13:05:00"
+      },
+      "arrival": {
+        "point": "SYD",
+        "time": "2026-09-15T14:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:46.837931+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia"
+      ]
+    }
+  ]
+}

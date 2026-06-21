@@ -1,0 +1,15 @@
+{
+  "id": "SC-024",
+  "source": "Implicit Norway open jaw OSL→TOS — no surface leg required (§4c-a)",
+  "segments": [
+    { "from": "OSL", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "TOS" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-a", "R3015-4c-origin"]
+}

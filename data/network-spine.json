@@ -1,0 +1,194 @@
+[
+  {
+    "from": "JFK",
+    "to": "LAX"
+  },
+  {
+    "from": "JFK",
+    "to": "ORD"
+  },
+  {
+    "from": "JFK",
+    "to": "MIA"
+  },
+  {
+    "from": "JFK",
+    "to": "LHR"
+  },
+  {
+    "from": "JFK",
+    "to": "MAD"
+  },
+  {
+    "from": "LAX",
+    "to": "ORD"
+  },
+  {
+    "from": "LAX",
+    "to": "MIA"
+  },
+  {
+    "from": "LAX",
+    "to": "LHR"
+  },
+  {
+    "from": "LAX",
+    "to": "MAD"
+  },
+  {
+    "from": "LAX",
+    "to": "SYD"
+  },
+  {
+    "from": "LAX",
+    "to": "NRT"
+  },
+  {
+    "from": "MIA",
+    "to": "ORD"
+  },
+  {
+    "from": "LHR",
+    "to": "ORD"
+  },
+  {
+    "from": "LHR",
+    "to": "MIA"
+  },
+  {
+    "from": "LHR",
+    "to": "MAD"
+  },
+  {
+    "from": "LHR",
+    "to": "SIN"
+  },
+  {
+    "from": "LHR",
+    "to": "NRT"
+  },
+  {
+    "from": "CDG",
+    "to": "JFK"
+  },
+  {
+    "from": "CDG",
+    "to": "ORD"
+  },
+  {
+    "from": "CDG",
+    "to": "LHR"
+  },
+  {
+    "from": "CDG",
+    "to": "MAD"
+  },
+  {
+    "from": "CDG",
+    "to": "DOH"
+  },
+  {
+    "from": "CDG",
+    "to": "SIN"
+  },
+  {
+    "from": "CDG",
+    "to": "HKG"
+  },
+  {
+    "from": "CDG",
+    "to": "HND"
+  },
+  {
+    "from": "CDG",
+    "to": "KUL"
+  },
+  {
+    "from": "MAD",
+    "to": "ORD"
+  },
+  {
+    "from": "MAD",
+    "to": "MIA"
+  },
+  {
+    "from": "MAD",
+    "to": "NRT"
+  },
+  {
+    "from": "DOH",
+    "to": "JFK"
+  },
+  {
+    "from": "DOH",
+    "to": "LAX"
+  },
+  {
+    "from": "DOH",
+    "to": "ORD"
+  },
+  {
+    "from": "DOH",
+    "to": "MIA"
+  },
+  {
+    "from": "DOH",
+    "to": "LHR"
+  },
+  {
+    "from": "DOH",
+    "to": "MAD"
+  },
+  {
+    "from": "DOH",
+    "to": "DXB"
+  },
+  {
+    "from": "DOH",
+    "to": "SIN"
+  },
+  {
+    "from": "DOH",
+    "to": "HKG"
+  },
+  {
+    "from": "DOH",
+    "to": "SYD"
+  },
+  {
+    "from": "DOH",
+    "to": "NRT"
+  },
+  {
+    "from": "DOH",
+    "to": "HND"
+  },
+  {
+    "from": "DOH",
+    "to": "ICN"
+  },
+  {
+    "from": "DOH",
+    "to": "KUL"
+  },
+  {
+    "from": "DXB",
+    "to": "LHR"
+  },
+  {
+    "from": "DXB",
+    "to": "HKG"
+  },
+  {
+    "from": "SIN",
+    "to": "SYD"
+  },
+  {
+    "from": "HKG",
+    "to": "JFK"
+  },
+  {
+    "from": "HKG",
+    "to": "LAX"
+  }
+]

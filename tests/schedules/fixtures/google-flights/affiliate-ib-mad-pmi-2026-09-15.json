@@ -1,0 +1,23 @@
+{
+  "queryId": "affiliate-ib-mad-pmi",
+  "category": "affiliate-edge",
+  "from": "MAD",
+  "to": "PMI",
+  "date": "2026-09-15",
+  "ok": false,
+  "error": "unsupported format string passed to NoneType.__format__",
+  "optionCount": 0,
+  "htmlMeta": {
+    "htmlLength": 2382854,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 0,
+    "hasOperatingCarrier": false,
+    "hasTimes": false,
+    "hasFlightNumber": false,
+    "operatingDistinct": []
+  },
+  "flights": []
+}

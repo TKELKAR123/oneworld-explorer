@@ -1,4 +1,4 @@
-import { searchAirports } from "@oneworld-explorer/core";
+import { getCountryDisplayName, searchAirports } from "@oneworld-explorer/core";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -15,6 +15,7 @@ export async function GET(request: Request) {
     name: a.name,
     city: a.city,
     country: a.country,
+    countryName: getCountryDisplayName(a.country),
     continent: a.continent,
   }));
 

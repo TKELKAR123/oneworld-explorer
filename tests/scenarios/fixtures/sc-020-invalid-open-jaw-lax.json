@@ -1,0 +1,14 @@
+{
+  "id": "SC-020",
+  "source": "Incomplete RTW ending at LAX — implicit US open jaw JFK→LAX but missing return leg",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-a"]
+}

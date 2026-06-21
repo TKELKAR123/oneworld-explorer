@@ -1,14 +1,20 @@
 import type { Airport, ParsedItinerary } from "../../ontology/types.js";
 
+/** Explicit mid-itinerary surface legs (§4(g)), not §4(c) O-D open jaw. */
 export function hasSurfaceSegment(itinerary: ParsedItinerary): boolean {
   return itinerary.segments.some((s) => s.surface);
 }
 
-export function isSurfaceOpenJaw(itinerary: ParsedItinerary): boolean {
+/** Origin airport ≠ return airport (O-D open jaw in play). */
+export function isOriginDestinationOpenJaw(itinerary: ParsedItinerary): boolean {
   const origin = itinerary.points[0]!;
   const termination = itinerary.points[itinerary.points.length - 1]!;
-  if (origin.iata === termination.iata) return false;
-  return hasSurfaceSegment(itinerary);
+  return origin.iata !== termination.iata;
+}
+
+/** @deprecated Use isOriginDestinationOpenJaw — O-D open jaw does not require an explicit surface leg. */
+export function isSurfaceOpenJaw(itinerary: ParsedItinerary): boolean {
+  return isOriginDestinationOpenJaw(itinerary);
 }
 
 function countries(origin: Airport, termination: Airport): [string, string] {
@@ -24,11 +30,7 @@ export type OpenJawType =
   | "within-africa"
   | "mv-lk-in";
 
-export function detectOpenJawType(itinerary: ParsedItinerary): OpenJawType | null {
-  if (!isSurfaceOpenJaw(itinerary)) return null;
-  const origin = itinerary.points[0]!;
-  const termination = itinerary.points[itinerary.points.length - 1]!;
-
+function classifyOpenJawEndpoints(origin: Airport, termination: Airport): OpenJawType | null {
   if (origin.country === termination.country) return "within-origin-country";
 
   if (
@@ -51,11 +53,22 @@ export function detectOpenJawType(itinerary: ParsedItinerary): OpenJawType | nul
   }
 
   const mvSet = new Set(["MV", "LK", "IN"]);
-  if (mvSet.has(origin.country) && mvSet.has(termination.country) && origin.country !== termination.country) {
+  if (
+    mvSet.has(origin.country) &&
+    mvSet.has(termination.country) &&
+    origin.country !== termination.country
+  ) {
     return "mv-lk-in";
   }
 
   return null;
+}
+
+export function detectOpenJawType(itinerary: ParsedItinerary): OpenJawType | null {
+  if (!isOriginDestinationOpenJaw(itinerary)) return null;
+  const origin = itinerary.points[0]!;
+  const termination = itinerary.points[itinerary.points.length - 1]!;
+  return classifyOpenJawEndpoints(origin, termination);
 }
 
 export function openJawPermitted(itinerary: ParsedItinerary): boolean {
@@ -63,4 +76,19 @@ export function openJawPermitted(itinerary: ParsedItinerary): boolean {
   const termination = itinerary.points[itinerary.points.length - 1]!;
   if (origin.iata === termination.iata) return true;
   return detectOpenJawType(itinerary) !== null;
+}
+
+/** Ticketed flight directly connecting origin to return is not a permitted O-D open jaw pattern. */
+export function hasTicketedOriginReturnConnector(itinerary: ParsedItinerary): boolean {
+  if (!isOriginDestinationOpenJaw(itinerary)) return false;
+  const origin = itinerary.points[0]!.iata;
+  const termination = itinerary.points[itinerary.points.length - 1]!.iata;
+  for (let i = 0; i < itinerary.segments.length; i++) {
+    const seg = itinerary.segments[i]!;
+    if (seg.surface) continue;
+    const from = itinerary.points[i]!.iata;
+    const to = itinerary.points[i + 1]!.iata;
+    if (from === origin && to === termination) return true;
+  }
+  return false;
 }

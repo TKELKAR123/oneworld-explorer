@@ -1,0 +1,15 @@
+{
+  "id": "SC-017",
+  "source": "Invalid open jaw — JFK origin with LHR return (no permitted §4(c) pair)",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "LHR" }
+  ],
+  "expectValid": false,
+  "expectOriginReturnMode": "openJawPending",
+  "expectIssueCodes": ["R3015-4c-origin"]
+}

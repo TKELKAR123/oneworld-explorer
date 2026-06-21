@@ -1,0 +1,16 @@
+{
+  "id": "SC-016",
+  "source": "US origin-country open jaw via surface (§4c-a)",
+  "segments": [
+    { "from": "JFK", "to": "BOS", "surface": true },
+    { "from": "BOS", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "BOS" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-a", "R3015-4c-origin"]
+}

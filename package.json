@@ -9,23 +9,42 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "npm run build -w @oneworld-explorer/core && npm run build -w @oneworld-explorer/schedules && npm run build -w @oneworld-explorer/web",
+    "build": "npm run build -w @oneworld-explorer/core && npm run build -w @oneworld-explorer/schedules && npm run build:geography-atlas && npm run build -w @oneworld-explorer/web",
     "dev": "npm run dev -w @oneworld-explorer/web",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:smoke": "vitest run --config vitest.smoke.config.ts",
-    "test:e2e": "playwright test",
-    "test:ci": "npm run validate && npm test && npm run build && npm run test:smoke && npm run test:e2e",
+    "test:e2e": "node scripts/free-port.mjs 3458 && playwright test --project=functional",
+    "test:e2e:visual": "node scripts/free-port.mjs 3458 && playwright test --project=visual",
+    "test:ci": "npm run validate && npm test && npm run build && npm run test:smoke && npm run test:e2e && npm run test:e2e:visual",
     "typecheck": "npm run build -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/web && npm run typecheck -w @oneworld-explorer/schedules",
     "validate:country-map": "tsx scripts/validate-country-map.ts",
     "validate:traceability": "tsx scripts/validate-traceability.ts",
-    "validate": "npm run validate:country-map && npm run validate:traceability"
+    "validate:airports": "tsx scripts/validate-airports.ts",
+    "validate:pdf-audit": "tsx scripts/audit-pdf-coverage.ts",
+    "validate:routes": "tsx scripts/validate-eligible-routes.ts",
+    "build:airports": "tsx scripts/build-airports.ts",
+    "fetch:routes-vendor": "tsx scripts/fetch-routes-vendor.ts",
+    "build:routes": "tsx scripts/build-eligible-routes.ts",
+    "refresh:routes": "npm run fetch:routes-vendor && npm run build:routes -- --offline",
+    "build:inspiration": "tsx scripts/build-inspiration-paths.ts",
+    "research:benchmark": "tsx scripts/score-route-benchmark.ts --write-doc",
+    "research:kiwi": "tsx scripts/spike-kiwi-routes.ts",
+    "research:compare-routes": "tsx scripts/compare-route-sources.ts --write-doc",
+    "build:geography-atlas": "tsx scripts/build-geography-atlas.ts",
+    "validate": "npm run validate:country-map && npm run validate:traceability && npm run validate:airports && npm run validate:pdf-audit && npm run validate:routes"
   },
   "devDependencies": {
     "@playwright/test": "^1.52.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "happy-dom": "^20.10.6",
+    "iso-3166-1": "^2.1.1",
+    "topojson-client": "^3.1.0",
     "tsx": "^4.20.3",
-    "vitest": "^3.2.3",
     "typescript": "^5.8.3",
+    "vitest": "^3.2.3",
+    "world-atlas": "^2.0.2",
     "yaml": "^2.8.0"
   }
 }

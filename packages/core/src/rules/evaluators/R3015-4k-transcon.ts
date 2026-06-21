@@ -1,9 +1,8 @@
 import type { EvaluationContext } from "../../ontology/types.js";
 import {
   AU_RESTRICTED_PAIRS,
-  US_TRANSCON_COLUMN_A,
-  US_TRANSCON_COLUMN_B,
 } from "../constants.js";
+import { isNaTransconPair } from "../helpers/transcon.js";
 import { ruleError } from "./utils.js";
 
 export function evaluateR3015_4k_us_transcon(ctx: EvaluationContext) {
@@ -15,14 +14,7 @@ export function evaluateR3015_4k_us_transcon(ctx: EvaluationContext) {
     if (seg.surface) continue;
     const from = itinerary.points[i]!;
     const to = itinerary.points[i + 1]!;
-    if (!from.usState || !to.usState) continue;
-    const countries = new Set([from.country, to.country]);
-    if (!countries.has("US") && !countries.has("CA")) continue;
-    const aInA = US_TRANSCON_COLUMN_A.has(from.usState);
-    const bInB = US_TRANSCON_COLUMN_B.has(to.usState);
-    const aInB = US_TRANSCON_COLUMN_B.has(from.usState);
-    const bInA = US_TRANSCON_COLUMN_A.has(to.usState);
-    if ((aInA && bInB) || (aInB && bInA)) transconCount++;
+    if (isNaTransconPair(from, to)) transconCount++;
   }
 
   if (transconCount > 1) {

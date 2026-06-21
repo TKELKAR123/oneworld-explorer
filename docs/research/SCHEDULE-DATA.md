@@ -1,68 +1,91 @@
-# Schedule data research (v0.2)
+# Schedule data research — zero-API repositioning
 
-## Goal
+## Product stance (2026)
 
-Integrate eligible oneworld Explorer **published schedules** for segment validation (carriers §4, codeshares §4(j), stopover timing §8, min stay §6). **Not** seat availability or pricing.
+Oneworld Explorer is a **Rule 3015 compliance explorer**, not a flight search engine.
 
-## Provider comparison (free / freemium path)
+| Tier | Source | Cost | Role |
+|------|--------|------|------|
+| **1** | Jonty/FlightsFrom weekly JSON (see [ROUTE-NETWORK-SOURCES-SPIKE.md](./ROUTE-NETWORK-SOURCES-SPIKE.md)) + overrides + ADS-B fixture | Free | Direct eligible carriers + 1-stop hub hints (**~weekly**) |
+| **1 legacy** | OpenFlights `routes.dat` (~**June 2014**) | Free (ODbL) | Historical fallback only |
+| **2** | User paste (booking panel) | Free | Dep/arr times, carriers, RBD → full §6–§9 |
+| **3** | Self-declared stop intent | Free | Provisional §8 hints when times unknown |
+| **4** | Google Flights / FlightsFrom / FlightConnections **links** | Free to us | User searches externally; copies into Tier 2 |
 
-| Provider | Free tier | Schedule data | Op vs mkt carrier | Verdict for v0.2 |
-|----------|-----------|---------------|-------------------|------------------|
-| [Aviationstack](https://aviationstack.com/) | **100 req/month** free | `/v1/flight_schedules`, `/v1/flightsFuture`, `/v1/routes` | Partial — verify `airline` field mapping | **Primary adapter candidate** |
-| [AeroDataBox](https://aerodatabox.com/) via RapidAPI | Free/trial with limited quota | Future schedules by route/date; `CodeshareStatus` | Explicit codeshare fields | **Secondary adapter** — better codeshare metadata |
-| [OpenFlights](https://openflights.org/data.html) routes.dat | Free, static | Airline + airport pairs only — no dates/times | Airline code only | **Bootstrap layer** — route existence check |
-| [SITA developer.aero](https://www.developer.aero/api-catalog/flight-schedule-overview) | Account required | `marketingCarriers` + `operatingCarrier` | Good field names | Evaluate free dev tier in spike |
-| Airline timetable pages | Free | Per-carrier, fragile | Varies | Manual fixture source only |
-| [OAG](https://developers.oag.com/) / [Cirium](https://developer.cirium.com/) | Commercial | Gold standard | Yes | **Appendix only** — upgrade path when funded |
+**Default UX makes zero outbound schedule API calls.**
 
-## Recommended v0.2 architecture: hybrid free-tier stack
+## Route data integration research (Jun 2026)
 
-```mermaid
-flowchart TB
-  User["User picks segment\nLHR → SIN on date D"]
-  Router["Route existence check\nOpenFlights + CARRIER-REGISTRY"]
-  Cache["Local schedule cache\nSQLite TTL 7-30 days"]
-  Primary["Aviationstack adapter\nflight_schedules"]
-  Secondary["AeroDataBox adapter\nif codeshare detail needed"]
-  Normalize["normalize → FlightInstance\nmkt + op carriers"]
-  Filter["Carrier rule filter\n§4(j) + affiliates"]
-  UI["Flight picker UI"]
+Spikes validated external options for fresher network data:
 
-  User --> Router
-  Router -->|"pair exists on eligible carrier"| Cache
-  Cache -->|miss| Primary
-  Primary -->|quota exceeded| Secondary
-  Primary --> Normalize
-  Secondary --> Normalize
-  Normalize --> Filter
-  Filter --> UI
-  Normalize --> Cache
-```
+| Method | Verdict | Doc |
+|--------|---------|-----|
+| Kiwi Tequila `/data/routes` bulk seed | **NO-GO** — endpoint 404 | [KIWI-ROUTES-SPIKE.md](./KIWI-ROUTES-SPIKE.md) |
+| Google Flights scrape | **DEFER** — post bugfix parsing works; §4(j) gap | [GOOGLE-FLIGHTS-SCRAPE-SPIKE.md](./GOOGLE-FLIGHTS-SCRAPE-SPIKE.md) |
+| **Decision** | **Jonty/FlightsFrom weekly adopted** | [ROUTE-DATA-INTEGRATION-DECISION.md](./ROUTE-DATA-INTEGRATION-DECISION.md) |
 
-## Free-tier operational constraints
+Benchmark corpus: `data/fixtures/route-benchmark-corpus.json` (60 routes).  
+Baseline scorecard: [route-benchmark-baseline.md](./route-benchmark-baseline.md) — FlightsFrom weekly recall **≥92%**, false-active **0%** with inactive overrides.
 
-| Constraint | Mitigation |
-|------------|------------|
-| 100 req/month (Aviationstack) | Cache keyed by `(from,to,date)`; demo fixtures |
-| Incomplete op/marketing split | Prefer AeroDataBox; warn "operator unverified" (debate D4) |
-| Stale OpenFlights routes | Tag `routeSource: openflights-2026`; quarterly refresh |
-| No connection builder API | v0.2: manual flight pick per segment |
+Research scripts: `scripts/score-route-benchmark.ts`, `scripts/spike-kiwi-routes.ts`, `scripts/spike-google-flights/`.
+
+**Network source spike (20 ideas):** [ROUTE-NETWORK-SOURCES-SPIKE.md](./ROUTE-NETWORK-SOURCES-SPIKE.md) — **Jonty/FlightsFrom weekly JSON recommended** over 2014 OpenFlights.
+
+## FlightsFrom weekly index (Tier 1 — primary)
+
+- Upstream: [Jonty/airline-route-data](https://github.com/Jonty/airline-route-data) (`airline_routes.json`, refreshed ~weekly)
+- Fetch: `npm run fetch:routes-vendor` → local vendor (gitignored)
+- Build: `npm run build:routes` → `data/eligible-routes.index.json` + network graph artifacts
+- Full refresh: `npm run refresh:routes`
+- Metadata: `data/routes-source.meta.json` (`fetchedAt`, upstream SHA256)
+- API: `GET /api/routes/network?from=&to=`
+- Static network only — no dates, times, or seasonal service guarantees
+- Attribution: same [FlightsFrom.com](https://www.flightsfrom.com) source we link to for per-leg timetables
+
+## OpenFlights (legacy — removed from build)
+
+- Previously used 2014 `routes.dat`; superseded by FlightsFrom weekly index (Jun 2026)
+
+## ADS-B hybrid (v0.4 — observed routes)
+
+- Fixture slice: `data/fixtures/adsb-routes-q1-2026.json` (CI-safe, no 1GB download)
+- Spike: `tsx scripts/spike-adsb-routes.ts`
+- Import merge: `tsx scripts/import-adsb-routes.ts` (optional `--write` to patch index)
+- Overrides: `data/route-overrides.json` — `inactive: true` blocklist (e.g. NRT↔JFK)
+- Network API adds `confidence`: `observed` \| `historical` \| `inactive`, plus `planningHint`
+
+Merge precedence: **inactive override** > **adsb-observed** > **flightsfrom-weekly** > **manual-seasonal**.
+
+## External search (Tier 4)
+
+Primary per-leg: [Google Flights](https://www.google.com/travel/flights) deep links (`q=` query — no scraping).
+
+Secondary: FlightsFrom weekly timetables, FlightConnections route map.
+
+Holistic CTA: [rtw.oneworld.com](https://rtw.oneworld.com/) official RTW booking tool.
+
+## Live providers (dormant appendix)
+
+Aviationstack and AeroDataBox adapters remain in `packages/schedules` for optional dev use only:
+
+- Gate: `SCHEDULE_LIVE=1` on `POST /api/schedules/search`
+- Not exposed in UI; keys documented in `.env.example` appendix only
+
+| Provider | Verdict |
+|----------|---------|
+| Aviationstack / AeroDataBox | Dormant — tiny free tier, wrong product fit |
+| Amadeus self-service | Reject — sunset Jul 2026 |
+| Kiwi Tequila `/data/routes` | **Reject (Jun 2026 spike)** — endpoint 404, no API key; Search API untested |
+| Google Flights scraping | **Defer (Jun 2026 spike)** — parsing works (post bugfix); operating carrier + ToS block production; see GOOGLE-FLIGHTS-SCRAPE-SPIKE.md |
+| Parse.bot / unofficial scrapers | Reject |
 
 ## v0.1 status
 
-Geometry-only validation in `@oneworld-explorer/core`. `@oneworld-explorer/schedules` exports stub adapters — see `packages/schedules/src/`.
+Geometry-only validation in `@oneworld-explorer/core`. `@oneworld-explorer/schedules` exports FlightsFrom weekly index + graph; live adapters behind env flag.
 
-## Research tasks (Phase 2)
+## Refresh cadence
 
-1. Spike Aviationstack `/v1/flight_schedules` — map JSON → `FlightInstance`; test BA178, QF1, AA100, QR739, JL42
-2. Spike AeroDataBox — compare `CodeshareStatus` vs Aviationstack for QF/JQ
-3. OpenFlights import filtered to eligible + affiliate IATA codes
-4. Document quota math per user session with cache hit rates
-5. Cache TTL policy (`asOf` + `season` metadata)
-6. ToS review for open-source cache redistribution
-
-## References
-
-- [docs/rules/CARRIER-ELIGIBILITY.md](../rules/CARRIER-ELIGIBILITY.md)
-- [data/CARRIER-REGISTRY.json](../../data/CARRIER-REGISTRY.json)
-- [docs/API.md](../API.md)
+- FlightsFrom weekly index: GitHub Action `.github/workflows/refresh-routes-weekly.yml` (Mondays 06:00 UTC) opens PR with rebuilt artifacts
+- Manual: `npm run refresh:routes`
+- CI gate: benchmark recall ≥90% on committed index
+- Tag `source: flightsfrom-weekly` in network API responses

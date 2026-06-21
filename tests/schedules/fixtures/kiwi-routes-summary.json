@@ -1,0 +1,182 @@
+{
+  "fetchedAt": "2026-06-19T16:06:31.079Z",
+  "carriers": [
+    {
+      "carrier": "AA",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "AS",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "AT",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "AY",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "BA",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "CX",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "FJ",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "IB",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "JL",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "MH",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "NU",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "QF",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "QR",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "RJ",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "UL",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    },
+    {
+      "carrier": "WY",
+      "status": 0,
+      "summary": {
+        "rowCount": 0,
+        "sampleFields": [],
+        "uniqueOdPairs": 0,
+        "hasFlightNo": false,
+        "hasOperatingCarrier": false
+      }
+    }
+  ],
+  "eligibleCount": 16
+}

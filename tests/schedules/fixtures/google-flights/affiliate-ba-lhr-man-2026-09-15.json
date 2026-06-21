@@ -1,0 +1,142 @@
+{
+  "queryId": "affiliate-ba-lhr-man",
+  "category": "affiliate-edge",
+  "from": "LHR",
+  "to": "MAN",
+  "date": "2026-09-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 8,
+  "htmlMeta": {
+    "htmlLength": 2198680,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 12,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "BA",
+      "BR",
+      "IB",
+      "KL",
+      "SN"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "BA",
+      "operatingCarrier": "BA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "2026-09-15T21:35:00"
+      },
+      "arrival": {
+        "point": "MAN",
+        "time": "2026-09-15T22:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:18.767173+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "British Airways"
+      ]
+    },
+    {
+      "marketingCarrier": "BR",
+      "operatingCarrier": "BR",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "2026-09-15T11:30:00"
+      },
+      "arrival": {
+        "point": "BHD",
+        "time": "2026-09-15T12:55:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:18.767205+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "British Airways",
+        "Aer Lingus"
+      ]
+    },
+    {
+      "marketingCarrier": "BR",
+      "operatingCarrier": "BR",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "BHD",
+        "time": "2026-09-15T14:25:00"
+      },
+      "arrival": {
+        "point": "MAN",
+        "time": "2026-09-15T15:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:18.767213+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "British Airways",
+        "Aer Lingus"
+      ]
+    },
+    {
+      "marketingCarrier": "BA",
+      "operatingCarrier": "BA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "2026-09-15T18:15:00"
+      },
+      "arrival": {
+        "point": "MAN",
+        "time": "2026-09-15T19:15:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:18.767220+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "British Airways"
+      ]
+    },
+    {
+      "marketingCarrier": "BA",
+      "operatingCarrier": "BA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "2026-09-15T10:25:00"
+      },
+      "arrival": {
+        "point": "MAN",
+        "time": "2026-09-15T11:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:18.767226+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "British Airways"
+      ]
+    }
+  ]
+}

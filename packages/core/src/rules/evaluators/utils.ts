@@ -15,3 +15,11 @@ export function ruleWarning(
 ): ValidationIssue {
   return { code, severity: "warning", message, ...extra };
 }
+
+export function ruleInfo(
+  code: string,
+  message: string,
+  extra?: Partial<ValidationIssue>,
+): ValidationIssue {
+  return { code, severity: "warning", message, ...extra, category: extra?.category ?? "self-declared" };
+}

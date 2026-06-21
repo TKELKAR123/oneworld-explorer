@@ -7,9 +7,9 @@ import {
 import { parseRoute } from "../src/parse-route.js";
 
 describe("pricing helpers", () => {
-  it("detects SWP↔EU direct segment pattern", () => {
+  it("detects SWP↔EU direct segment pattern when flightNumber set", () => {
     const { itinerary } = parseRoute([
-      { from: "LHR", to: "SYD" },
+      { from: "LHR", to: "SYD", flightNumber: "QF1" },
       { from: "SYD", to: "LAX" },
       { from: "LAX", to: "LHR" },
     ]);

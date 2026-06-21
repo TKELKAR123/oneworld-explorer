@@ -1,0 +1,23 @@
+{
+  "queryId": "trunk-qr-doh-lhr",
+  "category": "high-traffic-trunk",
+  "from": "DOH",
+  "to": "LHR",
+  "date": "2026-07-15",
+  "ok": false,
+  "error": "unsupported format string passed to NoneType.__format__",
+  "optionCount": 0,
+  "htmlMeta": {
+    "htmlLength": 2407932,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 0,
+    "hasOperatingCarrier": false,
+    "hasTimes": false,
+    "hasFlightNumber": false,
+    "operatingDistinct": []
+  },
+  "flights": []
+}

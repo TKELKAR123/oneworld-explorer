@@ -1,0 +1,16 @@
+{
+  "id": "SC-022",
+  "source": "Africa open jaw via surface (§4c-f)",
+  "segments": [
+    { "from": "JNB", "to": "NBO", "surface": true },
+    { "from": "NBO", "to": "LHR" },
+    { "from": "LHR", "to": "JFK" },
+    { "from": "JFK", "to": "NRT" },
+    { "from": "NRT", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "NBO" }
+  ],
+  "expectValid": false,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-f", "R3015-4c-origin"]
+}

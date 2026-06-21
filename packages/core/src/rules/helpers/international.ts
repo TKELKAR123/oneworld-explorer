@@ -1,4 +1,5 @@
 import type { ParsedItinerary } from "../../ontology/types.js";
+import { countInternationalTransfersFrom } from "./gap-engine.js";
 
 export function isInternationalSegment(
   fromCountry: string,
@@ -48,18 +49,5 @@ export function intlTransfersFrom(
   country: string,
   itinerary: ParsedItinerary,
 ): number {
-  let count = 0;
-  for (let i = 1; i < itinerary.points.length - 1; i++) {
-    const point = itinerary.points[i]!;
-    if (point.country !== country) continue;
-    const prev = itinerary.points[i - 1]!;
-    const next = itinerary.points[i + 1]!;
-    if (
-      isInternationalSegment(prev.country, point.country) &&
-      isInternationalSegment(point.country, next.country)
-    ) {
-      count++;
-    }
-  }
-  return count;
+  return countInternationalTransfersFrom(country, itinerary);
 }

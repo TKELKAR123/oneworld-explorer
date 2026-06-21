@@ -1,0 +1,7 @@
+{
+  "pdfRef": "§0 Fare Basis footnote — IONE3 offered from select markets only",
+  "markets": [
+    "US", "CA", "AU", "NZ", "JP", "SG", "HK", "GB", "IE", "DE", "FR", "NL", "CH", "SE", "NO", "DK", "FI", "AE", "QA", "KW", "BH", "OM", "SA", "IN", "MY", "TH", "PH", "KR", "TW", "CN"
+  ],
+  "note": "Markets not enumerated in PDF; table maintained for IONE3 business 3-continent sales validation."
+}

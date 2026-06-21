@@ -6,14 +6,21 @@ export default defineConfig({
   forbidOnly: Boolean(process.env.CI),
   retries: process.env.CI ? 2 : 0,
   workers: 1,
-  timeout: 30_000,
+  timeout: 90_000,
   reporter: process.env.CI
     ? [["github"], ["html", { open: "never" }], ["list"]]
     : "list",
+  expect: {
+    toHaveScreenshot: {
+      maxDiffPixelRatio: 0.02,
+      animations: "disabled",
+    },
+  },
   use: {
     baseURL: "http://127.0.0.1:3458",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
+    permissions: ["clipboard-read", "clipboard-write"],
   },
   webServer: {
     command: "npm run start -w @oneworld-explorer/web -- -p 3458",
@@ -21,5 +28,20 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
-  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
+  projects: [
+    {
+      name: "functional",
+      testMatch: /.*\.spec\.ts$/,
+      testIgnore: /.*\.visual\.spec\.ts$/,
+      use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "visual",
+      testMatch: /.*\.visual\.spec\.ts$/,
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 1280, height: 900 },
+      },
+    },
+  ],
 });

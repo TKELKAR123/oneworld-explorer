@@ -1,5 +1,6 @@
-import type { Continent, ParsedItinerary, TravelClass } from "../../ontology/types.js";
+import type { Continent, ParsedItinerary, TicketContext, TravelClass } from "../../ontology/types.js";
 import { EXPLORER_RULES, FARE_BASIS } from "../constants.js";
+import { resolveFareProduct } from "./ione3-markets.js";
 import { continentsVisited } from "./segments.js";
 
 const SWP: Continent = "south-west-pacific";
@@ -21,11 +22,6 @@ export function swpEuViaAsiaPattern(itinerary: ParsedItinerary): boolean {
     const seg = itinerary.segments[i]!;
     const from = itinerary.points[i]!;
     const to = itinerary.points[i + 1]!;
-    const continents = new Set([from.continent, to.continent]);
-
-    if (!seg.surface && continents.has(SWP) && continents.has(EU_ME)) {
-      return true;
-    }
 
     if (seg.surface) {
       for (const [left, right] of SWP_EU_SURFACE_PAIRS) {
@@ -33,6 +29,13 @@ export function swpEuViaAsiaPattern(itinerary: ParsedItinerary): boolean {
         const b = cityMatches(from.city, right) && cityMatches(to.city, left);
         if (a || b) return true;
       }
+      continue;
+    }
+
+    // Conservative v0.1.1: direct SWP↔EU/ME flights do not trigger until flightNumber known (v0.2)
+    if (seg.flightNumber && !seg.surface) {
+      const continents = new Set([from.continent, to.continent]);
+      if (continents.has(SWP) && continents.has(EU_ME)) return true;
     }
   }
   return false;
@@ -51,6 +54,7 @@ export function continentsCharged(itinerary: ParsedItinerary): Continent[] {
 export function suggestedFareBasis(
   continentCount: number,
   travelClass: TravelClass,
+  ticket?: TicketContext,
 ): string | null {
   if (
     continentCount < EXPLORER_RULES.minContinents ||
@@ -59,8 +63,11 @@ export function suggestedFareBasis(
     return null;
   }
   if (travelClass === "premium-economy") {
-    const base = FARE_BASIS[continentCount]?.business;
+    const base = FARE_BASIS[continentCount]?.economy;
     return base ? `${base} (+ PE surcharge per segment)` : null;
+  }
+  if (travelClass === "business" && continentCount === 3) {
+    return resolveFareProduct(ticket);
   }
   return FARE_BASIS[continentCount]?.[travelClass] ?? null;
 }

@@ -1,0 +1,3167 @@
+{
+  "spikedAt": "2026-06-20T18:23:16.566190+00:00",
+  "library": "fast-flights",
+  "totalQueries": 30,
+  "errors": 9,
+  "emptyResults": 0,
+  "successWithFlights": 21,
+  "errorRate": 0.3,
+  "emptyRate": 0.0,
+  "affiliateQueries": [
+    {
+      "queryId": "affiliate-ba-lhr-man",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "MAN",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 9,
+      "htmlMeta": {
+        "htmlLength": 2215813,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 17,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "BA",
+          "EU",
+          "KL",
+          "LX",
+          "SN"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T06:55:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-07-15T07:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:17.335381+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "EU",
+          "operatingCarrier": "EU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T08:05:00"
+          },
+          "arrival": {
+            "point": "DUS",
+            "time": "2026-07-15T10:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:17.335792+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Eurowings",
+            "Lufthansa City Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "EU",
+          "operatingCarrier": "EU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DUS",
+            "time": "2026-07-15T13:30:00"
+          },
+          "arrival": {
+            "point": "MUC",
+            "time": "2026-07-15T14:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:17.335806+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Eurowings",
+            "Lufthansa City Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "EU",
+          "operatingCarrier": "EU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MUC",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[16])"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-07-15T17:05:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:17.335868+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Eurowings",
+            "Lufthansa City Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "LX",
+          "operatingCarrier": "LX",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T08:55:00"
+          },
+          "arrival": {
+            "point": "GVA",
+            "time": "2026-07-15T11:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:17.335879+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "SWISS"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ba-lhr-man",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "MAN",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 8,
+      "htmlMeta": {
+        "htmlLength": 2198680,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 12,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "BA",
+          "BR",
+          "IB",
+          "KL",
+          "SN"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T21:35:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-09-15T22:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:18.767173+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BR",
+          "operatingCarrier": "BR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T11:30:00"
+          },
+          "arrival": {
+            "point": "BHD",
+            "time": "2026-09-15T12:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:18.767205+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways",
+            "Aer Lingus"
+          ]
+        },
+        {
+          "marketingCarrier": "BR",
+          "operatingCarrier": "BR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BHD",
+            "time": "2026-09-15T14:25:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-09-15T15:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:18.767213+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways",
+            "Aer Lingus"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T18:15:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-09-15T19:15:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:18.767220+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T10:25:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-09-15T11:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:18.767226+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ba-lhr-man",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "MAN",
+      "date": "2026-11-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 9,
+      "htmlMeta": {
+        "htmlLength": 2205058,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 14,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AF",
+          "BA",
+          "EU",
+          "KL",
+          "SN"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T06:50:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-11-15T07:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:32.840620+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T07:45:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-11-15T08:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:32.844154+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T19:50:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-11-15T20:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:32.844954+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T21:05:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-11-15T22:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:32.844978+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T15:15:00"
+          },
+          "arrival": {
+            "point": "MAN",
+            "time": "2026-11-15T16:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:32.844991+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ba-lhr-edi",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "EDI",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 11,
+      "htmlMeta": {
+        "htmlLength": 2263472,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 16,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AF",
+          "BA",
+          "EU",
+          "IB",
+          "KL"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[21])"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-07-15T22:20:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:35.235141+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T06:45:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-07-15T08:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:35.237173+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T16:30:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[18])"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:35.237345+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T13:10:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-07-15T14:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:35.237364+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "EU",
+          "operatingCarrier": "EU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T12:10:00"
+          },
+          "arrival": {
+            "point": "DUS",
+            "time": "2026-07-15T14:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:35.237385+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Eurowings",
+            "Lufthansa"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ba-lhr-edi",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "EDI",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 11,
+      "htmlMeta": {
+        "htmlLength": 2269409,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 17,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AF",
+          "BA",
+          "EU",
+          "KL",
+          "SW"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "SimpleDatetime(date=[2026, 9, 15], time=[7])"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-09-15T08:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:37.239617+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T19:05:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-09-15T20:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:37.240028+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "SimpleDatetime(date=[2026, 9, 15], time=[21])"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-09-15T22:15:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:37.240067+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T07:55:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-09-15T09:20:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:37.240110+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T15:05:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-09-15T16:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:37.240159+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ba-lhr-edi",
+      "category": "affiliate-edge",
+      "from": "LHR",
+      "to": "EDI",
+      "date": "2026-11-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 12,
+      "htmlMeta": {
+        "htmlLength": 2306802,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 21,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AF",
+          "BA",
+          "BR",
+          "EU",
+          "KL",
+          "SW"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T19:15:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-11-15T20:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:38.846526+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "SimpleDatetime(date=[2026, 11, 15], time=[21])"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-11-15T22:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:38.846602+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        },
+        {
+          "marketingCarrier": "BR",
+          "operatingCarrier": "BR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T09:45:00"
+          },
+          "arrival": {
+            "point": "BHD",
+            "time": "2026-11-15T11:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:38.846615+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways",
+            "Aer Lingus"
+          ]
+        },
+        {
+          "marketingCarrier": "BR",
+          "operatingCarrier": "BR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BHD",
+            "time": "2026-11-15T12:40:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-11-15T13:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:38.846621+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways",
+            "Aer Lingus"
+          ]
+        },
+        {
+          "marketingCarrier": "BA",
+          "operatingCarrier": "BA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T08:45:00"
+          },
+          "arrival": {
+            "point": "EDI",
+            "time": "2026-11-15T10:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:38.846628+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "British Airways"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-syd-per",
+      "category": "affiliate-edge",
+      "from": "SYD",
+      "to": "PER",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 15,
+      "htmlMeta": {
+        "htmlLength": 2364856,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 20,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "NZ",
+          "QF",
+          "VA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T12:15:00"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-07-15T13:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:40.367221+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ADL",
+            "time": "2026-07-15T18:20:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-07-15T20:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:40.367258+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T06:15:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-07-15T09:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:40.367267+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T07:15:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-07-15T10:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:40.367275+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T18:25:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-07-15T21:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:40.367282+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-syd-per",
+      "category": "affiliate-edge",
+      "from": "SYD",
+      "to": "PER",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 14,
+      "htmlMeta": {
+        "htmlLength": 2324986,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 16,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "QF",
+          "VA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T12:15:00"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-09-15T13:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:42.272162+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ADL",
+            "time": "2026-09-15T18:20:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-09-15T20:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:42.272290+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "QF",
+          "operatingCarrier": "QF",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "SimpleDatetime(date=[2026, 9, 15], time=[12])"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-09-15T13:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:42.272421+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Qantas"
+          ]
+        },
+        {
+          "marketingCarrier": "QF",
+          "operatingCarrier": "QF",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ADL",
+            "time": "2026-09-15T14:20:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-09-15T16:15:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:42.272442+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Qantas"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T06:15:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-09-15T09:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:42.272454+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-syd-per",
+      "category": "affiliate-edge",
+      "from": "SYD",
+      "to": "PER",
+      "date": "2026-11-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 13,
+      "htmlMeta": {
+        "htmlLength": 2365944,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 19,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "QF",
+          "VA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T09:15:00"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-11-15T10:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:43.974718+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ADL",
+            "time": "2026-11-15T13:20:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-11-15T14:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:43.975038+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T14:30:00"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-11-15T16:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:43.975111+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ADL",
+            "time": "2026-11-15T18:20:00"
+          },
+          "arrival": {
+            "point": "PER",
+            "time": "2026-11-15T19:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:43.975151+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "QF",
+          "operatingCarrier": "QF",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T09:20:00"
+          },
+          "arrival": {
+            "point": "ADL",
+            "time": "2026-11-15T10:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:43.975217+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Qantas"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-bne-ool",
+      "category": "affiliate-edge",
+      "from": "BNE",
+      "to": "OOL",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 6,
+      "htmlMeta": {
+        "htmlLength": 2054868,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 12,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "QF",
+          "VA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-07-15T06:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-07-15T07:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:45.438051+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T08:20:00"
+          },
+          "arrival": {
+            "point": "OOL",
+            "time": "2026-07-15T09:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:45.438280+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-07-15T07:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-07-15T08:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:45.438300+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T09:20:00"
+          },
+          "arrival": {
+            "point": "OOL",
+            "time": "2026-07-15T10:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:45.438311+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-07-15T09:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-07-15T10:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:45.438321+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-bne-ool",
+      "category": "affiliate-edge",
+      "from": "BNE",
+      "to": "OOL",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 5,
+      "htmlMeta": {
+        "htmlLength": 2091586,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 10,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "NZ",
+          "QF",
+          "VA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-09-15T06:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-09-15T07:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:46.837851+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T08:20:00"
+          },
+          "arrival": {
+            "point": "OOL",
+            "time": "2026-09-15T09:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:46.837897+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-09-15T07:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-09-15T08:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:46.837918+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T09:20:00"
+          },
+          "arrival": {
+            "point": "OOL",
+            "time": "2026-09-15T10:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:46.837925+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        },
+        {
+          "marketingCarrier": "VA",
+          "operatingCarrier": "VA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-09-15T13:05:00"
+          },
+          "arrival": {
+            "point": "SYD",
+            "time": "2026-09-15T14:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:46.837931+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-qf-bne-ool",
+      "category": "affiliate-edge",
+      "from": "BNE",
+      "to": "OOL",
+      "date": "2026-11-15",
+      "ok": false,
+      "error": "'NoneType' object is not subscriptable",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 1794127,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "affiliate-aa-dfw-abi",
+      "category": "affiliate-edge",
+      "from": "DFW",
+      "to": "ABI",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 3,
+      "htmlMeta": {
+        "htmlLength": 2320599,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 6,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "UA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-07-15T05:45:00"
+          },
+          "arrival": {
+            "point": "DEN",
+            "time": "2026-07-15T06:53:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:49.063604+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DEN",
+            "time": "2026-07-15T14:10:00"
+          },
+          "arrival": {
+            "point": "ABI",
+            "time": "2026-07-15T17:07:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:49.063762+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-07-15T05:45:00"
+          },
+          "arrival": {
+            "point": "DEN",
+            "time": "2026-07-15T06:53:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:49.063774+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DEN",
+            "time": "2026-07-15T08:15:00"
+          },
+          "arrival": {
+            "point": "ABI",
+            "time": "2026-07-15T11:12:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:49.063786+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-07-15T08:45:00"
+          },
+          "arrival": {
+            "point": "DEN",
+            "time": "2026-07-15T10:06:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:49.063798+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "United"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-aa-dfw-abi",
+      "category": "affiliate-edge",
+      "from": "DFW",
+      "to": "ABI",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 6,
+      "htmlMeta": {
+        "htmlLength": 2267235,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 9,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "UA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-09-15T05:45:00"
+          },
+          "arrival": {
+            "point": "DEN",
+            "time": "2026-09-15T06:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:50.365211+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DEN",
+            "time": "2026-09-15T12:20:00"
+          },
+          "arrival": {
+            "point": "ABI",
+            "time": "2026-09-15T15:29:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:50.365245+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-09-15T08:53:00"
+          },
+          "arrival": {
+            "point": "DEN",
+            "time": "2026-09-15T10:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:50.365254+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "UA",
+          "operatingCarrier": "UA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DEN",
+            "time": "2026-09-16T07:45:00"
+          },
+          "arrival": {
+            "point": "ABI",
+            "time": "2026-09-16T10:46:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:50.365261+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "AA",
+          "operatingCarrier": "AA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "DFW",
+            "time": "2026-09-15T09:30:00"
+          },
+          "arrival": {
+            "point": "ABI",
+            "time": "2026-09-15T10:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:50.365267+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "American"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-aa-dfw-abi",
+      "category": "affiliate-edge",
+      "from": "DFW",
+      "to": "ABI",
+      "date": "2026-11-15",
+      "ok": false,
+      "error": "'NoneType' object is not subscriptable",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 1786950,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "affiliate-ib-mad-pmi",
+      "category": "affiliate-edge",
+      "from": "MAD",
+      "to": "PMI",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 21,
+      "htmlMeta": {
+        "htmlLength": 2521269,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 21,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "I2",
+          "IB",
+          "UX"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "I2",
+          "operatingCarrier": "I2",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MAD",
+            "time": "2026-07-15T21:30:00"
+          },
+          "arrival": {
+            "point": "PMI",
+            "time": "2026-07-15T22:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:52.470207+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Iberia Express"
+          ]
+        },
+        {
+          "marketingCarrier": "IB",
+          "operatingCarrier": "IB",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MAD",
+            "time": "2026-07-15T05:20:00"
+          },
+          "arrival": {
+            "point": "PMI",
+            "time": "2026-07-15T06:45:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:52.470251+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Iberia"
+          ]
+        },
+        {
+          "marketingCarrier": "IB",
+          "operatingCarrier": "IB",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MAD",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[7])"
+          },
+          "arrival": {
+            "point": "PMI",
+            "time": "2026-07-15T08:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:52.470276+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Iberia"
+          ]
+        },
+        {
+          "marketingCarrier": "IB",
+          "operatingCarrier": "IB",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MAD",
+            "time": "2026-07-15T07:40:00"
+          },
+          "arrival": {
+            "point": "PMI",
+            "time": "2026-07-15T09:05:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:52.470284+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Iberia"
+          ]
+        },
+        {
+          "marketingCarrier": "IB",
+          "operatingCarrier": "IB",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MAD",
+            "time": "2026-07-15T21:30:00"
+          },
+          "arrival": {
+            "point": "PMI",
+            "time": "2026-07-15T22:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:52.470290+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Iberia"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-ib-mad-pmi",
+      "category": "affiliate-edge",
+      "from": "MAD",
+      "to": "PMI",
+      "date": "2026-09-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 2382854,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "affiliate-ib-mad-pmi",
+      "category": "affiliate-edge",
+      "from": "MAD",
+      "to": "PMI",
+      "date": "2026-11-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 2432714,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "affiliate-as-sea-pdx",
+      "category": "affiliate-edge",
+      "from": "SEA",
+      "to": "PDX",
+      "date": "2026-07-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 3144739,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "affiliate-as-sea-pdx",
+      "category": "affiliate-edge",
+      "from": "SEA",
+      "to": "PDX",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 19,
+      "htmlMeta": {
+        "htmlLength": 3145087,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 21,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AS",
+          "DL",
+          "UA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "DL",
+          "operatingCarrier": "DL",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SEA",
+            "time": "2026-09-15T07:30:00"
+          },
+          "arrival": {
+            "point": "PDX",
+            "time": "2026-09-15T08:43:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:58.616526+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Delta"
+          ]
+        },
+        {
+          "marketingCarrier": "DL",
+          "operatingCarrier": "DL",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SEA",
+            "time": "2026-09-15T09:30:00"
+          },
+          "arrival": {
+            "point": "PDX",
+            "time": "2026-09-15T10:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:58.616567+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Delta"
+          ]
+        },
+        {
+          "marketingCarrier": "DL",
+          "operatingCarrier": "DL",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SEA",
+            "time": "2026-09-15T20:59:00"
+          },
+          "arrival": {
+            "point": "PDX",
+            "time": "2026-09-15T22:02:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:58.616576+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Delta"
+          ]
+        },
+        {
+          "marketingCarrier": "DL",
+          "operatingCarrier": "DL",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SEA",
+            "time": "2026-09-15T22:50:00"
+          },
+          "arrival": {
+            "point": "PDX",
+            "time": "2026-09-15T23:54:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:58.616582+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Delta"
+          ]
+        },
+        {
+          "marketingCarrier": "AS",
+          "operatingCarrier": "AS",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SEA",
+            "time": "2026-09-15T07:08:00"
+          },
+          "arrival": {
+            "point": "PDX",
+            "time": "2026-09-15T08:18:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:22:58.616589+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Alaska"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "affiliate-as-sea-pdx",
+      "category": "affiliate-edge",
+      "from": "SEA",
+      "to": "PDX",
+      "date": "2026-11-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 3085901,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    }
+  ],
+  "trunkQueries": [
+    {
+      "queryId": "trunk-ba-lhr-jfk",
+      "category": "high-traffic-trunk",
+      "from": "LHR",
+      "to": "JFK",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 24,
+      "htmlMeta": {
+        "htmlLength": 2672382,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 29,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AT",
+          "BA",
+          "DL",
+          "TA",
+          "TK",
+          "TP",
+          "VS"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "TA",
+          "operatingCarrier": "TA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[6])"
+          },
+          "arrival": {
+            "point": "LIS",
+            "time": "2026-07-15T08:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:01.998477+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Tap Air Portugal",
+            "Azores Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "TA",
+          "operatingCarrier": "TA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LIS",
+            "time": "2026-07-15T12:35:00"
+          },
+          "arrival": {
+            "point": "PDL",
+            "time": "2026-07-15T14:05:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:01.998544+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Tap Air Portugal",
+            "Azores Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "TA",
+          "operatingCarrier": "TA",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "PDL",
+            "time": "2026-07-15T17:30:00"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "2026-07-15T19:35:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:01.998555+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Tap Air Portugal",
+            "Azores Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-07-15T18:50:00"
+          },
+          "arrival": {
+            "point": "CMN",
+            "time": "2026-07-15T22:10:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:01.998563+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        },
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "CMN",
+            "time": "SimpleDatetime(date=[2026, 7, 16], time=[6])"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "2026-07-16T08:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:01.998571+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-ba-lhr-jfk",
+      "category": "high-traffic-trunk",
+      "from": "LHR",
+      "to": "JFK",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 25,
+      "htmlMeta": {
+        "htmlLength": 2703789,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 29,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AT",
+          "B6",
+          "BA",
+          "DL",
+          "JU",
+          "LU",
+          "VS"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T18:10:00"
+          },
+          "arrival": {
+            "point": "CMN",
+            "time": "2026-09-15T21:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:03.423484+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        },
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "CMN",
+            "time": "SimpleDatetime(date=[2026, 9, 17], time=[6])"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "2026-09-17T08:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:03.423621+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        },
+        {
+          "marketingCarrier": "JU",
+          "operatingCarrier": "JU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T13:30:00"
+          },
+          "arrival": {
+            "point": "BEG",
+            "time": "2026-09-15T17:15:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:03.423662+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Air Serbia"
+          ]
+        },
+        {
+          "marketingCarrier": "JU",
+          "operatingCarrier": "JU",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BEG",
+            "time": "2026-09-16T07:55:00"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "2026-09-16T11:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:03.423699+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Air Serbia"
+          ]
+        },
+        {
+          "marketingCarrier": "B6",
+          "operatingCarrier": "B6",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-09-15T08:40:00"
+          },
+          "arrival": {
+            "point": "BOS",
+            "time": "2026-09-15T11:19:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:03.423709+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "JetBlue"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-ba-lhr-jfk",
+      "category": "high-traffic-trunk",
+      "from": "LHR",
+      "to": "JFK",
+      "date": "2026-11-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 20,
+      "htmlMeta": {
+        "htmlLength": 2550421,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 23,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AT",
+          "B6",
+          "BA",
+          "DL",
+          "FI",
+          "TP",
+          "VS"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "FI",
+          "operatingCarrier": "FI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T20:35:00"
+          },
+          "arrival": {
+            "point": "KEF",
+            "time": "2026-11-15T23:55:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:05.613992+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Icelandair"
+          ]
+        },
+        {
+          "marketingCarrier": "FI",
+          "operatingCarrier": "FI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "KEF",
+            "time": "2026-11-16T16:50:00"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "SimpleDatetime(date=[2026, 11, 16], time=[18])"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:05.614315+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Icelandair"
+          ]
+        },
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T17:10:00"
+          },
+          "arrival": {
+            "point": "CMN",
+            "time": "2026-11-15T21:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:05.614430+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        },
+        {
+          "marketingCarrier": "AT",
+          "operatingCarrier": "AT",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "CMN",
+            "time": "2026-11-16T15:50:00"
+          },
+          "arrival": {
+            "point": "JFK",
+            "time": "2026-11-16T18:05:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:05.614549+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Royal Air Maroc"
+          ]
+        },
+        {
+          "marketingCarrier": "TP",
+          "operatingCarrier": "TP",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "LHR",
+            "time": "2026-11-15T19:55:00"
+          },
+          "arrival": {
+            "point": "LIS",
+            "time": "2026-11-15T22:45:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:05.614563+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Tap Air Portugal"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-qf-syd-lax",
+      "category": "high-traffic-trunk",
+      "from": "SYD",
+      "to": "LAX",
+      "date": "2026-07-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 4,
+      "htmlMeta": {
+        "htmlLength": 2129355,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 6,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "OZ",
+          "PR",
+          "QF"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "PR",
+          "operatingCarrier": "PR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T10:15:00"
+          },
+          "arrival": {
+            "point": "MNL",
+            "time": "2026-07-15T16:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:07.336884+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Philippine Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "PR",
+          "operatingCarrier": "PR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MNL",
+            "time": "2026-07-16T11:05:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-07-16T09:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:07.336944+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Philippine Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "OZ",
+          "operatingCarrier": "OZ",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "SimpleDatetime(date=[2026, 7, 15], time=[21])"
+          },
+          "arrival": {
+            "point": "ICN",
+            "time": "2026-07-16T06:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:07.337005+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Asiana Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "OZ",
+          "operatingCarrier": "OZ",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ICN",
+            "time": "2026-07-16T12:40:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-07-16T08:20:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:07.337018+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Asiana Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "QF",
+          "operatingCarrier": "QF",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-07-15T17:50:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-07-15T14:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:07.337029+00:00",
+          "_queryId": "",
+          "_date": "2026-07-15",
+          "_airlineNames": [
+            "Qantas"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-qf-syd-lax",
+      "category": "high-traffic-trunk",
+      "from": "SYD",
+      "to": "LAX",
+      "date": "2026-09-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 9,
+      "htmlMeta": {
+        "htmlLength": 2226232,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 16,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AI",
+          "AS",
+          "DL",
+          "FJ",
+          "OZ",
+          "UA",
+          "VI"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "AI",
+          "operatingCarrier": "AI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T09:20:00"
+          },
+          "arrival": {
+            "point": "YVR",
+            "time": "2026-09-15T06:40:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:09.110542+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Air Canada",
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "AI",
+          "operatingCarrier": "AI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "YVR",
+            "time": "2026-09-15T12:09:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-09-15T15:09:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:09.110578+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Air Canada",
+            "United"
+          ]
+        },
+        {
+          "marketingCarrier": "VI",
+          "operatingCarrier": "VI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-09-15T07:30:00"
+          },
+          "arrival": {
+            "point": "BNE",
+            "time": "SimpleDatetime(date=[2026, 9, 15], time=[9])"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:09.110606+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia",
+            "Air Canada"
+          ]
+        },
+        {
+          "marketingCarrier": "VI",
+          "operatingCarrier": "VI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "BNE",
+            "time": "2026-09-15T10:15:00"
+          },
+          "arrival": {
+            "point": "YVR",
+            "time": "2026-09-15T06:44:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:09.110614+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia",
+            "Air Canada"
+          ]
+        },
+        {
+          "marketingCarrier": "VI",
+          "operatingCarrier": "VI",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "YVR",
+            "time": "2026-09-15T08:20:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-09-15T11:25:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:09.110621+00:00",
+          "_queryId": "",
+          "_date": "2026-09-15",
+          "_airlineNames": [
+            "Virgin Australia",
+            "Air Canada"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-qf-syd-lax",
+      "category": "high-traffic-trunk",
+      "from": "SYD",
+      "to": "LAX",
+      "date": "2026-11-15",
+      "ok": true,
+      "error": null,
+      "optionCount": 8,
+      "htmlMeta": {
+        "htmlLength": 2203027,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 14,
+        "hasOperatingCarrier": true,
+        "hasTimes": true,
+        "hasFlightNumber": false,
+        "operatingDistinct": [
+          "AA",
+          "AS",
+          "OZ",
+          "PR",
+          "QF",
+          "UA"
+        ]
+      },
+      "flights": [
+        {
+          "marketingCarrier": "PR",
+          "operatingCarrier": "PR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T11:35:00"
+          },
+          "arrival": {
+            "point": "MNL",
+            "time": "2026-11-15T16:50:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:10.719311+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Philippine Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "PR",
+          "operatingCarrier": "PR",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "MNL",
+            "time": "2026-11-16T11:25:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "SimpleDatetime(date=[2026, 11, 16], time=[10])"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:10.719551+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Philippine Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "OZ",
+          "operatingCarrier": "OZ",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T10:20:00"
+          },
+          "arrival": {
+            "point": "ICN",
+            "time": "SimpleDatetime(date=[2026, 11, 15], time=[19])"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:10.719575+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Asiana Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "OZ",
+          "operatingCarrier": "OZ",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "ICN",
+            "time": "2026-11-15T21:20:00"
+          },
+          "arrival": {
+            "point": "LAX",
+            "time": "2026-11-15T15:30:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:10.719583+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Asiana Airlines"
+          ]
+        },
+        {
+          "marketingCarrier": "AS",
+          "operatingCarrier": "AS",
+          "operatingCarrierSource": "inferred",
+          "flightNumber": "",
+          "departure": {
+            "point": "SYD",
+            "time": "2026-11-15T21:40:00"
+          },
+          "arrival": {
+            "point": "HNL",
+            "time": "2026-11-15T10:45:00"
+          },
+          "stops": [],
+          "provider": "fast-flights",
+          "fetchedAt": "2026-06-20T18:23:10.719595+00:00",
+          "_queryId": "",
+          "_date": "2026-11-15",
+          "_airlineNames": [
+            "Alaska"
+          ]
+        }
+      ]
+    },
+    {
+      "queryId": "trunk-qr-doh-lhr",
+      "category": "high-traffic-trunk",
+      "from": "DOH",
+      "to": "LHR",
+      "date": "2026-07-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 2407932,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "trunk-qr-doh-lhr",
+      "category": "high-traffic-trunk",
+      "from": "DOH",
+      "to": "LHR",
+      "date": "2026-09-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 2378352,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    },
+    {
+      "queryId": "trunk-qr-doh-lhr",
+      "category": "high-traffic-trunk",
+      "from": "DOH",
+      "to": "LHR",
+      "date": "2026-11-15",
+      "ok": false,
+      "error": "unsupported format string passed to NoneType.__format__",
+      "optionCount": 0,
+      "htmlMeta": {
+        "htmlLength": 2456523,
+        "captchaHint": true,
+        "hasAfInit": true
+      },
+      "score": {
+        "count": 0,
+        "hasOperatingCarrier": false,
+        "hasTimes": false,
+        "hasFlightNumber": false,
+        "operatingDistinct": []
+      },
+      "flights": []
+    }
+  ]
+}

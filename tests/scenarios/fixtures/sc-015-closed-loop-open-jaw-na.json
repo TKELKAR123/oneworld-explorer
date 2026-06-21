@@ -1,0 +1,23 @@
+{
+  "id": "SC-015",
+  "source": "Closed loop JFK–JFK — open-jaw exception rules not applicable",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "closedLoop",
+  "expectNotApplicableRules": [
+    "R3015-4c-open-jaw-a",
+    "R3015-4c-open-jaw-b",
+    "R3015-4c-open-jaw-c",
+    "R3015-4c-open-jaw-d",
+    "R3015-4c-open-jaw-e",
+    "R3015-4c-open-jaw-f",
+    "R3015-4c-open-jaw-g"
+  ]
+}

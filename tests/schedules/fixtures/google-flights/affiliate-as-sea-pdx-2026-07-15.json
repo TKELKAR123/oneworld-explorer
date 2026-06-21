@@ -1,0 +1,23 @@
+{
+  "queryId": "affiliate-as-sea-pdx",
+  "category": "affiliate-edge",
+  "from": "SEA",
+  "to": "PDX",
+  "date": "2026-07-15",
+  "ok": false,
+  "error": "unsupported format string passed to NoneType.__format__",
+  "optionCount": 0,
+  "htmlMeta": {
+    "htmlLength": 3144739,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 0,
+    "hasOperatingCarrier": false,
+    "hasTimes": false,
+    "hasFlightNumber": false,
+    "operatingDistinct": []
+  },
+  "flights": []
+}
