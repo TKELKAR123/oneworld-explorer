@@ -1,0 +1,138 @@
+{
+  "queryId": "affiliate-ib-mad-pmi",
+  "category": "affiliate-edge",
+  "from": "MAD",
+  "to": "PMI",
+  "date": "2026-07-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 21,
+  "htmlMeta": {
+    "htmlLength": 2521269,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 21,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "I2",
+      "IB",
+      "UX"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "I2",
+      "operatingCarrier": "I2",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MAD",
+        "time": "2026-07-15T21:30:00"
+      },
+      "arrival": {
+        "point": "PMI",
+        "time": "2026-07-15T22:50:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:52.470207+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Iberia Express"
+      ]
+    },
+    {
+      "marketingCarrier": "IB",
+      "operatingCarrier": "IB",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MAD",
+        "time": "2026-07-15T05:20:00"
+      },
+      "arrival": {
+        "point": "PMI",
+        "time": "2026-07-15T06:45:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:52.470251+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Iberia"
+      ]
+    },
+    {
+      "marketingCarrier": "IB",
+      "operatingCarrier": "IB",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MAD",
+        "time": "SimpleDatetime(date=[2026, 7, 15], time=[7])"
+      },
+      "arrival": {
+        "point": "PMI",
+        "time": "2026-07-15T08:25:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:52.470276+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Iberia"
+      ]
+    },
+    {
+      "marketingCarrier": "IB",
+      "operatingCarrier": "IB",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MAD",
+        "time": "2026-07-15T07:40:00"
+      },
+      "arrival": {
+        "point": "PMI",
+        "time": "2026-07-15T09:05:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:52.470284+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Iberia"
+      ]
+    },
+    {
+      "marketingCarrier": "IB",
+      "operatingCarrier": "IB",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MAD",
+        "time": "2026-07-15T21:30:00"
+      },
+      "arrival": {
+        "point": "PMI",
+        "time": "2026-07-15T22:50:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:52.470290+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Iberia"
+      ]
+    }
+  ]
+}

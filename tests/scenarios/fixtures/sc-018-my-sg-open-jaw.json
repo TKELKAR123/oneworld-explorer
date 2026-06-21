@@ -1,0 +1,14 @@
+{
+  "id": "SC-018",
+  "source": "Malaysia–Singapore open jaw (§4c-e) with surface",
+  "segments": [
+    { "from": "KUL", "to": "SIN", "surface": true },
+    { "from": "SIN", "to": "LHR" },
+    { "from": "LHR", "to": "JFK" },
+    { "from": "JFK", "to": "LAX" },
+    { "from": "LAX", "to": "SIN" }
+  ],
+  "expectValid": false,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-e"]
+}

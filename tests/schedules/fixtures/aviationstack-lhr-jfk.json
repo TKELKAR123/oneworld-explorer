@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "flight_date": "2026-09-15",
+      "flight_status": "scheduled",
+      "departure": {
+        "iata": "LHR",
+        "terminal": "5",
+        "scheduled": "2026-09-15T10:00:00+00:00"
+      },
+      "arrival": {
+        "iata": "JFK",
+        "terminal": "7",
+        "scheduled": "2026-09-15T18:30:00+00:00"
+      },
+      "airline": {
+        "iata": "BA",
+        "name": "British Airways"
+      },
+      "flight": {
+        "iata": "BA178",
+        "number": "178",
+        "codeshared": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "SC-009",
+  "source": "Classic RTW with full rule trace",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" }
+  ],
+  "expectValid": true,
+  "minPassedRules": 33
+}

@@ -1,0 +1,4299 @@
+[
+  {
+    "id": "SC-001",
+    "source": "FlyerTalk — classic eastbound RTW pattern",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "tags": [
+      "smoke-api",
+      "smoke-ui",
+      "geometry-only",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4c-origin",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-002",
+    "source": "Rule 3015 §4(a) — missing Pacific crossing",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "validationPhase": "ticketReady",
+    "expectRuleIds": [
+      "R3015-4a"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-4a"
+    ],
+    "taxonomy": {
+      "journeyShape": "short-haul",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4a"
+    }
+  },
+  {
+    "id": "SC-003",
+    "source": "Rule 3015 §0 — fewer than 3 continents",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "CDG"
+      },
+      {
+        "from": "CDG",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "validationPhase": "ticketReady",
+    "expectRuleIds": [
+      "R3015-0-continent-count"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-0-continent-count"
+    ],
+    "taxonomy": {
+      "journeyShape": "short-haul",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-0-continent-count"
+    }
+  },
+  {
+    "id": "SC-004",
+    "source": "FlyerTalk — excessive intra-Asia segments",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "BKK"
+      },
+      {
+        "from": "BKK",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "KUL"
+      },
+      {
+        "from": "KUL",
+        "to": "DEL"
+      },
+      {
+        "from": "DEL",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4h-continent-limits"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [
+      "R3015-4h-continent-limits"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4h-continent-limits"
+    }
+  },
+  {
+    "id": "SC-005",
+    "source": "Rule 3015 §4(i) — duplicate city pair",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4i-duplicate-sector"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-4i-duplicate-sector"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4i-duplicate-sector"
+    }
+  },
+  {
+    "id": "SC-006",
+    "source": "Unknown airport — structured parse error",
+    "segments": [
+      {
+        "from": "ZZZ",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectIssueCodes": [
+      "UNKNOWN_AIRPORT"
+    ],
+    "tags": [
+      "smoke-api",
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "UNKNOWN_AIRPORT"
+    ],
+    "taxonomy": {
+      "journeyShape": "short-haul",
+      "dataRichness": "geometry-only",
+      "failureCluster": "UNKNOWN_AIRPORT"
+    }
+  },
+  {
+    "id": "SC-007",
+    "source": "FlyerTalk — Hawaii backtrack §4(b)",
+    "segments": [
+      {
+        "from": "HNL",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "HNL"
+      },
+      {
+        "from": "HNL",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4b-hawaii"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [
+      "R3015-4b-hawaii"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4b-hawaii"
+    }
+  },
+  {
+    "id": "SC-008",
+    "source": "Disconnected segments — DXB/SIN gap",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-itinerary-continuity"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-itinerary-continuity"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-itinerary-continuity"
+    }
+  },
+  {
+    "id": "SC-009",
+    "source": "Classic RTW with full rule trace",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "minPassedRules": 33,
+    "tags": [
+      "smoke-api",
+      "smoke-ui",
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4c-origin",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-010",
+    "source": "Africa + Gulf — DXB alone should not trigger §4e-3 Europe ban",
+    "segments": [
+      {
+        "from": "JNB",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "CPT"
+      },
+      {
+        "from": "CPT",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "JNB"
+      }
+    ],
+    "expectValid": false,
+    "tags": [
+      "open-jaw",
+      "geometry-only",
+      "smoke-api",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-011",
+    "source": "Two US/Canada transcontinental flights",
+    "segments": [
+      {
+        "from": "YYZ",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "MIA"
+      },
+      {
+        "from": "MIA",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "YYZ"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4k-us-transcon"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-4k-us-transcon"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4k-us-transcon"
+    }
+  },
+  {
+    "id": "SC-012",
+    "source": "HKG–China open jaw via surface (§4c-d)",
+    "tags": [
+      "open-jaw",
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "HKG",
+        "to": "PEK",
+        "surface": true
+      },
+      {
+        "from": "PEK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "PEK"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-d",
+      "R3015-4c-origin"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-d",
+      "R3015-4c-origin",
+      "R3015-4a"
+    ]
+  },
+  {
+    "id": "SC-013",
+    "source": "India–Maldives open jaw MAA→MLE (§4c-g) — direction fail",
+    "tags": [
+      "open-jaw",
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "direction"
+    },
+    "segments": [
+      {
+        "from": "MAA",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "MLE"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-g",
+      "R3015-4c-origin"
+    ],
+    "expectRuleIds": [
+      "R3015-4b-direction"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-g",
+      "R3015-4c-origin",
+      "R3015-4b-direction"
+    ]
+  },
+  {
+    "id": "SC-014",
+    "source": "US origin with two international departures emits §4f warning",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "CDG"
+      },
+      {
+        "from": "CDG",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4f-usa-exception"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4f-usa-exception"
+    ],
+    "taxonomy": {
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4f-usa-exception"
+    }
+  },
+  {
+    "id": "SC-015",
+    "source": "Closed loop JFK–JFK — open-jaw exception rules not applicable",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "closedLoop",
+    "expectNotApplicableRules": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-open-jaw-b",
+      "R3015-4c-open-jaw-c",
+      "R3015-4c-open-jaw-d",
+      "R3015-4c-open-jaw-e",
+      "R3015-4c-open-jaw-f",
+      "R3015-4c-open-jaw-g"
+    ],
+    "tags": [
+      "smoke-api",
+      "smoke-ui",
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-open-jaw-b",
+      "R3015-4c-open-jaw-c",
+      "R3015-4c-open-jaw-d",
+      "R3015-4c-open-jaw-e",
+      "R3015-4c-open-jaw-f",
+      "R3015-4c-open-jaw-g",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4c-origin",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "closed-loop",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-016",
+    "source": "US origin-country open jaw via surface (§4c-a)",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "BOS",
+        "surface": true
+      },
+      {
+        "from": "BOS",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "BOS"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only",
+      "smoke-api",
+      "smoke-ui"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-017",
+    "source": "Invalid open jaw — JFK origin with LHR return (no permitted §4(c) pair)",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJawPending",
+    "expectIssueCodes": [
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only",
+      "smoke-api",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [
+      "R3015-4c-origin"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4c-origin"
+    }
+  },
+  {
+    "id": "SC-018",
+    "source": "Malaysia–Singapore open jaw (§4c-e) with surface",
+    "segments": [
+      {
+        "from": "KUL",
+        "to": "SIN",
+        "surface": true
+      },
+      {
+        "from": "SIN",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "SIN"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-e"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-e"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-019",
+    "source": "US/Canada open jaw via surface (§4c-c)",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "YYZ",
+        "surface": true
+      },
+      {
+        "from": "YYZ",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "YYZ"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-c",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "open-jaw",
+      "geometry-only",
+      "smoke-api",
+      "smoke-ui"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-c",
+      "R3015-4c-origin",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-020",
+    "source": "Incomplete RTW ending at LAX — implicit US open jaw JFK→LAX but missing return leg",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-a"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-ui"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4c-origin",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-021",
+    "source": "Middle East open jaw via surface (§4c-b)",
+    "segments": [
+      {
+        "from": "DXB",
+        "to": "RUH",
+        "surface": true
+      },
+      {
+        "from": "RUH",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "RUH"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-b",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-b",
+      "R3015-4c-origin"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-022",
+    "source": "Africa open jaw via surface (§4c-f)",
+    "segments": [
+      {
+        "from": "JNB",
+        "to": "NBO",
+        "surface": true
+      },
+      {
+        "from": "NBO",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "NBO"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-f",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "geometry-only"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-f",
+      "R3015-4c-origin"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-023",
+    "source": "Implicit US open jaw JFK→ORD — no surface leg required (§4c-a)",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "ORD"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-ui",
+      "flyertalk-golden"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-024",
+    "source": "Implicit Norway open jaw OSL→TOS — no surface leg required (§4c-a)",
+    "segments": [
+      {
+        "from": "OSL",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "TOS"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-ui"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin",
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only"
+    }
+  },
+  {
+    "id": "SC-025",
+    "source": "Invalid open jaw — JFK origin with LHR return (no §4(c) pair)",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJawPending",
+    "expectIssueCodes": [
+      "R3015-4c-origin"
+    ],
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "rulesTouched": [
+      "R3015-4c-origin"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "dataRichness": "geometry-only",
+      "failureCluster": "R3015-4c-origin"
+    }
+  },
+  {
+    "id": "SC-026",
+    "source": "Ineligible carrier UA on first sector",
+    "tags": [
+      "carriers",
+      "smoke-api",
+      "flyertalk-golden"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier",
+      "failureCluster": "carrier-eligibility"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "UA",
+        "operatingCarrier": "UA"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4-carriers"
+    ],
+    "rulesTouched": [
+      "R3015-4-carriers",
+      "R3015-4j-codeshare"
+    ]
+  },
+  {
+    "id": "SC-027",
+    "source": "Valid BA/AA eligible-on-eligible codeshare",
+    "tags": [
+      "carriers",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "AA"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4-carriers",
+      "R3015-4j-codeshare"
+    ]
+  },
+  {
+    "id": "SC-028",
+    "source": "Valid QF/JQ codeshare exception",
+    "tags": [
+      "carriers",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "JQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4j-codeshare",
+      "R3015-4j-jq-qq"
+    ]
+  },
+  {
+    "id": "SC-029",
+    "source": "Invalid BA/JQ codeshare — not a permitted pair",
+    "tags": [
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier",
+      "failureCluster": "codeshare"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "JQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4j-codeshare"
+    ],
+    "rulesTouched": [
+      "R3015-4j-codeshare"
+    ]
+  },
+  {
+    "id": "SC-030",
+    "source": "Valid AA/MQ American Eagle affiliate",
+    "tags": [
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "AA",
+        "operatingCarrier": "MQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4-affiliates",
+      "R3015-4j-codeshare"
+    ]
+  },
+  {
+    "id": "SC-031",
+    "source": "NU validating carrier — not on §15 stock list",
+    "tags": [
+      "ticket",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket",
+      "failureCluster": "ticketing-stock"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "NU"
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-15-stock"
+    ],
+    "rulesTouched": [
+      "R3015-15-stock"
+    ]
+  },
+  {
+    "id": "SC-032",
+    "source": "BA validating carrier on §15 stock list",
+    "tags": [
+      "ticket",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "BA",
+      "pnrHasOsiRtw": true
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-15-stock",
+      "R3015-5-reservations"
+    ]
+  },
+  {
+    "id": "SC-033",
+    "source": "IB stock with QF/JQ segment — §15 exception",
+    "tags": [
+      "ticket",
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket+carrier",
+      "failureCluster": "ticketing-stock"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "JQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "IB"
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-15-stock-jq"
+    ],
+    "rulesTouched": [
+      "R3015-15-stock-jq",
+      "R3015-4j-jq-qq"
+    ]
+  },
+  {
+    "id": "SC-034",
+    "source": "Ticket not purchased before departure",
+    "tags": [
+      "ticket",
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket",
+      "failureCluster": "purchase-timing"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "purchasedBeforeDeparture": false
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-0-purchase"
+    ],
+    "rulesTouched": [
+      "R3015-0-purchase"
+    ]
+  },
+  {
+    "id": "SC-035",
+    "source": "TC1 origin min stay — last intl sector under 10 days",
+    "tags": [
+      "schedule",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "originMarket": "TC1",
+      "dataRichness": "schedule",
+      "failureCluster": "min-stay"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "departureTime": "2026-06-05T10:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-6-min-stay"
+    ],
+    "rulesTouched": [
+      "R3015-6-min-stay"
+    ]
+  },
+  {
+    "id": "SC-036",
+    "source": "TC1 origin min stay — 10+ days between first and last intl sector",
+    "tags": [
+      "schedule"
+    ],
+    "taxonomy": {
+      "originMarket": "TC1",
+      "dataRichness": "schedule"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-02T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2026-06-04T10:00:00Z",
+        "arrivalTime": "2026-06-05T10:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "departureTime": "2026-06-08T10:00:00Z"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "departureTime": "2026-06-20T10:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-6-min-stay",
+      "R3015-8-stopovers"
+    ]
+  },
+  {
+    "id": "SC-037",
+    "source": "Max stay exceeded — return over 12 months from origin",
+    "tags": [
+      "schedule",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "schedule",
+      "failureCluster": "max-stay"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-01-01T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "arrivalTime": "2027-02-01T10:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "departureTime": "2027-02-01T10:00:00Z"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-7-max-stay"
+    ],
+    "rulesTouched": [
+      "R3015-7-max-stay"
+    ]
+  },
+  {
+    "id": "SC-038",
+    "source": "Fewer than 2 stopovers (24h+ connections)",
+    "tags": [
+      "schedule"
+    ],
+    "taxonomy": {
+      "dataRichness": "schedule",
+      "failureCluster": "stopovers"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-02T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2026-06-04T10:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-8-stopovers"
+    ],
+    "rulesTouched": [
+      "R3015-8-stopovers"
+    ]
+  },
+  {
+    "id": "SC-039",
+    "source": "Minimum 2 stopovers satisfied",
+    "tags": [
+      "schedule"
+    ],
+    "taxonomy": {
+      "dataRichness": "schedule"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-02T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2026-06-04T10:00:00Z",
+        "arrivalTime": "2026-06-05T10:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "departureTime": "2026-06-08T10:00:00Z"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-8-stopovers"
+    ]
+  },
+  {
+    "id": "SC-040",
+    "source": "Invalid RBD X on AA economy sector",
+    "tags": [
+      "ticket",
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket+rbd",
+      "failureCluster": "booking-class"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "AA",
+        "rbd": "X"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-5b-booking"
+    ],
+    "rulesTouched": [
+      "R3015-5b-booking"
+    ]
+  },
+  {
+    "id": "SC-041",
+    "source": "Valid economy RBD L on AA",
+    "tags": [
+      "ticket"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket+rbd"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "AA",
+        "rbd": "L"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "pnrHasOsiRtw": true
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-5b-booking",
+      "R3015-5-reservations"
+    ]
+  },
+  {
+    "id": "SC-042",
+    "source": "Cuba itinerary with AA-operated sector",
+    "tags": [
+      "compliance",
+      "carriers",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier+geo",
+      "failureCluster": "cuba-restriction"
+    },
+    "segments": [
+      {
+        "from": "MIA",
+        "to": "HAV",
+        "marketingCarrier": "AA",
+        "operatingCarrier": "AA"
+      },
+      {
+        "from": "HAV",
+        "to": "LHR",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "JFK",
+        "to": "MIA",
+        "marketingCarrier": "AA",
+        "operatingCarrier": "AA"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-15-cuba"
+    ],
+    "rulesTouched": [
+      "R3015-15-cuba"
+    ]
+  },
+  {
+    "id": "SC-043",
+    "source": "BA/QF ground transport segment not permitted",
+    "tags": [
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier",
+      "failureCluster": "ground-transport"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "groundTransport": true
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4-no-ground-transport"
+    ],
+    "rulesTouched": [
+      "R3015-4-no-ground-transport"
+    ]
+  },
+  {
+    "id": "SC-044",
+    "source": "3-continent Explorer fare originating in South America (GRU)",
+    "tags": [
+      "compliance",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "originMarket": "SA",
+      "fareClass": "LONE3",
+      "failureCluster": "continent-origin"
+    },
+    "segments": [
+      {
+        "from": "GRU",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "GRU"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-0-three-continent-origin"
+    ],
+    "rulesTouched": [
+      "R3015-0-three-continent-origin",
+      "R3015-0-continent-count"
+    ]
+  },
+  {
+    "id": "SC-045",
+    "source": "Business class 4-continent RTW — DONE4 fare basis",
+    "tags": [
+      "builder",
+      "smoke-ui"
+    ],
+    "travelClass": "business",
+    "taxonomy": {
+      "fareClass": "DONE4",
+      "journeyShape": "classic-rtw",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-fare-basis",
+      "R3015-0-fare-class"
+    ]
+  },
+  {
+    "id": "SC-046",
+    "source": "First class 3-continent — AONE3 fare basis",
+    "tags": [
+      "builder"
+    ],
+    "travelClass": "first",
+    "taxonomy": {
+      "fareClass": "AONE3",
+      "journeyShape": "short-rtw",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-fare-basis",
+      "R3015-0-fare-class"
+    ]
+  },
+  {
+    "id": "SC-047",
+    "source": "SWP origin — one permitted transoceanic surface sector",
+    "tags": [
+      "geometry-only",
+      "open-jaw",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "journeyShape": "swp-origin",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "SYD",
+        "to": "HNL",
+        "surface": true
+      },
+      {
+        "from": "HNL",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4g-swp-transoceanic",
+      "R3015-4g-surface",
+      "R3015-0-three-continent-origin"
+    ]
+  },
+  {
+    "id": "SC-048",
+    "source": "SWP origin — two transoceanic surface sectors not permitted",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "swp-origin",
+      "dataRichness": "geometry-only",
+      "failureCluster": "surface"
+    },
+    "segments": [
+      {
+        "from": "SYD",
+        "to": "HNL",
+        "surface": true
+      },
+      {
+        "from": "HNL",
+        "to": "LHR",
+        "surface": true
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SYD"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4g-swp-transoceanic"
+    ],
+    "rulesTouched": [
+      "R3015-4g-swp-transoceanic",
+      "R3015-4g-surface"
+    ]
+  },
+  {
+    "id": "SC-049",
+    "source": "Mid-itinerary return via origin point (§4d)",
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "journeyShape": "via-origin",
+      "dataRichness": "geometry-only",
+      "failureCluster": "via-origin"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4d-no-via-origin"
+    ],
+    "rulesTouched": [
+      "R3015-4d-no-via-origin"
+    ]
+  },
+  {
+    "id": "SC-050",
+    "source": "Double Atlantic crossing — extra TATL",
+    "tags": [
+      "geometry-only",
+      "smoke-api"
+    ],
+    "taxonomy": {
+      "journeyShape": "backtrack",
+      "dataRichness": "geometry-only",
+      "failureCluster": "ocean-crossing"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4a"
+    ],
+    "rulesTouched": [
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4e-intercon"
+    ]
+  },
+  {
+    "id": "SC-051",
+    "source": "IONE3 business 3-continent from disallowed sale market XX",
+    "tags": [
+      "compliance",
+      "ticket",
+      "flyertalk-golden"
+    ],
+    "travelClass": "business",
+    "taxonomy": {
+      "fareClass": "IONE3",
+      "originMarket": "US",
+      "dataRichness": "ticket",
+      "failureCluster": "IONE3-markets"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "saleMarket": "XX",
+      "fareProduct": "IONE3"
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-0-IONE3-markets"
+    ],
+    "rulesTouched": [
+      "R3015-0-IONE3-markets",
+      "R3015-0-fare-basis"
+    ]
+  },
+  {
+    "id": "SC-052",
+    "source": "Business 3-continent DONE3 from allowed US market",
+    "tags": [
+      "builder"
+    ],
+    "travelClass": "business",
+    "taxonomy": {
+      "fareClass": "DONE3",
+      "originMarket": "US",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "saleMarket": "US"
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-fare-basis",
+      "R3015-0-IONE3-markets"
+    ]
+  },
+  {
+    "id": "SC-053",
+    "source": "Transoceanic intermediate surface from non-SWP origin",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geometry-only",
+      "failureCluster": "surface"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "surface": true
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4g-surface"
+    ],
+    "rulesTouched": [
+      "R3015-4g-surface"
+    ]
+  },
+  {
+    "id": "SC-054",
+    "source": "TC backtracking — LHR return before Pacific crossing",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "backtrack",
+      "failureCluster": "direction"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4b-direction"
+    ],
+    "rulesTouched": [
+      "R3015-4b-direction",
+      "R3015-4e-intercon"
+    ]
+  },
+  {
+    "id": "SC-055",
+    "source": "Too few segments (§4h minimum 3)",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geometry-only",
+      "failureCluster": "segment-count"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "validationPhase": "ticketReady",
+    "expectRuleIds": [
+      "R3015-4h-segment-count"
+    ],
+    "rulesTouched": [
+      "R3015-4h-segment-count",
+      "R3015-0-continent-count"
+    ]
+  },
+  {
+    "id": "SC-056",
+    "source": "Excessive Alaska segments — two arrivals in AK",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geometry-only",
+      "failureCluster": "alaska"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "ANC"
+      },
+      {
+        "from": "ANC",
+        "to": "SEA"
+      },
+      {
+        "from": "SEA",
+        "to": "ANC"
+      },
+      {
+        "from": "ANC",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4k-alaska"
+    ],
+    "rulesTouched": [
+      "R3015-4k-alaska"
+    ]
+  },
+  {
+    "id": "SC-057",
+    "source": "Australia PER–SYD limited pair flown twice same direction",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geometry-only",
+      "failureCluster": "australia-domestic"
+    },
+    "segments": [
+      {
+        "from": "SYD",
+        "to": "PER"
+      },
+      {
+        "from": "PER",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "PER"
+      },
+      {
+        "from": "PER",
+        "to": "SYD"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4l-australia"
+    ],
+    "rulesTouched": [
+      "R3015-4l-australia"
+    ]
+  },
+  {
+    "id": "SC-058",
+    "source": "Missing PNR OSI YY OW RTW",
+    "tags": [
+      "ticket",
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket",
+      "failureCluster": "reservations"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "pnrHasOsiRtw": false
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-5-reservations"
+    ],
+    "rulesTouched": [
+      "R3015-5-reservations"
+    ]
+  },
+  {
+    "id": "SC-059",
+    "source": "Higher booking class on one sector vs declared economy",
+    "tags": [
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "segment-class",
+      "failureCluster": "fare-class"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "bookingClass": "business"
+      }
+    ],
+    "travelClass": "economy",
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-0-fare-class"
+    ],
+    "rulesTouched": [
+      "R3015-0-fare-class"
+    ]
+  },
+  {
+    "id": "SC-060",
+    "source": "SWP–Europe direct QF1 — Asia counted via §0 SWP-EU-via-Asia",
+    "tags": [
+      "geometry-only",
+      "compliance"
+    ],
+    "taxonomy": {
+      "journeyShape": "swp-eu-direct",
+      "dataRichness": "geometry-only"
+    },
+    "segments": [
+      {
+        "from": "LHR",
+        "to": "SYD",
+        "flightNumber": "QF1"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-swp-eu-via-asia",
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis"
+    ]
+  },
+  {
+    "id": "SC-061",
+    "source": "Asia — third intercontinental departure exceeds allowance",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "failureCluster": "intercon-asia"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DEL"
+      },
+      {
+        "from": "DEL",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4e-2-asia"
+    ],
+    "rulesTouched": [
+      "R3015-4e-2-asia",
+      "R3015-4e-intercon"
+    ]
+  },
+  {
+    "id": "SC-062",
+    "source": "Africa + Europe both directions — Mauritius not permitted",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "failureCluster": "africa-eu"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JNB"
+      },
+      {
+        "from": "JNB",
+        "to": "MRU"
+      },
+      {
+        "from": "MRU",
+        "to": "CDG"
+      },
+      {
+        "from": "CDG",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4e-3-africa-eu"
+    ],
+    "rulesTouched": [
+      "R3015-4e-3-africa-eu"
+    ]
+  },
+  {
+    "id": "SC-063",
+    "source": "US/Canada domestic sectors not counted international for §4(f)",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "us-ca-domestic"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "YYZ"
+      },
+      {
+        "from": "YYZ",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4f-us-ca-domestic",
+      "R3015-4f-origin-intl"
+    ]
+  },
+  {
+    "id": "SC-064",
+    "source": "Eligible carrier online transfer between BA sectors",
+    "tags": [
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-9-transfers",
+      "R3015-4-carriers"
+    ]
+  },
+  {
+    "id": "SC-065",
+    "source": "Panama PTY counts as North America continent",
+    "tags": [
+      "geometry-only",
+      "compliance"
+    ],
+    "taxonomy": {
+      "dataRichness": "geography"
+    },
+    "segments": [
+      {
+        "from": "PTY",
+        "to": "MIA"
+      },
+      {
+        "from": "MIA",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "PTY"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-na-includes",
+      "R3015-0-continent-def",
+      "R3015-0-tc-def"
+    ]
+  },
+  {
+    "id": "SC-066",
+    "source": "Middle East sub-zone routing (DXB/RUH)",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geography"
+    },
+    "segments": [
+      {
+        "from": "DXB",
+        "to": "RUH"
+      },
+      {
+        "from": "RUH",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "DXB"
+      }
+    ],
+    "expectValid": false,
+    "rulesTouched": [
+      "R3015-0-eu-me-zones",
+      "R3015-4c-open-jaw-b"
+    ]
+  },
+  {
+    "id": "SC-067",
+    "source": "Central Asia ALA counts as Asia continent",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geography"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "ALA"
+      },
+      {
+        "from": "ALA",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-asia-countries",
+      "R3015-0-continent-def"
+    ]
+  },
+  {
+    "id": "SC-068",
+    "source": "5-continent RTW — LONE5 economy",
+    "tags": [
+      "builder",
+      "smoke-ui"
+    ],
+    "taxonomy": {
+      "fareClass": "LONE5",
+      "journeyShape": "extended-rtw"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "GRU"
+      },
+      {
+        "from": "GRU",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis",
+      "R3015-4e-intercon"
+    ]
+  },
+  {
+    "id": "SC-069",
+    "source": "6-continent RTW — LONE6 economy cap",
+    "tags": [
+      "builder"
+    ],
+    "taxonomy": {
+      "fareClass": "LONE6",
+      "journeyShape": "max-continents"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "NBO"
+      },
+      {
+        "from": "NBO",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "GRU"
+      },
+      {
+        "from": "GRU",
+        "to": "SCL"
+      },
+      {
+        "from": "SCL",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-continent-count",
+      "R3015-0-fare-basis",
+      "R3015-4e-3-africa-eu"
+    ]
+  },
+  {
+    "id": "SC-070",
+    "source": "First class 4-continent — AONE4",
+    "tags": [
+      "builder"
+    ],
+    "travelClass": "first",
+    "taxonomy": {
+      "fareClass": "AONE4"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-fare-basis",
+      "R3015-0-fare-class"
+    ]
+  },
+  {
+    "id": "SC-071",
+    "source": "Business 5-continent — DONE5",
+    "tags": [
+      "builder"
+    ],
+    "travelClass": "business",
+    "taxonomy": {
+      "fareClass": "DONE5"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "GRU"
+      },
+      {
+        "from": "GRU",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-fare-basis"
+    ]
+  },
+  {
+    "id": "SC-072",
+    "source": "QF/QQ Alliance Airlines codeshare exception",
+    "tags": [
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "QQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4j-jq-qq"
+    ]
+  },
+  {
+    "id": "SC-073",
+    "source": "WY stock valid with full ticketing context",
+    "tags": [
+      "ticket"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "WY",
+      "pnrHasOsiRtw": true,
+      "purchasedBeforeDeparture": true
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-15-stock",
+      "R3015-0-purchase",
+      "R3015-5-reservations"
+    ]
+  },
+  {
+    "id": "SC-074",
+    "source": "North America third intercontinental departure",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "failureCluster": "intercon-na"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "GRU"
+      },
+      {
+        "from": "GRU",
+        "to": "EZE"
+      },
+      {
+        "from": "EZE",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4e-1-na"
+    ],
+    "rulesTouched": [
+      "R3015-4e-1-na",
+      "R3015-4e-intercon"
+    ]
+  },
+  {
+    "id": "SC-075",
+    "source": "TC2 origin min stay not enforced (non-TC1)",
+    "tags": [
+      "schedule"
+    ],
+    "taxonomy": {
+      "originMarket": "TC2",
+      "dataRichness": "schedule"
+    },
+    "segments": [
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-6-min-stay"
+    ]
+  },
+  {
+    "id": "SC-076",
+    "source": "Cuba RTW with non-AA operators only — §15 pass",
+    "tags": [
+      "compliance",
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier+geo"
+    },
+    "segments": [
+      {
+        "from": "MIA",
+        "to": "HAV",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "HAV",
+        "to": "LHR",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "QF"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "QF"
+      },
+      {
+        "from": "LAX",
+        "to": "MIA",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-15-cuba"
+    ]
+  },
+  {
+    "id": "SC-077",
+    "source": "Valid BA-only marketed sectors throughout",
+    "tags": [
+      "carriers",
+      "smoke-ui"
+    ],
+    "taxonomy": {
+      "dataRichness": "carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "BA",
+      "pnrHasOsiRtw": true
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4-carriers"
+    ]
+  },
+  {
+    "id": "SC-078",
+    "source": "Reverse-direction duplicate sector permitted (LHR–JFK then JFK–LHR)",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "reverse-sector-ok"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "rulesTouched": [
+      "R3015-4i-duplicate-sector",
+      "R3015-4a"
+    ]
+  },
+  {
+    "id": "SC-079",
+    "source": "Westbound RTW SYD origin closed loop",
+    "tags": [
+      "builder",
+      "smoke-ui"
+    ],
+    "taxonomy": {
+      "journeyShape": "westbound-rtw",
+      "originMarket": "AU"
+    },
+    "segments": [
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4a",
+      "R3015-4b-direction",
+      "R3015-4c-origin"
+    ]
+  },
+  {
+    "id": "SC-080",
+    "source": "Europe origin implicit open jaw OSL–TRD",
+    "tags": [
+      "open-jaw",
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw",
+      "originMarket": "NO"
+    },
+    "segments": [
+      {
+        "from": "OSL",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "TRD"
+      }
+    ],
+    "expectValid": true,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-a",
+      "R3015-4c-origin"
+    ]
+  },
+  {
+    "id": "SC-081",
+    "source": "IONE3 allowed from US sale market",
+    "tags": [
+      "ticket",
+      "builder",
+      "flyertalk-golden"
+    ],
+    "travelClass": "business",
+    "taxonomy": {
+      "fareClass": "IONE3",
+      "originMarket": "US"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "HKG"
+      },
+      {
+        "from": "HKG",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "saleMarket": "US",
+      "fareProduct": "IONE3"
+    },
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-IONE3-markets"
+    ]
+  },
+  {
+    "id": "SC-082",
+    "source": "IB stock with WY validating when QF/JQ present — also blocked",
+    "tags": [
+      "ticket",
+      "carriers"
+    ],
+    "taxonomy": {
+      "dataRichness": "ticket+carrier"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "JQ"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "ticket": {
+      "validatingCarrier": "WY"
+    },
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-15-stock-jq"
+    ],
+    "rulesTouched": [
+      "R3015-15-stock-jq"
+    ]
+  },
+  {
+    "id": "SC-083",
+    "source": "Single transcontinental US flight within allowance",
+    "tags": [
+      "geometry-only",
+      "smoke-ui"
+    ],
+    "taxonomy": {
+      "journeyShape": "transcon-ok"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-4k-us-transcon"
+    ]
+  },
+  {
+    "id": "SC-084",
+    "source": "Origin international departure limit — extra US intl out",
+    "tags": [
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "failureCluster": "origin-intl"
+    },
+    "segments": [
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "GRU"
+      },
+      {
+        "from": "GRU",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "LHR"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4f-origin-intl"
+    ],
+    "rulesTouched": [
+      "R3015-4f-origin-intl"
+    ]
+  },
+  {
+    "id": "SC-085",
+    "source": "Full ticket + schedule + carrier golden path",
+    "tags": [
+      "smoke-api",
+      "smoke-ui",
+      "booking",
+      "flyertalk-golden"
+    ],
+    "taxonomy": {
+      "dataRichness": "full",
+      "journeyShape": "classic-rtw"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "marketingCarrier": "AA",
+        "operatingCarrier": "AA",
+        "rbd": "L",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-02T10:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA",
+        "departureTime": "2026-06-04T10:00:00Z",
+        "arrivalTime": "2026-06-05T10:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA",
+        "departureTime": "2026-06-08T10:00:00Z"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "marketingCarrier": "QF",
+        "operatingCarrier": "QF",
+        "departureTime": "2026-06-20T10:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "marketingCarrier": "BA",
+        "operatingCarrier": "BA"
+      }
+    ],
+    "ticket": {
+      "purchasedBeforeDeparture": true,
+      "validatingCarrier": "BA",
+      "saleMarket": "US",
+      "pnrHasOsiRtw": true
+    },
+    "expectValid": true,
+    "minPassedRules": 40,
+    "rulesTouched": [
+      "R3015-0-purchase",
+      "R3015-4-carriers",
+      "R3015-5b-booking",
+      "R3015-5-reservations",
+      "R3015-6-min-stay",
+      "R3015-8-stopovers",
+      "R3015-15-stock"
+    ]
+  },
+  {
+    "id": "SC-086",
+    "source": "Geometry-only baseline — no ticket or carrier metadata",
+    "tags": [
+      "smoke-api",
+      "geometry-only"
+    ],
+    "taxonomy": {
+      "dataRichness": "geometry-only",
+      "journeyShape": "classic-rtw"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-tc-def",
+      "R3015-0-continent-def",
+      "R3015-0-eu-me-zones",
+      "R3015-0-asia-countries",
+      "R3015-0-na-includes",
+      "R3015-4h-segment-count",
+      "R3015-4h-continent-limits"
+    ]
+  },
+  {
+    "id": "SC-087",
+    "source": "US origin §4f warning becomes error without transfer pair",
+    "tags": [
+      "smoke-ui",
+      "geometry-only",
+      "flyertalk-golden"
+    ],
+    "taxonomy": {
+      "failureCluster": "usa-exception"
+    },
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "CDG"
+      },
+      {
+        "from": "CDG",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-4f-usa-exception"
+    ],
+    "rulesTouched": [
+      "R3015-4f-usa-exception",
+      "R3015-4f-origin-intl"
+    ]
+  },
+  {
+    "id": "SC-088",
+    "source": "Maldives–Sri Lanka surface sector within permitted §4c-g pair",
+    "tags": [
+      "open-jaw"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw"
+    },
+    "segments": [
+      {
+        "from": "MLE",
+        "to": "CMB",
+        "surface": true
+      },
+      {
+        "from": "CMB",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "JFK"
+      },
+      {
+        "from": "JFK",
+        "to": "NRT"
+      },
+      {
+        "from": "NRT",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "MLE"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "closedLoop",
+    "rulesTouched": [
+      "R3015-4c-open-jaw-g",
+      "R3015-4b-direction"
+    ]
+  },
+  {
+    "id": "SC-089",
+    "source": "HKG–PEK implicit open jaw without surface flag",
+    "tags": [
+      "open-jaw"
+    ],
+    "taxonomy": {
+      "journeyShape": "open-jaw"
+    },
+    "segments": [
+      {
+        "from": "HKG",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "PEK"
+      }
+    ],
+    "expectValid": false,
+    "expectOriginReturnMode": "openJaw",
+    "expectActiveRules": [
+      "R3015-4c-open-jaw-d"
+    ],
+    "rulesTouched": [
+      "R3015-4c-open-jaw-d"
+    ]
+  },
+  {
+    "id": "SC-090",
+    "source": "Caribbean origin counts as North America (MIA RTW)",
+    "tags": [
+      "geometry-only",
+      "compliance"
+    ],
+    "taxonomy": {
+      "originMarket": "US",
+      "dataRichness": "geography"
+    },
+    "segments": [
+      {
+        "from": "MIA",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "MIA"
+      }
+    ],
+    "expectValid": true,
+    "rulesTouched": [
+      "R3015-0-na-includes",
+      "R3015-0-three-continent-origin"
+    ]
+  },
+  {
+    "id": "SC-091",
+    "source": "FlyerTalk User Guide eastbound RTW pattern (same as SC-001)",
+    "tags": [
+      "flyertalk-golden",
+      "geometry-only"
+    ],
+    "travelClass": "economy",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK"
+      }
+    ],
+    "expectValid": true
+  },
+  {
+    "id": "SC-092",
+    "source": "Only one stopover when schedule complete — invalid §8",
+    "tags": [
+      "flyertalk-golden",
+      "schedule"
+    ],
+    "travelClass": "economy",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-01T22:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2026-06-05T08:00:00Z",
+        "arrivalTime": "2026-06-05T18:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "departureTime": "2026-06-06T10:00:00Z",
+        "arrivalTime": "2026-06-06T20:00:00Z"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD",
+        "departureTime": "2026-06-07T18:00:00Z",
+        "arrivalTime": "2026-06-08T04:00:00Z"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "departureTime": "2026-06-08T10:00:00Z",
+        "arrivalTime": "2026-06-08T20:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "departureTime": "2026-06-09T12:00:00Z",
+        "arrivalTime": "2026-06-09T22:00:00Z"
+      }
+    ],
+    "expectValid": false,
+    "expectRuleIds": [
+      "R3015-8-stopovers"
+    ]
+  },
+  {
+    "id": "SC-093",
+    "source": "Two stopovers schedule complete — valid §8",
+    "tags": [
+      "flyertalk-golden",
+      "schedule"
+    ],
+    "travelClass": "economy",
+    "segments": [
+      {
+        "from": "JFK",
+        "to": "LHR",
+        "departureTime": "2026-06-01T10:00:00Z",
+        "arrivalTime": "2026-06-01T22:00:00Z"
+      },
+      {
+        "from": "LHR",
+        "to": "DXB",
+        "departureTime": "2026-06-05T08:00:00Z",
+        "arrivalTime": "2026-06-05T18:00:00Z"
+      },
+      {
+        "from": "DXB",
+        "to": "SIN",
+        "departureTime": "2026-06-10T08:00:00Z",
+        "arrivalTime": "2026-06-10T18:00:00Z"
+      },
+      {
+        "from": "SIN",
+        "to": "SYD",
+        "departureTime": "2026-06-11T10:00:00Z",
+        "arrivalTime": "2026-06-11T20:00:00Z"
+      },
+      {
+        "from": "SYD",
+        "to": "LAX",
+        "departureTime": "2026-06-20T08:00:00Z",
+        "arrivalTime": "2026-06-20T18:00:00Z"
+      },
+      {
+        "from": "LAX",
+        "to": "JFK",
+        "departureTime": "2026-06-25T10:00:00Z",
+        "arrivalTime": "2026-06-25T20:00:00Z"
+      }
+    ],
+    "expectValid": true
+  }
+]

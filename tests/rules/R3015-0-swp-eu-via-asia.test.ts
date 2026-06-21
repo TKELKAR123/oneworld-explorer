@@ -11,7 +11,7 @@ describe("R3015-0-swp-eu-via-asia", () => {
 
   it("fails invalid itinerary", () => {
     const segments = [
-      { from: "SYD", to: "LHR" },
+      { from: "SYD", to: "LHR", flightNumber: "QF1" },
       { from: "LHR", to: "JFK" },
       { from: "JFK", to: "SYD" },
     ];

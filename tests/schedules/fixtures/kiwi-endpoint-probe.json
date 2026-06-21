@@ -1,0 +1,46 @@
+{
+  "probedAt": "2026-06-19T16:06:31.072Z",
+  "apiKeyPresent": "REDACTED",
+  "results": [
+    {
+      "path": "/data/routes?airline=BA",
+      "status": 404,
+      "ok": false,
+      "contentType": "application/json",
+      "bodyPreview": "{\"detail\":\"Not Found\"}",
+      "rateLimitRemaining": null
+    },
+    {
+      "path": "/routes?airline=BA",
+      "status": 404,
+      "ok": false,
+      "contentType": "application/json",
+      "bodyPreview": "{\"detail\":\"Not Found\"}",
+      "rateLimitRemaining": null
+    },
+    {
+      "path": "/v2/routes?airline=BA",
+      "status": 404,
+      "ok": false,
+      "contentType": "application/json",
+      "bodyPreview": "{\"detail\":\"Not Found\"}",
+      "rateLimitRemaining": null
+    },
+    {
+      "path": "/data/airlines",
+      "status": 404,
+      "ok": false,
+      "contentType": "application/json",
+      "bodyPreview": "{\"detail\":\"Not Found\"}",
+      "rateLimitRemaining": null
+    },
+    {
+      "path": "/locations/query?term=BA&location_types=airline",
+      "status": 401,
+      "ok": false,
+      "contentType": "application/json",
+      "bodyPreview": "{\"error_code\":401,\"message\":\"Unauthorized\"}",
+      "rateLimitRemaining": null
+    }
+  ]
+}

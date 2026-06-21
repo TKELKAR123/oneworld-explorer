@@ -55,7 +55,8 @@ describe("smoke — HTTP against production Next.js server", () => {
     expect(res.status).toBe(200);
     const html = await res.text();
     expect(html).toContain("oneworld Explorer");
-    expect(html).toContain("Validate route");
+    expect(html).toContain("Re-check");
+    expect(html).toContain("bg-surface");
   });
 
   it("POST /api/validate returns JSON for classic RTW", async () => {

@@ -1,0 +1,46 @@
+[
+  {
+    "carrier": "IB",
+    "from": "JFK",
+    "to": "MAD",
+    "source": "manual-seasonal",
+    "note": "Seasonal oneworld service — verify dates"
+  },
+  {
+    "carrier": "AY",
+    "from": "MAD",
+    "to": "OSL",
+    "source": "manual-seasonal",
+    "note": "Seasonal connection — verify dates"
+  },
+  {
+    "carrier": "BA",
+    "from": "JFK",
+    "to": "LHR",
+    "source": "manual-seasonal",
+    "note": "Year-round but timetable varies"
+  },
+  {
+    "carrier": "AY",
+    "from": "LHR",
+    "to": "OSL",
+    "source": "manual-seasonal",
+    "note": "Verify seasonal availability"
+  },
+  {
+    "carrier": "AA",
+    "from": "NRT",
+    "to": "JFK",
+    "source": "manual-inactive",
+    "inactive": true,
+    "note": "Nonstop ended ~Mar 2024 — use connections"
+  },
+  {
+    "carrier": "JL",
+    "from": "NRT",
+    "to": "JFK",
+    "source": "manual-inactive",
+    "inactive": true,
+    "note": "Nonstop ended ~Mar 2024 — use connections"
+  }
+]

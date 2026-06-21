@@ -1,0 +1,146 @@
+{
+  "queryId": "trunk-ba-lhr-jfk",
+  "category": "high-traffic-trunk",
+  "from": "LHR",
+  "to": "JFK",
+  "date": "2026-07-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 24,
+  "htmlMeta": {
+    "htmlLength": 2672382,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 29,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "AA",
+      "AT",
+      "BA",
+      "DL",
+      "TA",
+      "TK",
+      "TP",
+      "VS"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "TA",
+      "operatingCarrier": "TA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "SimpleDatetime(date=[2026, 7, 15], time=[6])"
+      },
+      "arrival": {
+        "point": "LIS",
+        "time": "2026-07-15T08:50:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:01.998477+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Tap Air Portugal",
+        "Azores Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "TA",
+      "operatingCarrier": "TA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LIS",
+        "time": "2026-07-15T12:35:00"
+      },
+      "arrival": {
+        "point": "PDL",
+        "time": "2026-07-15T14:05:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:01.998544+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Tap Air Portugal",
+        "Azores Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "TA",
+      "operatingCarrier": "TA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "PDL",
+        "time": "2026-07-15T17:30:00"
+      },
+      "arrival": {
+        "point": "JFK",
+        "time": "2026-07-15T19:35:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:01.998555+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Tap Air Portugal",
+        "Azores Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "AT",
+      "operatingCarrier": "AT",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "LHR",
+        "time": "2026-07-15T18:50:00"
+      },
+      "arrival": {
+        "point": "CMN",
+        "time": "2026-07-15T22:10:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:01.998563+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Royal Air Maroc"
+      ]
+    },
+    {
+      "marketingCarrier": "AT",
+      "operatingCarrier": "AT",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "CMN",
+        "time": "SimpleDatetime(date=[2026, 7, 16], time=[6])"
+      },
+      "arrival": {
+        "point": "JFK",
+        "time": "2026-07-16T08:50:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:01.998571+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Royal Air Maroc"
+      ]
+    }
+  ]
+}

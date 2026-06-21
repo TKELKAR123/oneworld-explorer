@@ -14,6 +14,7 @@ describe("R3015-4k-alaska", () => {
       { from: "DXB", to: "SIN" },
       { from: "SIN", to: "SYD" },
       { from: "SYD", to: "ANC" },
+      { from: "ANC", to: "SEA" },
       { from: "SEA", to: "ANC" },
       { from: "ANC", to: "JFK" },
     ]);

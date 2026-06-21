@@ -5,16 +5,15 @@ import {
   searchSchedules,
 } from "../src/index.js";
 
-describe("searchSchedules stub", () => {
-  it("returns empty flights with scheduleOnly flag", async () => {
+describe("searchSchedules", () => {
+  it("returns scheduleOnly result for LHR→JFK", async () => {
     const result = await searchSchedules({
       from: "LHR",
       to: "JFK",
       date: "2026-09-15",
     });
-    expect(result.stub).toBe(true);
     expect(result.scheduleOnly).toBe(true);
-    expect(result.flights).toEqual([]);
+    expect(result.flights).toBeDefined();
     expect(result.asOf).toMatch(/^\d{4}-\d{2}-\d{2}T/);
   });
 });

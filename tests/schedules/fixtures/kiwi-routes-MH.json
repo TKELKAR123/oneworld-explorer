@@ -1,0 +1,5 @@
+{
+  "error": "KIWI_TEQUILA_API_KEY not set",
+  "endpoint": "/data/routes?airline=MH",
+  "note": "Endpoint returned 404 in unauthenticated probe — see kiwi-endpoint-probe.json"
+}

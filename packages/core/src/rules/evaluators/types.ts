@@ -9,4 +9,7 @@ export interface FormalRule {
   category: string;
   enforceInV01: boolean;
   enforceInV02: boolean;
+  ruleKind?: "tariff" | "exception" | "advisory";
+  displayGroup?: string;
+  applicability?: "always" | "whenTriggered";
 }

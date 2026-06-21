@@ -17,6 +17,49 @@ import {
 import {
   freeFlightSegmentsUsed,
 } from "./rules/helpers/segments.js";
+import { detectOpenJawType } from "./rules/helpers/open-jaw.js";
+import { OPEN_JAW_LABELS } from "./rules/rule-metadata.js";
+import type { OriginReturnSummary } from "./ontology/types.js";
+
+function buildOriginReturn(itinerary: ParsedItinerary): OriginReturnSummary {
+  const origin = itinerary.points[0]!;
+  const termination = itinerary.points[itinerary.points.length - 1]!;
+
+  if (origin.iata === termination.iata) {
+    return {
+      originIata: origin.iata,
+      returnIata: termination.iata,
+      originCountry: origin.country,
+      returnCountry: termination.country,
+      mode: "closedLoop",
+      requiresSurface: false,
+    };
+  }
+
+  const jawType = detectOpenJawType(itinerary);
+  if (jawType) {
+    return {
+      originIata: origin.iata,
+      returnIata: termination.iata,
+      originCountry: origin.country,
+      returnCountry: termination.country,
+      mode: "openJaw",
+      openJawType: jawType,
+      openJawLabel: OPEN_JAW_LABELS[jawType],
+      requiresSurface: false,
+    };
+  }
+
+  return {
+    originIata: origin.iata,
+    returnIata: termination.iata,
+    originCountry: origin.country,
+    returnCountry: termination.country,
+    mode: "openJawPending",
+    requiresSurface: false,
+    pendingHint: `Return (${termination.iata}) is not in a permitted §4(c) open-jaw pair with origin (${origin.iata}).`,
+  };
+}
 
 const ALL_CONTINENTS: Continent[] = [
   "europe-middle-east",
@@ -71,11 +114,12 @@ export function analyzeRoute(
     segments: segmentDetails,
     continentsVisited: charged,
     continentCount: charged.length,
-    suggestedFareBasis: suggestedFareBasis(charged.length, travelClass),
+    suggestedFareBasis: suggestedFareBasis(charged.length, travelClass, options.ticket),
     direction,
     flightSegmentsByContinent,
     totalSegments: itinerary.segments.length,
     crossesAtlantic: atlanticCount === 1,
     crossesPacific: pacificCount === 1,
+    originReturn: buildOriginReturn(itinerary),
   };
 }

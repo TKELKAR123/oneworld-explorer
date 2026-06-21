@@ -7,8 +7,9 @@ describe("R3015-0-fare-basis", () => {
     expect(ruleErrors(result, "R3015-0-fare-basis")).toHaveLength(0);
   });
 
-  it("fails invalid itinerary", () => {
-    const result = validate(CLASSIC_RTW, { travelClass: 'premium-economy' as never });
-    expect(result.analysis?.suggestedFareBasis === null || ruleErrors(result, 'R3015-0-fare-basis').length >= 0).toBe(true);
+  it("premium economy uses LONE basis not business", () => {
+    const result = validate(CLASSIC_RTW, { travelClass: "premium-economy" });
+    expect(result.analysis?.suggestedFareBasis).toBe("LONE4 (+ PE surcharge per segment)");
+    expect(ruleErrors(result, "R3015-0-fare-basis")).toHaveLength(0);
   });
 });

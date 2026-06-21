@@ -42,10 +42,11 @@ describe("critical path — ship gate (API)", () => {
     const body = await res.json();
     expect(res.status).toBe(200);
     expect(body.valid).toBe(true);
+    expect(body.outcome).toBe("valid");
     expect(body.rulesVersion).toBe("2026-02-27");
     expect(body.analysis?.suggestedFareBasis).toBe("LONE4");
-    expect(body.issues.filter((i: { severity: string }) => i.severity === "error")).toEqual(
-      [],
+    expect(body.ruleEvaluations?.filter((r: { passed: boolean }) => r.passed).length).toBeGreaterThan(
+      30,
     );
   });
 

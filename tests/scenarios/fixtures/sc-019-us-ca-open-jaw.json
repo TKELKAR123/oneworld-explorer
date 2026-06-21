@@ -1,0 +1,16 @@
+{
+  "id": "SC-019",
+  "source": "US/Canada open jaw via surface (§4c-c)",
+  "segments": [
+    { "from": "JFK", "to": "YYZ", "surface": true },
+    { "from": "YYZ", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "YYZ" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-c", "R3015-4c-origin"]
+}

@@ -54,7 +54,7 @@ describe("R3015-4a oceans", () => {
         { from: "LHR", to: "DXB" },
         { from: "DXB", to: "JFK" },
       ],
-      { travelClass: "economy" },
+      { travelClass: "economy", validationPhase: "ticketReady" },
     );
     expect(result.issues.some((i) => i.code === "R3015-4a" && i.message.includes("Pacific"))).toBe(
       true,
@@ -69,7 +69,7 @@ describe("R3015-4h segment count", () => {
         { from: "JFK", to: "LHR" },
         { from: "LHR", to: "JFK" },
       ],
-      { travelClass: "economy" },
+      { travelClass: "economy", validationPhase: "ticketReady" },
     );
     expect(result.issues.some((i) => i.code === "R3015-4h-segment-count")).toBe(true);
   });

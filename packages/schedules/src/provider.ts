@@ -22,7 +22,14 @@ export interface ScheduleSearchResult {
   asOf: string;
   flights: NormalizedFlight[];
   scheduleOnly: true;
+  from?: string;
+  to?: string;
+  date?: string;
   warnings?: string[];
+  rejected?: Array<{ flight: NormalizedFlight; reason: string }>;
+  cacheHit?: boolean;
+  provider?: string;
+  errorCode?: string;
 }
 
 export interface ScheduleProvider {

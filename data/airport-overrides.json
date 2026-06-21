@@ -1,0 +1,162 @@
+{
+  "HNL": { "country": "US", "usState": "HI" },
+  "OGG": { "country": "US", "usState": "HI" },
+  "KOA": { "country": "US", "usState": "HI" },
+  "LIH": { "country": "US", "usState": "HI" },
+  "ITO": { "country": "US", "usState": "HI" },
+  "TXL": {
+    "name": "Berlin Tegel Airport",
+    "city": "Berlin",
+    "country": "DE",
+    "latitude": 52.559722,
+    "longitude": 13.287778
+  },
+  "AHU": {
+    "name": "Cherif Al Idrissi Airport",
+    "city": "Al Hoceima",
+    "country": "MA",
+    "latitude": 35.177101,
+    "longitude": -3.83952
+  },
+  "GLN": {
+    "name": "Guelmim Airport",
+    "city": "Guelmim",
+    "country": "MA",
+    "latitude": 29.026699,
+    "longitude": -10.0503
+  },
+  "TIP": {
+    "name": "Tripoli International Airport",
+    "city": "Tripoli",
+    "country": "LY",
+    "latitude": 32.663333,
+    "longitude": 13.159167
+  },
+  "KBP": {
+    "name": "Boryspil International Airport",
+    "city": "Kyiv",
+    "country": "UA",
+    "latitude": 50.345001,
+    "longitude": 30.894699
+  },
+  "IEV": {
+    "name": "Kyiv Zhuliany International Airport",
+    "city": "Kyiv",
+    "country": "UA",
+    "latitude": 50.401944,
+    "longitude": 30.451944
+  },
+  "RGS": {
+    "name": "Burgos Airport",
+    "city": "Burgos",
+    "country": "ES",
+    "latitude": 42.357601,
+    "longitude": -3.62076
+  },
+  "MJV": {
+    "name": "Region de Murcia International Airport",
+    "city": "Murcia",
+    "country": "ES",
+    "latitude": 37.774722,
+    "longitude": -0.812222
+  },
+  "RJL": {
+    "name": "Logrono-Agoncillo Airport",
+    "city": "Logrono",
+    "country": "ES",
+    "latitude": 42.461111,
+    "longitude": -2.322222
+  },
+  "TGC": {
+    "name": "Tanjung Manis Airport",
+    "city": "Tanjung Manis",
+    "country": "MY",
+    "latitude": 2.17784,
+    "longitude": 111.202003
+  },
+  "KTE": {
+    "name": "Kerteh Airport",
+    "city": "Kerteh",
+    "country": "MY",
+    "latitude": 4.53722,
+    "longitude": 103.427002
+  },
+  "PNH": {
+    "name": "Phnom Penh International Airport",
+    "city": "Phnom Penh",
+    "country": "KH",
+    "latitude": 11.547155,
+    "longitude": 104.844699
+  },
+  "REP": {
+    "name": "Siem Reap International Airport",
+    "city": "Siem Reap",
+    "country": "KH",
+    "latitude": 13.410667,
+    "longitude": 103.812778
+  },
+  "LKH": {
+    "name": "Long Akah Airport",
+    "city": "Long Akah",
+    "country": "MY",
+    "latitude": 3.310909,
+    "longitude": 114.785553
+  },
+  "ZBL": {
+    "name": "Biloela Airport",
+    "city": "Biloela",
+    "country": "AU",
+    "latitude": -24.493889,
+    "longitude": 150.515278
+  },
+  "OSM": {
+    "name": "Mosul International Airport",
+    "city": "Mosul",
+    "country": "IQ",
+    "latitude": 36.305801,
+    "longitude": 43.1474
+  },
+  "GIU": {
+    "name": "Sigiriya Air Force Base",
+    "city": "Sigiriya",
+    "country": "LK",
+    "latitude": 7.95667,
+    "longitude": 80.7285
+  },
+  "DIW": {
+    "name": "Dickwella Airfield",
+    "city": "Dickwella",
+    "country": "LK",
+    "latitude": 5.966667,
+    "longitude": 80.683333
+  },
+  "NRT": {
+    "city": "Tokyo",
+    "searchTerms": ["Tokyo", "Narita"]
+  },
+  "HND": {
+    "searchTerms": ["Tokyo"]
+  },
+  "KUL": {
+    "city": "Kuala Lumpur",
+    "searchTerms": ["Kuala Lumpur", "Malaysia"]
+  },
+  "SZB": {
+    "city": "Kuala Lumpur",
+    "searchTerms": ["Kuala Lumpur", "Subang"]
+  },
+  "OAG": {
+    "name": "Orange Airport",
+    "city": "Orange",
+    "country": "AU",
+    "latitude": -33.382014,
+    "longitude": 149.131262
+  },
+  "ONS": {
+    "name": "Onslow Airport",
+    "city": "Onslow",
+    "country": "AU",
+    "latitude": -21.670161,
+    "longitude": 115.114902
+  }
+}

@@ -23,6 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build -w @oneworld-explorer/core
+      - run: npm run research:benchmark -- --min-recall=90 --quiet
       - run: npm run validate
 
   unit:

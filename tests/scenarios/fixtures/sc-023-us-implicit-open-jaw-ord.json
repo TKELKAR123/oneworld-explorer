@@ -1,0 +1,15 @@
+{
+  "id": "SC-023",
+  "source": "Implicit US open jaw JFK→ORD — no surface leg required (§4c-a)",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "ORD" }
+  ],
+  "expectValid": true,
+  "expectOriginReturnMode": "openJaw",
+  "expectActiveRules": ["R3015-4c-open-jaw-a", "R3015-4c-origin"]
+}

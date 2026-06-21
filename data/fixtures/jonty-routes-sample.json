@@ -1,0 +1,72 @@
+{
+  "LHR": {
+    "iata": "LHR",
+    "name": "London Heathrow",
+    "routes": [
+      {
+        "iata": "JFK",
+        "km": 5540,
+        "min": 480,
+        "carriers": [
+          { "iata": "BA", "name": "British Airways" },
+          { "iata": "AA", "name": "American Airlines" },
+          { "iata": "DL", "name": "Delta Air Lines" }
+        ]
+      },
+      {
+        "iata": "SYD",
+        "km": 17000,
+        "min": 1260,
+        "carriers": [{ "iata": "QF", "name": "Qantas" }]
+      }
+    ]
+  },
+  "JFK": {
+    "iata": "JFK",
+    "name": "New York JFK",
+    "routes": [
+      {
+        "iata": "LHR",
+        "km": 5540,
+        "min": 420,
+        "carriers": [{ "iata": "BA", "name": "British Airways" }]
+      }
+    ]
+  },
+  "MCT": {
+    "iata": "MCT",
+    "name": "Muscat",
+    "routes": [
+      {
+        "iata": "LHR",
+        "km": 5800,
+        "min": 480,
+        "carriers": [{ "iata": "WY", "name": "Oman Air" }]
+      }
+    ]
+  },
+  "CMN": {
+    "iata": "CMN",
+    "name": "Casablanca",
+    "routes": [
+      {
+        "iata": "JFK",
+        "km": 5800,
+        "min": 480,
+        "carriers": [{ "iata": "AT", "name": "Royal Air Maroc" }]
+      }
+    ]
+  },
+  "NRT": {
+    "iata": "NRT",
+    "name": "Tokyo Narita",
+    "routes": [
+      {
+        "iata": "LAX",
+        "km": 8800,
+        "min": 660,
+        "carriers": [{ "iata": "JL", "name": "Japan Airlines" }]
+      }
+    ]
+  }
+}

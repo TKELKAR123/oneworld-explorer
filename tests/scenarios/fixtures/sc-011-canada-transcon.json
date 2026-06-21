@@ -1,0 +1,12 @@
+{
+  "id": "SC-011",
+  "source": "Two US/Canada transcontinental flights",
+  "segments": [
+    { "from": "YYZ", "to": "LAX" },
+    { "from": "LAX", "to": "MIA" },
+    { "from": "MIA", "to": "LHR" },
+    { "from": "LHR", "to": "YYZ" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4k-us-transcon"]
+}

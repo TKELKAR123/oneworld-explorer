@@ -1,6 +1,7 @@
 import type { Continent, EvaluationContext } from "../../ontology/types.js";
 import { continentsCharged } from "../helpers/pricing.js";
 import { countIntercontinentalEvents } from "../helpers/segments.js";
+import { isIntercontinental } from "../helpers/geometry.js";
 import { ruleError } from "./utils.js";
 
 function interconLimits(continent: Continent, charged: Continent[]): { maxDep: number; maxArr: number } {
@@ -91,14 +92,18 @@ export function evaluateR3015_4e_3_africa_eu(ctx: EvaluationContext) {
   const charged = continentsCharged(ctx.itinerary);
   if (!charged.includes("africa")) return [];
 
-  const { departures, arrivals } = countIntercontinentalEvents(ctx.itinerary);
-  const hasEuDep = [...departures.entries()].some(
-    ([c, n]) => c === "europe-middle-east" && n > 0,
-  );
-  const hasEuArr = [...arrivals.entries()].some(
-    ([c, n]) => c === "europe-middle-east" && n > 0,
-  );
-  if (!hasEuDep || !hasEuArr) return [];
+  let europeSubZoneDep = 0;
+  let europeSubZoneArr = 0;
+
+  for (let i = 0; i < ctx.itinerary.segments.length; i++) {
+    const from = ctx.itinerary.points[i]!;
+    const to = ctx.itinerary.points[i + 1]!;
+    if (!isIntercontinental(from, to)) continue;
+    if (from.subZone === "europe") europeSubZoneDep++;
+    if (to.subZone === "europe") europeSubZoneArr++;
+  }
+
+  if (europeSubZoneDep === 0 || europeSubZoneArr === 0) return [];
 
   const issues = [];
   for (const p of ctx.itinerary.points) {

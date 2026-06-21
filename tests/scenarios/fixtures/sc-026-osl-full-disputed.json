@@ -1,0 +1,25 @@
+{
+  "id": "SC-026",
+  "source": "FlyerTalk — full OSL RTW disputed route (4e-3 Africa/EU + Asia 5/4)",
+  "tags": ["flyertalk-golden", "geometry-only"],
+  "validationPhase": "ticketReady",
+  "segments": [
+    { "from": "OSL", "to": "DOH" },
+    { "from": "DOH", "to": "BOM" },
+    { "from": "BOM", "to": "CMB" },
+    { "from": "CMB", "to": "KUL" },
+    { "from": "KUL", "to": "HKG" },
+    { "from": "HKG", "to": "CEB" },
+    { "from": "CEB", "to": "NRT" },
+    { "from": "NRT", "to": "ORD" },
+    { "from": "ORD", "to": "ANC" },
+    { "from": "ANC", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" },
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "CPT" },
+    { "from": "CPT", "to": "DOH" },
+    { "from": "DOH", "to": "OSL" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4e-3-africa-eu", "R3015-4h-continent-limits"]
+}

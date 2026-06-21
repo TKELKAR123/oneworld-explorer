@@ -1,0 +1,136 @@
+{
+  "queryId": "affiliate-aa-dfw-abi",
+  "category": "affiliate-edge",
+  "from": "DFW",
+  "to": "ABI",
+  "date": "2026-07-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 3,
+  "htmlMeta": {
+    "htmlLength": 2320599,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 6,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "UA"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "UA",
+      "operatingCarrier": "UA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "DFW",
+        "time": "2026-07-15T05:45:00"
+      },
+      "arrival": {
+        "point": "DEN",
+        "time": "2026-07-15T06:53:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:49.063604+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "UA",
+      "operatingCarrier": "UA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "DEN",
+        "time": "2026-07-15T14:10:00"
+      },
+      "arrival": {
+        "point": "ABI",
+        "time": "2026-07-15T17:07:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:49.063762+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "UA",
+      "operatingCarrier": "UA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "DFW",
+        "time": "2026-07-15T05:45:00"
+      },
+      "arrival": {
+        "point": "DEN",
+        "time": "2026-07-15T06:53:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:49.063774+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "UA",
+      "operatingCarrier": "UA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "DEN",
+        "time": "2026-07-15T08:15:00"
+      },
+      "arrival": {
+        "point": "ABI",
+        "time": "2026-07-15T11:12:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:49.063786+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "UA",
+      "operatingCarrier": "UA",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "DFW",
+        "time": "2026-07-15T08:45:00"
+      },
+      "arrival": {
+        "point": "DEN",
+        "time": "2026-07-15T10:06:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:49.063798+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "United"
+      ]
+    }
+  ]
+}

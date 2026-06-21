@@ -1,0 +1,542 @@
+[
+  {
+    "id": "inactive-aa-nrt-jfk",
+    "category": "known-inactive",
+    "carrier": "AA",
+    "from": "NRT",
+    "to": "JFK",
+    "expected": "must-not-appear-active",
+    "note": "Nonstop ended ~Mar 2024"
+  },
+  {
+    "id": "inactive-jl-nrt-jfk",
+    "category": "known-inactive",
+    "carrier": "JL",
+    "from": "NRT",
+    "to": "JFK",
+    "expected": "must-not-appear-active",
+    "note": "Nonstop ended ~Mar 2024"
+  },
+  {
+    "id": "inactive-aa-jfk-nrt",
+    "category": "known-inactive",
+    "carrier": "AA",
+    "from": "JFK",
+    "to": "NRT",
+    "expected": "must-not-appear-active",
+    "note": "Return direction of ended nonstop"
+  },
+  {
+    "id": "inactive-jl-jfk-nrt",
+    "category": "known-inactive",
+    "carrier": "JL",
+    "from": "JFK",
+    "to": "NRT",
+    "expected": "must-not-appear-active",
+    "note": "Return direction of ended nonstop"
+  },
+  {
+    "id": "inactive-aa-dfw-nrt",
+    "category": "known-inactive",
+    "carrier": "AA",
+    "from": "DFW",
+    "to": "NRT",
+    "expected": "verify-dates",
+    "note": "Seasonal/suspended variants — may appear in stale data"
+  },
+  {
+    "id": "inactive-ba-lhr-per",
+    "category": "known-inactive",
+    "carrier": "BA",
+    "from": "LHR",
+    "to": "PER",
+    "expected": "verify-dates",
+    "note": "Via-stop variants; direct may have changed"
+  },
+  {
+    "id": "inactive-qf-per-lhr",
+    "category": "known-inactive",
+    "carrier": "QF",
+    "from": "PER",
+    "to": "LHR",
+    "expected": "verify-dates",
+    "note": "QF kangaroo route restructured over years"
+  },
+  {
+    "id": "inactive-mh-kul-lhr",
+    "category": "known-inactive",
+    "carrier": "MH",
+    "from": "KUL",
+    "to": "LHR",
+    "expected": "verify-dates",
+    "note": "MH Europe service reduced post-2014"
+  },
+  {
+    "id": "inactive-ib-mad-bos",
+    "category": "known-inactive",
+    "carrier": "IB",
+    "from": "MAD",
+    "to": "BOS",
+    "expected": "verify-dates",
+    "note": "Seasonal US route — verify current season"
+  },
+  {
+    "id": "inactive-rj-amm-jfk",
+    "category": "known-inactive",
+    "carrier": "RJ",
+    "from": "AMM",
+    "to": "JFK",
+    "expected": "verify-dates",
+    "note": "RJ long-haul varies by season"
+  },
+  {
+    "id": "seasonal-ib-jfk-mad",
+    "category": "known-seasonal",
+    "carrier": "IB",
+    "from": "JFK",
+    "to": "MAD",
+    "expected": "may-appear-verify-dates",
+    "note": "Seasonal oneworld service"
+  },
+  {
+    "id": "seasonal-ay-mad-osl",
+    "category": "known-seasonal",
+    "carrier": "AY",
+    "from": "MAD",
+    "to": "OSL",
+    "expected": "may-appear-verify-dates",
+    "note": "Seasonal connection"
+  },
+  {
+    "id": "seasonal-ba-jfk-lhr",
+    "category": "known-seasonal",
+    "carrier": "BA",
+    "from": "JFK",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "Year-round trunk but timetable varies"
+  },
+  {
+    "id": "seasonal-ay-lhr-osl",
+    "category": "known-seasonal",
+    "carrier": "AY",
+    "from": "LHR",
+    "to": "OSL",
+    "expected": "may-appear-verify-dates",
+    "note": "Verify seasonal availability"
+  },
+  {
+    "id": "seasonal-ay-hel-bkk",
+    "category": "known-seasonal",
+    "carrier": "AY",
+    "from": "HEL",
+    "to": "BKK",
+    "expected": "may-appear-verify-dates",
+    "note": "AY Asia seasonal"
+  },
+  {
+    "id": "seasonal-fj-nan-akl",
+    "category": "known-seasonal",
+    "carrier": "FJ",
+    "from": "NAN",
+    "to": "AKL",
+    "expected": "should-appear",
+    "note": "FJ Pacific trunk"
+  },
+  {
+    "id": "seasonal-cx-hkg-lhr",
+    "category": "known-seasonal",
+    "carrier": "CX",
+    "from": "HKG",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "CX Europe trunk — frequency varies"
+  },
+  {
+    "id": "seasonal-jl-hnd-sfo",
+    "category": "known-seasonal",
+    "carrier": "JL",
+    "from": "HND",
+    "to": "SFO",
+    "expected": "should-appear",
+    "note": "JL US transpacific"
+  },
+  {
+    "id": "seasonal-qr-doh-mle",
+    "category": "known-seasonal",
+    "carrier": "QR",
+    "from": "DOH",
+    "to": "MLE",
+    "expected": "should-appear",
+    "note": "QR leisure seasonal"
+  },
+  {
+    "id": "seasonal-as-sea-lhr",
+    "category": "known-seasonal",
+    "carrier": "BA",
+    "from": "SEA",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "AS/BA codeshare US–Europe"
+  },
+  {
+    "id": "trunk-ba-lhr-jfk",
+    "category": "high-traffic-trunk",
+    "carrier": "BA",
+    "from": "LHR",
+    "to": "JFK",
+    "expected": "should-appear",
+    "note": "ADS-B observed 2026-Q1"
+  },
+  {
+    "id": "trunk-aa-jfk-lhr",
+    "category": "high-traffic-trunk",
+    "carrier": "AA",
+    "from": "JFK",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "ADS-B observed 2026-Q1"
+  },
+  {
+    "id": "trunk-qf-syd-lax",
+    "category": "high-traffic-trunk",
+    "carrier": "QF",
+    "from": "SYD",
+    "to": "LAX",
+    "expected": "should-appear",
+    "note": "QF transpacific RTW staple"
+  },
+  {
+    "id": "trunk-qr-doh-lhr",
+    "category": "high-traffic-trunk",
+    "carrier": "QR",
+    "from": "DOH",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "QR hub trunk"
+  },
+  {
+    "id": "trunk-cx-hkg-syd",
+    "category": "high-traffic-trunk",
+    "carrier": "CX",
+    "from": "HKG",
+    "to": "SYD",
+    "expected": "should-appear",
+    "note": "CX kangaroo route"
+  },
+  {
+    "id": "trunk-jl-nrt-lax",
+    "category": "high-traffic-trunk",
+    "carrier": "JL",
+    "from": "NRT",
+    "to": "LAX",
+    "expected": "should-appear",
+    "note": "JL US trunk (distinct from ended NRT-JFK)"
+  },
+  {
+    "id": "trunk-aa-dfw-lhr",
+    "category": "high-traffic-trunk",
+    "carrier": "AA",
+    "from": "DFW",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "AA BA JV trunk"
+  },
+  {
+    "id": "trunk-ib-mad-gru",
+    "category": "high-traffic-trunk",
+    "carrier": "IB",
+    "from": "MAD",
+    "to": "GRU",
+    "expected": "should-appear",
+    "note": "IB South America"
+  },
+  {
+    "id": "trunk-mh-kul-sin",
+    "category": "high-traffic-trunk",
+    "carrier": "MH",
+    "from": "KUL",
+    "to": "SIN",
+    "expected": "should-appear",
+    "note": "MH short-haul hub"
+  },
+  {
+    "id": "trunk-ay-hel-lhr",
+    "category": "high-traffic-trunk",
+    "carrier": "AY",
+    "from": "HEL",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "AY Europe trunk"
+  },
+  {
+    "id": "affiliate-ba-lhr-man",
+    "category": "affiliate-edge",
+    "carrier": "BA",
+    "from": "LHR",
+    "to": "MAN",
+    "expected": "operating-carrier-needed",
+    "note": "Often CJ or BA Euroflyer metal — §4(j) test"
+  },
+  {
+    "id": "affiliate-ba-lhr-edi",
+    "category": "affiliate-edge",
+    "carrier": "BA",
+    "from": "LHR",
+    "to": "EDI",
+    "expected": "operating-carrier-needed",
+    "note": "UK domestic affiliate test"
+  },
+  {
+    "id": "affiliate-qf-syd-per",
+    "category": "affiliate-edge",
+    "carrier": "QF",
+    "from": "SYD",
+    "to": "PER",
+    "expected": "operating-carrier-needed",
+    "note": "May be QF or JQ metal"
+  },
+  {
+    "id": "affiliate-qf-bne-ool",
+    "category": "affiliate-edge",
+    "carrier": "QF",
+    "from": "BNE",
+    "to": "OOL",
+    "expected": "operating-carrier-needed",
+    "note": "QF/JQ domestic codeshare"
+  },
+  {
+    "id": "affiliate-aa-dfw-abi",
+    "category": "affiliate-edge",
+    "carrier": "AA",
+    "from": "DFW",
+    "to": "ABI",
+    "expected": "operating-carrier-needed",
+    "note": "AA Eagle regional — OO/MQ affiliate"
+  },
+  {
+    "id": "affiliate-aa-ord-rdu",
+    "category": "affiliate-edge",
+    "carrier": "AA",
+    "from": "ORD",
+    "to": "RDU",
+    "expected": "operating-carrier-needed",
+    "note": "AA mainline vs regional"
+  },
+  {
+    "id": "affiliate-ib-mad-pmi",
+    "category": "affiliate-edge",
+    "carrier": "IB",
+    "from": "MAD",
+    "to": "PMI",
+    "expected": "operating-carrier-needed",
+    "note": "I2 Iberia Express affiliate"
+  },
+  {
+    "id": "affiliate-as-sea-pdx",
+    "category": "affiliate-edge",
+    "carrier": "AS",
+    "from": "SEA",
+    "to": "PDX",
+    "expected": "operating-carrier-needed",
+    "note": "AS/QX Horizon affiliate"
+  },
+  {
+    "id": "affiliate-jl-hnd-cts",
+    "category": "affiliate-edge",
+    "carrier": "JL",
+    "from": "HND",
+    "to": "CTS",
+    "expected": "operating-carrier-needed",
+    "note": "J-Air affiliate possible"
+  },
+  {
+    "id": "affiliate-fj-nan-vli",
+    "category": "affiliate-edge",
+    "carrier": "FJ",
+    "from": "NAN",
+    "to": "VLI",
+    "expected": "operating-carrier-needed",
+    "note": "Fiji Link JC affiliate"
+  },
+  {
+    "id": "newer-at-cmn-jfk",
+    "category": "newer-members",
+    "carrier": "AT",
+    "from": "CMN",
+    "to": "JFK",
+    "expected": "should-appear",
+    "note": "Royal Air Maroc — eligible, often missing from 14-carrier lists"
+  },
+  {
+    "id": "newer-at-cmn-lhr",
+    "category": "newer-members",
+    "carrier": "AT",
+    "from": "CMN",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "AT Europe trunk"
+  },
+  {
+    "id": "newer-wy-mct-lhr",
+    "category": "newer-members",
+    "carrier": "WY",
+    "from": "MCT",
+    "to": "LHR",
+    "expected": "should-appear",
+    "note": "Oman Air eligible member"
+  },
+  {
+    "id": "newer-wy-mct-bkk",
+    "category": "newer-members",
+    "carrier": "WY",
+    "from": "MCT",
+    "to": "BKK",
+    "expected": "should-appear",
+    "note": "WY Asia route"
+  },
+  {
+    "id": "newer-nu-oka-hnd",
+    "category": "newer-members",
+    "carrier": "NU",
+    "from": "OKA",
+    "to": "HND",
+    "expected": "should-appear",
+    "note": "Japan Transocean Air — eligible, niche"
+  },
+  {
+    "id": "newer-nu-isg-hnd",
+    "category": "newer-members",
+    "carrier": "NU",
+    "from": "ISG",
+    "to": "HND",
+    "expected": "should-appear",
+    "note": "NU Okinawa routes"
+  },
+  {
+    "id": "newer-at-cmn-doh",
+    "category": "newer-members",
+    "carrier": "AT",
+    "from": "CMN",
+    "to": "DOH",
+    "expected": "should-appear",
+    "note": "AT–QR oneworld connection"
+  },
+  {
+    "id": "newer-wy-mct-doh",
+    "category": "newer-members",
+    "carrier": "WY",
+    "from": "MCT",
+    "to": "DOH",
+    "expected": "should-appear",
+    "note": "Gulf hub connection"
+  },
+  {
+    "id": "newer-at-cmn-cai",
+    "category": "newer-members",
+    "carrier": "AT",
+    "from": "CMN",
+    "to": "CAI",
+    "expected": "should-appear",
+    "note": "AT Africa network"
+  },
+  {
+    "id": "newer-wy-mct-del",
+    "category": "newer-members",
+    "carrier": "WY",
+    "from": "MCT",
+    "to": "DEL",
+    "expected": "should-appear",
+    "note": "WY India route"
+  },
+  {
+    "id": "multihop-lhr-per",
+    "category": "false-negative-trap",
+    "carrier": "QF",
+    "from": "LHR",
+    "to": "PER",
+    "expected": "advisory-only",
+    "note": "Often via DOH/SIN — no direct; network hint may miss valid RTW path"
+  },
+  {
+    "id": "multihop-jfk-syd",
+    "category": "false-negative-trap",
+    "carrier": "QF",
+    "from": "JFK",
+    "to": "SYD",
+    "expected": "advisory-only",
+    "note": "Multi-hop only — 1-stop BFS should help"
+  },
+  {
+    "id": "multihop-lax-bkk",
+    "category": "false-negative-trap",
+    "carrier": "CX",
+    "from": "LAX",
+    "to": "BKK",
+    "expected": "advisory-only",
+    "note": "Via HKG — direct may not exist"
+  },
+  {
+    "id": "multihop-ord-del",
+    "category": "false-negative-trap",
+    "carrier": "QR",
+    "from": "ORD",
+    "to": "DEL",
+    "expected": "advisory-only",
+    "note": "Via DOH — common RTW leg"
+  },
+  {
+    "id": "multihop-sfo-sin",
+    "category": "false-negative-trap",
+    "carrier": "SQ",
+    "from": "SFO",
+    "to": "SIN",
+    "expected": "advisory-only",
+    "note": "Non-oneworld carrier — tests eligible filter; path via AA/BA/QF hubs"
+  },
+  {
+    "id": "multihop-mad-nrt",
+    "category": "false-negative-trap",
+    "carrier": "IB",
+    "from": "MAD",
+    "to": "NRT",
+    "expected": "advisory-only",
+    "note": "Via LHR/HEL — no direct IB"
+  },
+  {
+    "id": "multihop-akl-lhr",
+    "category": "false-negative-trap",
+    "carrier": "QF",
+    "from": "AKL",
+    "to": "LHR",
+    "expected": "advisory-only",
+    "note": "Via SYD/SIN/DOH"
+  },
+  {
+    "id": "multihop-dfw-hkg",
+    "category": "false-negative-trap",
+    "carrier": "CX",
+    "from": "DFW",
+    "to": "HKG",
+    "expected": "advisory-only",
+    "note": "AA/CX codeshare path"
+  },
+  {
+    "id": "multihop-bos-doh",
+    "category": "false-negative-trap",
+    "carrier": "QR",
+    "from": "BOS",
+    "to": "DOH",
+    "expected": "should-appear",
+    "note": "QR direct exists — sanity check vs multi-hop category"
+  },
+  {
+    "id": "multihop-per-lhr",
+    "category": "false-negative-trap",
+    "carrier": "BA",
+    "from": "PER",
+    "to": "LHR",
+    "expected": "advisory-only",
+    "note": "Via SIN/DOH — QF/BA JV routing"
+  }
+]

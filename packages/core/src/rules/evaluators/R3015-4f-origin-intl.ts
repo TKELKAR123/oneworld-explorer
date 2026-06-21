@@ -5,6 +5,10 @@ import {
   intlTransfersFrom,
   isInternationalSegment,
 } from "../helpers/international.js";
+import {
+  hasScheduleCompleteItinerary,
+  qualifiesUsaDoubleDepartureException,
+} from "../helpers/gap-engine.js";
 import { ruleError, ruleWarning } from "./utils.js";
 
 export function evaluateR3015_4f_origin_intl(ctx: EvaluationContext) {
@@ -48,15 +52,24 @@ export function evaluateR3015_4f_usa_exception(ctx: EvaluationContext) {
   if (origin.country !== "US") return [];
 
   const depIntl = intlDeparturesFrom("US", ctx.itinerary);
-  if (depIntl === 2) {
+  if (depIntl !== 2) return [];
+
+  if (hasScheduleCompleteItinerary(ctx.itinerary)) {
+    if (qualifiesUsaDoubleDepartureException(ctx.itinerary)) return [];
     return [
-      ruleWarning(
+      ruleError(
         "R3015-4f-usa-exception",
-        "Two US international departures require one arrival–departure pair to be a transfer without stopover (schedule data not available in v0.1).",
+        "Two US international departures require one arrival–departure pair to be a transfer without stopover (≤24h) per §4(f) EXCEPTION.",
       ),
     ];
   }
-  return [];
+
+  return [
+    ruleWarning(
+      "R3015-4f-usa-exception",
+      "Two US international departures require one arrival–departure pair to be a transfer without stopover — attach flight times for a definitive check.",
+    ),
+  ];
 }
 
 export function evaluateR3015_4f_us_ca_domestic(ctx: EvaluationContext) {

@@ -1,0 +1,23 @@
+{
+  "queryId": "affiliate-aa-dfw-abi",
+  "category": "affiliate-edge",
+  "from": "DFW",
+  "to": "ABI",
+  "date": "2026-11-15",
+  "ok": false,
+  "error": "'NoneType' object is not subscriptable",
+  "optionCount": 0,
+  "htmlMeta": {
+    "htmlLength": 1786950,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 0,
+    "hasOperatingCarrier": false,
+    "hasTimes": false,
+    "hasFlightNumber": false,
+    "operatingDistinct": []
+  },
+  "flights": []
+}

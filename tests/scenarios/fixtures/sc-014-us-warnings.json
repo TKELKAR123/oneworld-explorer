@@ -1,0 +1,17 @@
+{
+  "id": "SC-014",
+  "source": "US origin with two international departures emits §4f warning",
+  "segments": [
+    { "from": "JFK", "to": "LHR" },
+    { "from": "LHR", "to": "DXB" },
+    { "from": "DXB", "to": "SIN" },
+    { "from": "SIN", "to": "SYD" },
+    { "from": "SYD", "to": "LAX" },
+    { "from": "LAX", "to": "JFK" },
+    { "from": "JFK", "to": "CDG" },
+    { "from": "CDG", "to": "LHR" },
+    { "from": "LHR", "to": "JFK" }
+  ],
+  "expectValid": false,
+  "expectRuleIds": ["R3015-4f-usa-exception"]
+}

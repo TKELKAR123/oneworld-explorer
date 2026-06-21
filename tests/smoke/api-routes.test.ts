@@ -94,8 +94,40 @@ describe("smoke — API route handlers", () => {
     expect(ruleIssue?.naturalLanguage?.length).toBeGreaterThan(10);
   });
 
+  it("POST /api/validate returns validationPhase for partial routes", async () => {
+    const req = new Request("http://test/api/validate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        segments: [{ from: "OSL", to: "DOH" }],
+        travelClass: "economy",
+      }),
+    });
+    const res = await POST(req);
+    const body = await res.json();
+    expect(body.validationPhase).toBe("building");
+    expect(body.guidanceIssues?.length).toBeGreaterThan(0);
+  });
+
+  it("POST /api/validate accepts clientPhase ticketReady override", async () => {
+    const req = new Request("http://test/api/validate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        segments: [{ from: "JFK", to: "LHR" }, { from: "LHR", to: "JFK" }],
+        clientPhase: "ticketReady",
+      }),
+    });
+    const res = await POST(req);
+    const body = await res.json();
+    expect(body.validationPhase).toBe("ticketReady");
+    expect(body.issues.some((i: { code: string }) => i.code === "R3015-4h-segment-count")).toBe(
+      true,
+    );
+  });
+
   it("GET /api/airports/search returns IATA matches", async () => {
-    const req = new Request("http://test/api/airports/search?q=lon&limit=5");
+    const req = new Request("http://test/api/airports/search?q=London&limit=5");
     const res = await GET(req);
     expect(res.status).toBe(200);
     const body = await res.json();

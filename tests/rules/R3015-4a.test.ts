@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { CLASSIC_RTW, ruleErrors, validate } from "../helpers/route.js";
+import { CLASSIC_RTW, ruleErrors, validate, validateTicketReady } from "../helpers/route.js";
 
 describe("R3015-4a", () => {
   it("passes valid itinerary", () => {
@@ -8,7 +8,11 @@ describe("R3015-4a", () => {
   });
 
   it("fails invalid itinerary", () => {
-    const result = validate([{ from: 'JFK', to: 'LHR' }, { from: 'LHR', to: 'DXB' }, { from: 'DXB', to: 'JFK' }]);
+    const result = validateTicketReady([
+      { from: 'JFK', to: 'LHR' },
+      { from: 'LHR', to: 'DXB' },
+      { from: 'DXB', to: 'JFK' },
+    ]);
     expect(ruleErrors(result, 'R3015-4a').length > 0).toBe(true);
   });
 });

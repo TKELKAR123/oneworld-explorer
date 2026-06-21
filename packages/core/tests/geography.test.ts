@@ -50,6 +50,17 @@ describe("searchAirports", () => {
     expect(hits.some((a) => a.iata === "LHR")).toBe(true);
   });
 
+  it("finds by country name", () => {
+    const hits = searchAirports("Malaysia", 8);
+    expect(hits.some((a) => a.iata === "KUL")).toBe(true);
+  });
+
+  it("finds Tokyo metro airports", () => {
+    const hits = searchAirports("Tokyo", 8);
+    expect(hits.some((a) => a.iata === "HND")).toBe(true);
+    expect(hits.some((a) => a.iata === "NRT")).toBe(true);
+  });
+
   it("returns empty for blank query", () => {
     expect(searchAirports("")).toEqual([]);
   });

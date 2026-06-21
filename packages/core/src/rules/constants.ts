@@ -44,9 +44,12 @@ export const FARE_BASIS: Record<
   6: { economy: "LONE6", business: "DONE6", first: "AONE6" },
 };
 
-export const ELIGIBLE_CARRIERS = [
+export const ELIGIBLE_CARRIERS = new Set([
   "AA", "AS", "AT", "AY", "BA", "CX", "FJ", "IB", "JL", "MH", "NU", "QF", "QR", "RJ", "UL", "WY",
-] as const;
+]);
+
+export const CA_TRANSCON_COLUMN_A = new Set(["ON", "QC", "NB", "NS", "PE", "NL"]);
+export const CA_TRANSCON_COLUMN_B = new Set(["BC", "AB", "SK", "MB", "YT", "NT", "NU"]);
 
 export const US_TRANSCON_COLUMN_A = new Set([
   "AZ", "FL", "IN", "KY", "MI", "NC", "OH", "PA", "SC", "TN", "VA",

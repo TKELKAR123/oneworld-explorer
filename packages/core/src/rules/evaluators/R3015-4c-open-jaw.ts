@@ -1,9 +1,6 @@
 import type { EvaluationContext } from "../../ontology/types.js";
 import type { OpenJawType } from "../helpers/open-jaw.js";
-import {
-  detectOpenJawType,
-  isSurfaceOpenJaw,
-} from "../helpers/open-jaw.js";
+import { detectOpenJawType } from "../helpers/open-jaw.js";
 import { ruleError } from "./utils.js";
 
 function openJawRule(
@@ -20,14 +17,6 @@ function openJawRule(
     const jawType = detectOpenJawType(itinerary);
     if (jawType === expected) return [];
 
-    if (isSurfaceOpenJaw(itinerary) && jawType === null) {
-      return [
-        ruleError(
-          ruleId,
-          `Open jaw requires a permitted surface sector (${label}).`,
-        ),
-      ];
-    }
     return [];
   };
 }

@@ -1,0 +1,139 @@
+{
+  "queryId": "trunk-qf-syd-lax",
+  "category": "high-traffic-trunk",
+  "from": "SYD",
+  "to": "LAX",
+  "date": "2026-07-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 4,
+  "htmlMeta": {
+    "htmlLength": 2129355,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 6,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "AA",
+      "OZ",
+      "PR",
+      "QF"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "PR",
+      "operatingCarrier": "PR",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-07-15T10:15:00"
+      },
+      "arrival": {
+        "point": "MNL",
+        "time": "2026-07-15T16:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:07.336884+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Philippine Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "PR",
+      "operatingCarrier": "PR",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "MNL",
+        "time": "2026-07-16T11:05:00"
+      },
+      "arrival": {
+        "point": "LAX",
+        "time": "2026-07-16T09:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:07.336944+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Philippine Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "OZ",
+      "operatingCarrier": "OZ",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "SimpleDatetime(date=[2026, 7, 15], time=[21])"
+      },
+      "arrival": {
+        "point": "ICN",
+        "time": "2026-07-16T06:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:07.337005+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Asiana Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "OZ",
+      "operatingCarrier": "OZ",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "ICN",
+        "time": "2026-07-16T12:40:00"
+      },
+      "arrival": {
+        "point": "LAX",
+        "time": "2026-07-16T08:20:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:07.337018+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Asiana Airlines"
+      ]
+    },
+    {
+      "marketingCarrier": "QF",
+      "operatingCarrier": "QF",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-07-15T17:50:00"
+      },
+      "arrival": {
+        "point": "LAX",
+        "time": "2026-07-15T14:30:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:07.337029+00:00",
+      "_queryId": "",
+      "_date": "2026-07-15",
+      "_airlineNames": [
+        "Qantas"
+      ]
+    }
+  ]
+}

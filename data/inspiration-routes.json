@@ -1,0 +1,596 @@
+[
+  {
+    "id": "SC-001",
+    "label": "FlyerTalk — classic eastbound RTW patter",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-009",
+    "label": "Classic RTW with full rule trace",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-015",
+    "label": "Closed loop JFK–JFK — open-jaw exception",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-016",
+    "label": "US origin-country open jaw via surface (",
+    "stops": [
+      "JFK",
+      "BOS",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "BOS"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "BOS",
+        "lat": 42.36197,
+        "lon": -71.0079
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "BOS",
+        "lat": 42.36197,
+        "lon": -71.0079
+      }
+    ]
+  },
+  {
+    "id": "SC-019",
+    "label": "US/Canada open jaw via surface (§4c-c)",
+    "stops": [
+      "JFK",
+      "YYZ",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "YYZ"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "YYZ",
+        "lat": 43.675935,
+        "lon": -79.629421
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "YYZ",
+        "lat": 43.675935,
+        "lon": -79.629421
+      }
+    ]
+  },
+  {
+    "id": "SC-020",
+    "label": "Incomplete RTW ending at LAX — implicit ",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      }
+    ]
+  },
+  {
+    "id": "SC-023",
+    "label": "Implicit US open jaw JFK→ORD — no surfac",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "ORD"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "ORD",
+        "lat": 41.9786,
+        "lon": -87.9048
+      }
+    ]
+  },
+  {
+    "id": "SC-024",
+    "label": "Implicit Norway open jaw OSL→TOS — no su",
+    "stops": [
+      "OSL",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "TOS"
+    ],
+    "points": [
+      {
+        "iata": "OSL",
+        "lat": 60.193901,
+        "lon": 11.1004
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "TOS",
+        "lat": 69.683296,
+        "lon": 18.9189
+      }
+    ]
+  },
+  {
+    "id": "SC-045",
+    "label": "Business class 4-continent RTW — DONE4 f",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-068",
+    "label": "5-continent RTW — LONE5 economy",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "GRU",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "GRU",
+        "lat": -23.431274,
+        "lon": -46.469954
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-077",
+    "label": "Valid BA-only marketed sectors throughou",
+    "stops": [
+      "JFK",
+      "LHR",
+      "DXB",
+      "SIN",
+      "SYD",
+      "LAX",
+      "JFK"
+    ],
+    "points": [
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "DXB",
+        "lat": 25.24979,
+        "lon": 55.370992
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "JFK",
+        "lat": 40.639447,
+        "lon": -73.779317
+      }
+    ]
+  },
+  {
+    "id": "SC-079",
+    "label": "Westbound RTW SYD origin closed loop",
+    "stops": [
+      "SYD",
+      "LAX",
+      "LHR",
+      "SIN",
+      "SYD"
+    ],
+    "points": [
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      },
+      {
+        "iata": "LAX",
+        "lat": 33.942501,
+        "lon": -118.407997
+      },
+      {
+        "iata": "LHR",
+        "lat": 51.470748,
+        "lon": -0.459909
+      },
+      {
+        "iata": "SIN",
+        "lat": 1.35019,
+        "lon": 103.994003
+      },
+      {
+        "iata": "SYD",
+        "lat": -33.946098,
+        "lon": 151.177002
+      }
+    ]
+  }
+]

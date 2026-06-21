@@ -1,0 +1,148 @@
+{
+  "queryId": "trunk-qf-syd-lax",
+  "category": "high-traffic-trunk",
+  "from": "SYD",
+  "to": "LAX",
+  "date": "2026-09-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 9,
+  "htmlMeta": {
+    "htmlLength": 2226232,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 16,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "AA",
+      "AI",
+      "AS",
+      "DL",
+      "FJ",
+      "OZ",
+      "UA",
+      "VI"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "AI",
+      "operatingCarrier": "AI",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-09-15T09:20:00"
+      },
+      "arrival": {
+        "point": "YVR",
+        "time": "2026-09-15T06:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:09.110542+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Air Canada",
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "AI",
+      "operatingCarrier": "AI",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "YVR",
+        "time": "2026-09-15T12:09:00"
+      },
+      "arrival": {
+        "point": "LAX",
+        "time": "2026-09-15T15:09:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:09.110578+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Air Canada",
+        "United"
+      ]
+    },
+    {
+      "marketingCarrier": "VI",
+      "operatingCarrier": "VI",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SYD",
+        "time": "2026-09-15T07:30:00"
+      },
+      "arrival": {
+        "point": "BNE",
+        "time": "SimpleDatetime(date=[2026, 9, 15], time=[9])"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:09.110606+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia",
+        "Air Canada"
+      ]
+    },
+    {
+      "marketingCarrier": "VI",
+      "operatingCarrier": "VI",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "BNE",
+        "time": "2026-09-15T10:15:00"
+      },
+      "arrival": {
+        "point": "YVR",
+        "time": "2026-09-15T06:44:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:09.110614+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia",
+        "Air Canada"
+      ]
+    },
+    {
+      "marketingCarrier": "VI",
+      "operatingCarrier": "VI",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "YVR",
+        "time": "2026-09-15T08:20:00"
+      },
+      "arrival": {
+        "point": "LAX",
+        "time": "2026-09-15T11:25:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:23:09.110621+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Virgin Australia",
+        "Air Canada"
+      ]
+    }
+  ]
+}

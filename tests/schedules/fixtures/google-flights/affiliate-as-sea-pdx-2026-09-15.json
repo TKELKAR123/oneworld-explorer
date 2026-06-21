@@ -1,0 +1,139 @@
+{
+  "queryId": "affiliate-as-sea-pdx",
+  "category": "affiliate-edge",
+  "from": "SEA",
+  "to": "PDX",
+  "date": "2026-09-15",
+  "ok": true,
+  "error": null,
+  "optionCount": 19,
+  "htmlMeta": {
+    "htmlLength": 3145087,
+    "captchaHint": true,
+    "hasAfInit": true
+  },
+  "score": {
+    "count": 21,
+    "hasOperatingCarrier": true,
+    "hasTimes": true,
+    "hasFlightNumber": false,
+    "operatingDistinct": [
+      "AA",
+      "AS",
+      "DL",
+      "UA"
+    ]
+  },
+  "flights": [
+    {
+      "marketingCarrier": "DL",
+      "operatingCarrier": "DL",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SEA",
+        "time": "2026-09-15T07:30:00"
+      },
+      "arrival": {
+        "point": "PDX",
+        "time": "2026-09-15T08:43:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:58.616526+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Delta"
+      ]
+    },
+    {
+      "marketingCarrier": "DL",
+      "operatingCarrier": "DL",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SEA",
+        "time": "2026-09-15T09:30:00"
+      },
+      "arrival": {
+        "point": "PDX",
+        "time": "2026-09-15T10:40:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:58.616567+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Delta"
+      ]
+    },
+    {
+      "marketingCarrier": "DL",
+      "operatingCarrier": "DL",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SEA",
+        "time": "2026-09-15T20:59:00"
+      },
+      "arrival": {
+        "point": "PDX",
+        "time": "2026-09-15T22:02:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:58.616576+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Delta"
+      ]
+    },
+    {
+      "marketingCarrier": "DL",
+      "operatingCarrier": "DL",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SEA",
+        "time": "2026-09-15T22:50:00"
+      },
+      "arrival": {
+        "point": "PDX",
+        "time": "2026-09-15T23:54:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:58.616582+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Delta"
+      ]
+    },
+    {
+      "marketingCarrier": "AS",
+      "operatingCarrier": "AS",
+      "operatingCarrierSource": "inferred",
+      "flightNumber": "",
+      "departure": {
+        "point": "SEA",
+        "time": "2026-09-15T07:08:00"
+      },
+      "arrival": {
+        "point": "PDX",
+        "time": "2026-09-15T08:18:00"
+      },
+      "stops": [],
+      "provider": "fast-flights",
+      "fetchedAt": "2026-06-20T18:22:58.616589+00:00",
+      "_queryId": "",
+      "_date": "2026-09-15",
+      "_airlineNames": [
+        "Alaska"
+      ]
+    }
+  ]
+}

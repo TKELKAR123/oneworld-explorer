@@ -17,6 +17,14 @@
     { "iata": "UL", "name": "SriLankan Airlines", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" },
     { "iata": "WY", "name": "Oman Air", "kinds": ["eligible_explorer"], "pdfRef": "§4 intro" }
   ],
+  "futureMembers": [
+    {
+      "iata": "PR",
+      "name": "Philippine Airlines",
+      "effectiveDate": "TBD",
+      "note": "Preview only — not eligible for ticketing until oneworld join"
+    }
+  ],
   "codeshareExceptions": [
     { "marketing": "QF", "operating": "JQ", "pdfRef": "§4(j)" },
     { "marketing": "QF", "operating": "QQ", "pdfRef": "§4(j)" }
