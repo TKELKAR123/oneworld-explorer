@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import catalogData from "../scenarios/catalog.json";
-import { loadClassicRoute, openHealthDrawer, routeHero, waitForValidation } from "./helpers/wait-for-validation";
+import { loadClassicRoute, openHealthDrawer, routeHero, waitForValidation, recheckForValidRoute } from "./helpers/wait-for-validation";
 
 interface CatalogScenario {
   id: string;
@@ -42,6 +42,7 @@ test.describe("catalog smoke-ui (tier E)", () => {
 test.describe("catalog UI flows", () => {
   test("SC-001 classic RTW loads valid", async ({ page }) => {
     await loadClassicRoute(page);
+    await recheckForValidRoute(page);
     await expect(routeHero(page)).toContainText("Valid");
   });
 
@@ -55,6 +56,8 @@ test.describe("catalog UI flows", () => {
     await expect(page.getByTestId("stop-card-6")).toContainText(/Within country of origin/i, {
       timeout: 15_000,
     });
+    await page.getByRole("button", { name: "Re-check" }).click();
+    await waitForValidation(page);
     await expect(routeHero(page)).toContainText("Valid");
   });
 

@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import {
+  clickGlobeZoomIn,
   dragGlobe,
   pickAirportFromSearch,
   readZoomPercent,
@@ -12,10 +13,12 @@ test.describe("UX audit — globe reset view", () => {
     await page.goto("/");
     await waitForAppReady(page);
     await pickAirportFromSearch(page, "London", "LHR");
-    await expect(page.getByText(/Next hops from LHR/i)).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByTestId("explore-destinations-panel")).toContainText(
+      /Next hops from LHR/i,
+      { timeout: 10_000 },
+    );
 
-    await page.getByTestId("globe-zoom-in").click();
-    await page.getByTestId("globe-zoom-in").click();
+    await clickGlobeZoomIn(page, 2);
     await wheelOverGlobe(page, -500);
     await dragGlobe(page, 80, 40);
     await page.waitForTimeout(300);

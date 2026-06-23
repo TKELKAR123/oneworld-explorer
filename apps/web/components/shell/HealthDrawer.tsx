@@ -72,9 +72,11 @@ export function HealthDrawer({
       ? `${blocking} issue${blocking === 1 ? "" : "s"}${topIssue ? ` · ${topIssue.slice(0, 48)}` : ""}`
       : result?.outcome === "valid" || result?.outcome === "validWithWarnings"
         ? "All clear"
-        : stops.length >= 2
-          ? "Building route shape"
-          : "Add stops to check";
+        : result?.analysis?.originReturn.mode === "openJawPending"
+          ? "Pick a permitted return airport"
+          : stops.length >= 2
+            ? "Draft — add stops or Re-check for full audit"
+            : "Add stops to check";
 
   if (stops.length === 0) return null;
 

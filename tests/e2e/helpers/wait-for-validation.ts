@@ -4,7 +4,9 @@ import { expect, type Page } from "@playwright/test";
 export async function waitForAppReady(page: Page) {
   await expect(page.getByRole("heading", { name: "oneworld Explorer" })).toBeVisible();
   await expect(page.getByTestId("explore-column")).toBeVisible({ timeout: 15_000 });
-  await expect(page.getByTestId("route-hero")).toContainText(/Start here|Pick origin/i);
+  await expect(page.getByTestId("route-hero")).toContainText(/Start here|Pick origin/i, {
+    timeout: 15_000,
+  });
 }
 
 /** Globe geography atlas fetched and WebGL shell ready. */
@@ -16,9 +18,39 @@ export async function waitForGlobeAtlas(page: Page) {
 export async function waitForValidation(page: Page) {
   await expect(page.getByTestId("route-hero")).toBeVisible({ timeout: 15_000 });
   await expect(page.getByTestId("route-hero")).toContainText(
-    /Valid|Invalid|Building|Ready to quote|Needs fixes|Ready with caveats/i,
+    /Valid|Invalid|Draft|Needs return|Ready to quote|Needs fixes|Ready with caveats|Checking/i,
     { timeout: 30_000 },
   );
+}
+
+/** Wait until validation + route network loading overlay clears. */
+export async function waitForRouteSettled(page: Page, timeout = 60_000) {
+  const pending = page.getByTestId("route-pending");
+  if ((await pending.count()) === 0) return;
+  await expect(pending).toBeHidden({ timeout });
+}
+
+/** Wait until the outcome chip settles (ignores absent loading overlay). */
+export async function waitForOutcomeChip(
+  page: Page,
+  pattern: RegExp,
+  timeout = 30_000,
+) {
+  const chip = page.getByTestId("outcome-chip");
+  await expect(chip).toBeVisible({ timeout: 15_000 });
+  const pending = page.getByTestId("route-pending");
+  if (await pending.isVisible().catch(() => false)) {
+    await expect(pending).toBeHidden({ timeout });
+  }
+  await expect(chip).toContainText(pattern, { timeout });
+  await expect(chip).not.toContainText(/^Checking/i, { timeout: 5_000 });
+}
+
+/** Promote building-phase routes to ticket-ready Valid (hero chip requires this). */
+export async function recheckForValidRoute(page: Page) {
+  await page.getByRole("button", { name: "Re-check" }).click();
+  await waitForValidation(page);
+  await waitForOutcomeChip(page, /Valid/i);
 }
 
 /** Hero strip (outcome, fare basis, segment ledger). */
@@ -58,4 +90,5 @@ export async function loadClassicRoute(page: Page) {
     timeout: 15_000,
   });
   await waitForValidation(page);
+  await waitForRouteSettled(page);
 }

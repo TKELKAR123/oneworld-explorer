@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { pickAirportFromSearch } from "../helpers/globe-metrics";
 import { waitForAppReady } from "../helpers/wait-for-validation";
 
 test.describe("perf — anchor fetch count", () => {
@@ -15,8 +16,7 @@ test.describe("perf — anchor fetch count", () => {
     await page.goto("/");
     await waitForAppReady(page);
 
-    await page.getByTestId("globe-airport-search").fill("LHR");
-    await page.getByTestId("globe-search-option-LHR").click();
+    await pickAirportFromSearch(page, "LHR", "LHR");
 
     await expect(page.getByTestId("explore-destinations-panel")).toContainText(
       /Next hops from LHR/i,

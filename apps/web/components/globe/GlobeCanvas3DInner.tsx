@@ -48,6 +48,8 @@ export interface GlobeCanvas3DInnerProps {
   onAirportClick: (iata: string) => void;
   onDestinationPick: (iata: string) => void;
   onLegClick?: (legIndex: number) => void;
+  onArcHover?: (iata: string | null) => void;
+  cityByIata?: Record<string, string>;
 }
 
 export default function GlobeCanvas3DInner({
@@ -77,6 +79,8 @@ export default function GlobeCanvas3DInner({
   onAirportClick,
   onDestinationPick,
   onLegClick,
+  onArcHover,
+  cityByIata,
 }: GlobeCanvas3DInnerProps) {
   const globeRef = useRef<GlobeMethods | undefined>(undefined);
   const syncingZoomRef = useRef(false);
@@ -140,8 +144,9 @@ export default function GlobeCanvas3DInner({
         exploreAnchorIata,
         chainMode,
         selectedStopIndex,
+        cityByIata,
       }),
-    [networkNodes, mapPoints, stops, exploreAnchorIata, chainMode, selectedStopIndex],
+    [networkNodes, mapPoints, stops, exploreAnchorIata, chainMode, selectedStopIndex, cityByIata],
   );
 
   const labels = useMemo(() => buildWebGlLabels(points), [points]);
@@ -272,16 +277,19 @@ export default function GlobeCanvas3DInner({
           if (a.kind === "fan" && a.iata) onDestinationPick(a.iata);
           if (a.kind === "leg" && a.legIndex != null) onLegClick?.(a.legIndex);
         }}
-        arcLabel={(d) => {
-          const a = d as WebGlArc;
-          return a.kind === "fan" ? a.iata ?? "" : "";
+        onArcHover={(arc) => {
+          const a = arc as WebGlArc | null;
+          if (a?.kind === "fan" && a.iata) onArcHover?.(a.iata);
+          else onArcHover?.(null);
         }}
+        arcLabel={(d) => (d as WebGlArc).tooltip ?? ""}
         pointsData={points}
         pointLat="lat"
         pointLng="lng"
         pointColor={(d) => (d as WebGlPoint).color}
         pointRadius={(d) => (d as WebGlPoint).size}
         pointAltitude="altitude"
+        pointLabel={(d) => (d as WebGlPoint).tooltip ?? (d as WebGlPoint).iata}
         onPointClick={(pt) => onAirportClick((pt as WebGlPoint).iata)}
         labelsData={labels}
         labelLat="lat"

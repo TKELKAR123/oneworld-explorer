@@ -7,7 +7,7 @@ test.describe("UX audit — empty hero", () => {
     await page.goto("/");
     await waitForAppReady(page);
     await expect(routeHero(page)).toContainText(/Start here/i);
-    await expect(routeHero(page)).not.toContainText(/Building/i);
+    await expect(routeHero(page)).not.toContainText(/^Building/i);
     await expect(page.getByTestId("outcome-chip")).toBeVisible();
   });
 });

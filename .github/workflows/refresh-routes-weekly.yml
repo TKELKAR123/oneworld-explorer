@@ -1,0 +1,61 @@
+name: Refresh routes weekly
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    name: Weekly FlightsFrom route refresh
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build -w @oneworld-explorer/core
+
+      - run: npm run fetch:routes-vendor
+
+      - run: npm run build:airports
+
+      - run: npm run build:routes -- --offline
+
+      - run: npm run validate:routes
+
+      - run: npm run research:benchmark -- --min-recall=90 --quiet
+
+      - name: Create pull request if data changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(routes): weekly FlightsFrom refresh"
+          title: "chore(routes): weekly FlightsFrom refresh"
+          body: |
+            Automated weekly refresh from [Jonty/airline-route-data](https://github.com/Jonty/airline-route-data).
+
+            - Rebuilt `eligible-routes.index.json` and network graph artifacts
+            - Updated `routes-source.meta.json` upstream fingerprint
+            - Benchmark recall gate (≥90%) passed
+
+            Review pair-count delta before merge.
+          branch: chore/weekly-routes-refresh
+          delete-branch: true
+          add-paths: |
+            data/eligible-routes.index.json
+            data/network-nodes.json
+            data/network-edges.json
+            data/network-spine.json
+            data/routes-source.meta.json
+            data/future-member-routes.preview.json
+            data/airports.generated.json

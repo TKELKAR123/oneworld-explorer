@@ -9,6 +9,12 @@ export function plannerPhase(
   result: ValidationResult | null,
 ): PlannerPhase {
   if (stops.length === 0) return "empty";
+  if (result?.outcome === "invalid" || result?.outcome === "validWithWarnings") {
+    return "auditing";
+  }
+  if (result?.validationPhase === "ticketReady" && result.outcome === "valid") {
+    return "auditing";
+  }
   const hasPaste = legDetails.some(
     (d) => Boolean(d.marketingCarrier?.trim() || d.departureTime?.trim()),
   );

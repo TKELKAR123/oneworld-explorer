@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { loadClassicRoute, openHealthDrawer, openTemplatesPanel, routeHero, waitForAppReady, waitForValidation } from "./helpers/wait-for-validation";
+import { loadClassicRoute, openHealthDrawer, openTemplatesPanel, routeHero, waitForAppReady, waitForValidation, recheckForValidRoute } from "./helpers/wait-for-validation";
 
 test.describe("UI — stop list builder", () => {
   test("loads blank, then classic RTW shows Valid + LONE4", async ({ page }) => {
@@ -8,6 +8,7 @@ test.describe("UI — stop list builder", () => {
     await openTemplatesPanel(page);
     await page.getByTestId("route-starter-select").selectOption("SC-001");
     await waitForValidation(page);
+    await recheckForValidRoute(page);
     await expect(routeHero(page)).toContainText("Valid");
     await expect(routeHero(page)).toContainText(/LONE4/i);
   });

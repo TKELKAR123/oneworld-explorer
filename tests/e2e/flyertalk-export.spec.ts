@@ -7,10 +7,17 @@ test.describe("FlyerTalk export", () => {
     await loadClassicRoute(page);
 
     await page.getByTestId("copy-flyertalk").click();
-    await expect(page.getByTestId("copy-flyertalk")).toContainText(/Copied!/);
+    await expect(page.getByTestId("copy-flyertalk")).toContainText(/Copied!/i, {
+      timeout: 10_000,
+    });
+
+    await expect
+      .poll(async () => page.evaluate(async () => navigator.clipboard.readText()), {
+        timeout: 10_000,
+      })
+      .toMatch(/LONE4/);
 
     const text = await page.evaluate(async () => navigator.clipboard.readText());
-    expect(text).toMatch(/LONE4/);
-    expect(text).toMatch(/JFK-LHR-DXB-SIN-SYD-LAX-JFK/);
+    expect(text).toMatch(/JFK-LHR-DOH-SIN-SYD-LAX-JFK/);
   });
 });

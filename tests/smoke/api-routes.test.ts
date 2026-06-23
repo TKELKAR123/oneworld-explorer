@@ -3,6 +3,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { GET } from "../../apps/web/app/api/airports/search/route.js";
+import { POST as POST_PARSE_TEXT } from "../../apps/web/app/api/itinerary/parse-text/route.js";
 import { POST } from "../../apps/web/app/api/validate/route.js";
 
 const CLASSIC_RTW = [
@@ -146,5 +147,18 @@ describe("smoke — API route handlers", () => {
     const res = await GET(req);
     const body = await res.json();
     expect(body.airports.length).toBeLessThanOrEqual(2);
+  });
+
+  it("POST /api/itinerary/parse-text parses dash chain", async () => {
+    const req = new Request("http://test/api/itinerary/parse-text", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: "JFK-LHR-DOH-SIN" }),
+    });
+    const res = await POST_PARSE_TEXT(req);
+    expect(res.status).toBe(200);
+    const body = await res.json();
+    expect(body.stops).toEqual(["JFK", "LHR", "DOH", "SIN"]);
+    expect(body.formatted).toBe("JFK-LHR-DOH-SIN");
   });
 });

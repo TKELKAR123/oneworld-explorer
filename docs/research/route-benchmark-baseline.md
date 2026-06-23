@@ -1,6 +1,6 @@
 # Route index benchmark
 
-Generated: 2026-06-21
+Generated: 2026-06-22
 
 Corpus: `data/fixtures/route-benchmark-corpus.json` (60 entries)
 

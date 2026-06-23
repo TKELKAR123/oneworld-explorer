@@ -84,6 +84,17 @@ Geometry-only routes still pass without nagging; carrier/stay/ticketing rules sh
 | `tests/e2e/catalog-ui.spec.ts` | Tier E — `smoke-ui` catalog API + UI flows |
 | `tests/e2e/ui-smoke.spec.ts` | Builder UX, autocomplete (stable `data-testid`) |
 
+## Journey E2E (`@journey` tag)
+
+Run selectively: `npm run test:e2e -- --grep @journey`
+
+| Goal | Spec |
+|------|------|
+| Cold start + LHR explore | `tests/e2e/journeys/discovery.spec.ts` |
+| FlyerTalk confusion regression | `tests/e2e/journeys/flyertalk-confusion.spec.ts` |
+| Route text paste/sync | `tests/e2e/journeys/route-text.spec.ts` |
+| Globe legend + segment pills | `tests/e2e/journeys/globe-ux.spec.ts` |
+
 ## Not covered (zero-API product)
 
 - Live schedule provider calls in default UX (dormant behind `SCHEDULE_LIVE=1`)

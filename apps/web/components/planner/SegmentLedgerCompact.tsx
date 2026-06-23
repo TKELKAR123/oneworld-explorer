@@ -44,22 +44,25 @@ export function SegmentLedgerCompact({
         {FLIGHT_SEGMENT_CONTINENTS.map((continent) => {
           const limit = FLIGHT_SEGMENT_LIMITS[continent];
           const used = analysis.flightSegmentsByContinent[continent] ?? 0;
-          if (used === 0 && limit === 4) return null;
           const over = used > limit;
           const legIndices = analysis.segments
             .filter((s) => !s.surface && s.fromContinent === continent)
             .map((s) => s.index);
+          const unused = used === 0;
 
           return (
             <button
               key={continent}
               type="button"
+              data-testid={`segment-budget-${continent}`}
               disabled={legIndices.length === 0}
               onClick={() => onHighlightLegs?.(legIndices)}
               className={`rounded-full border px-2 py-0.5 text-[11px] ${
                 over
                   ? "border-red-800/60 bg-red-950/40 text-red-300"
-                  : "border-surface-border bg-surface-card text-surface-muted"
+                  : unused
+                    ? "border-surface-border/60 bg-surface-card/50 text-surface-muted opacity-70"
+                    : "border-surface-border bg-surface-card text-surface-muted"
               }`}
             >
               <span

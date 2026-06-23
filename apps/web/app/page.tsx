@@ -15,6 +15,7 @@ import {
 } from "../components/planner";
 import { ExploreColumn } from "../components/explore/ExploreColumn";
 import { SlimHeroBar } from "../components/shell/SlimHeroBar";
+import { RouteTextBar } from "../components/shell/RouteTextBar";
 import { HealthDrawer } from "../components/shell/HealthDrawer";
 import type { InspirationRoute } from "../components/globe";
 import { kmBetween, mapDataFromAnalysis } from "../components/RouteMap";
@@ -103,6 +104,7 @@ export default function HomePage() {
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const requestIdRef = useRef(0);
+  const forceTicketReadyRef = useRef(false);
   const legCardRefs = useRef<Map<number, HTMLDivElement>>(new Map());
   const [validationError, setValidationError] = useState<string | null>(null);
   const [exploreAnchorIata, setExploreAnchorIata] = useState<string | null>(null);
@@ -144,7 +146,7 @@ export default function HomePage() {
     [legDetails, legTypes],
   );
 
-  const validate = useCallback(async () => {
+  const validate = useCallback(async (options?: { ticketReady?: boolean }) => {
     if (!stopsReadyForValidation(stops)) {
       setResult(null);
       setLoading(false);
@@ -155,6 +157,8 @@ export default function HomePage() {
     const controller = new AbortController();
     abortRef.current = controller;
     const requestId = ++requestIdRef.current;
+    const ticketReady = options?.ticketReady ?? forceTicketReadyRef.current;
+    forceTicketReadyRef.current = false;
 
     setLoading(true);
     setValidationError(null);
@@ -171,6 +175,7 @@ export default function HomePage() {
           ticket,
           stopIntents,
           validationMode: scheduleComplete ? "scheduleComplete" : undefined,
+          ...(ticketReady ? { validationPhase: "ticketReady" } : {}),
         }),
         signal: controller.signal,
       });
@@ -505,7 +510,18 @@ export default function HomePage() {
         </div>
       )}
 
-      <div className="mx-auto w-full max-w-7xl px-4 pt-4">
+      <div className="mx-auto w-full max-w-7xl space-y-2 px-4 pt-4">
+        <RouteTextBar
+          stops={stops}
+          legTypes={legTypes}
+          stopIntents={stopIntents}
+          onApply={({ stops: s, legTypes: lt, stopIntents: si }) => {
+            setStops(s);
+            setLegTypes(lt);
+            setStopIntents(si);
+            setLegDetails(emptyLegDetails(lt.length));
+          }}
+        />
         <SlimHeroBar
           stops={stops}
           legDetails={legDetails}
@@ -587,7 +603,10 @@ export default function HomePage() {
             }}
             onInsertHub={insertHub}
             onNetworkRetry={refetch}
-            onRecheck={() => void validate()}
+            onRecheck={() => {
+              forceTicketReadyRef.current = true;
+              void validate({ ticketReady: true });
+            }}
             recheckLoading={loading}
             legCardRefs={legCardRefs}
             previewFutureMembers={previewFutureMembers}

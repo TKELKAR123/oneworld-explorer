@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { pickAirportFromSearch } from "./helpers/globe-metrics";
 import { waitForAppReady } from "./helpers/wait-for-validation";
 
 test.describe("Hub insert", () => {
@@ -6,8 +7,7 @@ test.describe("Hub insert", () => {
     await page.goto("/");
     await waitForAppReady(page);
 
-    await page.getByTestId("globe-airport-search").fill("Cebu");
-    await page.getByTestId("globe-search-option-CEB").click();
+    await pickAirportFromSearch(page, "Cebu", "CEB");
 
     await page.getByRole("button", { name: "+ Add stop", exact: true }).click();
     const stopInputs = page.locator('[data-testid="stop-row"] input');

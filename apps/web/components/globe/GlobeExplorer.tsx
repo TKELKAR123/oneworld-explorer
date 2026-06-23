@@ -160,6 +160,17 @@ function GlobeExplorerBody(props: GlobeExplorerProps) {
   const flyTo = useMemo(() => flyTarget, [flyTarget]);
   const atlasCountries = atlas?.countries ?? [];
 
+  const cityByIata = useMemo(() => {
+    const map: Record<string, string> = {};
+    const analysis = props.currentAnalysis;
+    if (!analysis) return map;
+    for (const seg of analysis.segments) {
+      if (seg.from.city) map[seg.from.iata] = seg.from.city;
+      if (seg.to.city) map[seg.to.iata] = seg.to.city;
+    }
+    return map;
+  }, [props.currentAnalysis]);
+
   const chainMode = props.chainMode ?? true;
 
   function handleDestinationPick(iata: string) {
@@ -221,6 +232,8 @@ function GlobeExplorerBody(props: GlobeExplorerProps) {
     onAirportClick: props.onAirportClick,
     onDestinationPick: handleDestinationPick,
     onLegClick: props.onLegClick,
+    onArcHover: setHoverDest,
+    cityByIata,
   };
 
   const chromeProps = {

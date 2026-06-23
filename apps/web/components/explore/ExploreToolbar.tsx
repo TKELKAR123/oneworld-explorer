@@ -164,6 +164,23 @@ export function ExploreToolbar({
           )}
         </div>
       </div>
+      <div
+        className="flex flex-wrap items-center gap-3 text-[10px] text-surface-muted"
+        data-testid="globe-layer-legend"
+      >
+        <span className="flex items-center gap-1">
+          <span className="inline-block h-0.5 w-3 rounded bg-green-400" />
+          Your route
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="inline-block h-0.5 w-3 rounded bg-blue-400/50" />
+          Possible hops
+        </span>
+        <span className="flex items-center gap-1">
+          <span className="inline-block h-0.5 w-3 border-b border-dashed border-amber-400" />
+          Suggested hub
+        </span>
+      </div>
     </div>
   );
 }

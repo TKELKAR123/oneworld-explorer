@@ -40,6 +40,8 @@ export {
   normalizeLegacySegments,
 } from "./build-itinerary.js";
 export { parseRoute, normalizeSegments } from "./parse-route.js";
+export { formatRouteText, parseRouteText } from "./parse-route-text.js";
+export type { ParsedRouteText } from "./parse-route-text.js";
 export { analyzeRoute } from "./analyze-route.js";
 export { previewAddStop } from "./preview-add-stop.js";
 export type { AddStopImpact, ImpactTier, PreviewAddStopInput } from "./preview-add-stop.js";

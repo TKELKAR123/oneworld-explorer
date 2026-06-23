@@ -1,5 +1,13 @@
 import { expect, test } from "@playwright/test";
-import { loadClassicRoute, openHealthDrawer, openTemplatesPanel, routeHero, waitForAppReady, waitForValidation } from "./helpers/wait-for-validation";
+import { clickGlobeZoomIn } from "./helpers/globe-metrics";
+import {
+  loadClassicRoute,
+  openHealthDrawer,
+  openTemplatesPanel,
+  routeHero,
+  waitForAppReady,
+  waitForValidation,
+} from "./helpers/wait-for-validation";
 
 test.describe("critical path — ship gate", () => {
   test("app loads blank then classic RTW validates with route health", async ({ page }) => {
@@ -9,8 +17,12 @@ test.describe("critical path — ship gate", () => {
     await openTemplatesPanel(page);
     await page.getByTestId("route-starter-select").selectOption("SC-001");
     await waitForValidation(page);
+    await page.getByRole("button", { name: "Re-check" }).click();
+    await waitForValidation(page);
     await expect(routeHero(page)).toContainText("Valid");
     await expect(page.getByTestId("route-shape-pills")).toContainText(/\d+ continents/);
+    await expect(page.getByTestId("segment-budget-asia")).toContainText("0/4");
+    await expect(page.getByTestId("segment-budget-south-west-pacific")).toContainText("0/4");
     await expect(page.getByTestId("segment-ledger")).toBeVisible();
     await expect(page.getByTestId("cabin-fare-tracker")).toContainText(/LONE4/i);
     await openHealthDrawer(page);
@@ -94,11 +106,11 @@ test.describe("critical path — ship gate", () => {
 
   test("globe zoom persists after control click", async ({ page }) => {
     await loadClassicRoute(page);
-    const before = await page.getByTestId("globe-zoom-controls").innerText();
-    await page.getByTestId("globe-zoom-in").click();
-    await page.getByTestId("globe-zoom-in").click();
+    const controls = page.getByTestId("explore-column").getByTestId("globe-zoom-controls");
+    const before = await controls.innerText();
+    await clickGlobeZoomIn(page, 2);
     await page.waitForTimeout(300);
-    const after = await page.getByTestId("globe-zoom-controls").innerText();
+    const after = await controls.innerText();
     expect(after).not.toBe(before);
   });
 });

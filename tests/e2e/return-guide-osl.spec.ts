@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { pickAirportFromSearch } from "./helpers/globe-metrics";
 import { waitForAppReady } from "./helpers/wait-for-validation";
 
 test.describe("Return guide — OSL", () => {
@@ -6,8 +7,7 @@ test.describe("Return guide — OSL", () => {
     await page.goto("/");
     await waitForAppReady(page);
 
-    await page.getByTestId("globe-airport-search").fill("Oslo");
-    await page.getByTestId("globe-search-option-OSL").click();
+    await pickAirportFromSearch(page, "Oslo", "OSL");
     const returnPanel = page.getByTestId("return-options-panel");
     await expect(returnPanel).toBeVisible({ timeout: 15_000 });
     const open = await returnPanel.evaluate((el: HTMLDetailsElement) => el.open);

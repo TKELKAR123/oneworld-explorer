@@ -8,6 +8,8 @@ import type {
 } from "@oneworld-explorer/core";
 import { buildFlyerTalkExport, buildRouteChainExport } from "../../lib/flyertalk-export";
 import { cabinFareTrackerLabel } from "../../lib/fare-hint";
+import { outcomeChip } from "../../lib/outcome-chip";
+import { plainIssueHeadline } from "../../lib/plain-issue-copy";
 import type { LegBookingDetails } from "../../lib/segment-booking";
 import { SegmentLedgerCompact } from "../planner/SegmentLedgerCompact";
 import { RouteShapePills } from "./RouteShapePills";
@@ -24,19 +26,10 @@ export interface SlimHeroBarProps {
   onHighlightLegs: (indices: number[]) => void;
 }
 
-function outcomeChip(
-  stops: string[],
-  result: ValidationResult | null,
-  loading: boolean,
-): { label: string; variant: "metric" | "success" | "warning" | "danger" } {
-  if (stops.length === 0) return { label: "Start here", variant: "metric" };
-  if (loading && !result) return { label: "Checking…", variant: "metric" };
-  if (result?.validationPhase === "building" || !result?.outcome) {
-    return { label: "Building", variant: "metric" };
-  }
-  if (result.outcome === "valid") return { label: "Valid", variant: "success" };
-  if (result.outcome === "validWithWarnings") return { label: "Valid · warnings", variant: "warning" };
-  return { label: "Invalid", variant: "danger" };
+function topBlockerMessage(result: ValidationResult | null): string | null {
+  if (result?.outcome !== "invalid") return null;
+  const issue = result.issues.find((i) => i.severity === "error");
+  return issue ? plainIssueHeadline(issue) : null;
 }
 
 export function SlimHeroBar({
@@ -52,6 +45,7 @@ export function SlimHeroBar({
   const [copied, setCopied] = useState(false);
   const pending = loading || networkLoading;
   const chip = outcomeChip(stops, result, loading);
+  const blocker = topBlockerMessage(result);
   const chain = buildRouteChainExport(stops);
   const analysis = result?.analysis ?? null;
 
@@ -110,6 +104,12 @@ export function SlimHeroBar({
           {copied ? "Copied!" : "Copy for FlyerTalk"}
         </Button>
       </div>
+
+      {blocker && (
+        <p className="mt-1.5 text-xs text-red-300" data-testid="hero-blocker">
+          {blocker}
+        </p>
+      )}
 
       {stops.length > 0 && (
         <div

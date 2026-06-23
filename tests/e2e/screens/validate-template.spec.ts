@@ -4,7 +4,7 @@ import { loadClassicRoute, routeHero, waitForAppReady } from "../helpers/wait-fo
 test.describe("screens — validate template", () => {
   test("SC-001 loads outcome within hero", async ({ page }) => {
     await loadClassicRoute(page);
-    await expect(routeHero(page)).toContainText(/Valid|Invalid|Building/i);
+    await expect(routeHero(page)).toContainText(/Valid|Invalid|Draft|Needs return/i);
   });
 
   test("leg paste input still available", async ({ page }) => {
