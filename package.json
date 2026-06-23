@@ -17,7 +17,7 @@
     "test:e2e": "node scripts/free-port.mjs 3458 && playwright test --project=functional",
     "test:e2e:visual": "node scripts/free-port.mjs 3458 && playwright test --project=visual",
     "test:ci": "npm run validate && npm test && npm run build && npm run test:smoke && npm run test:e2e && npm run test:e2e:visual",
-    "typecheck": "npm run build -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/web && npm run typecheck -w @oneworld-explorer/schedules",
+    "typecheck": "npm run build -w @oneworld-explorer/core && npm run build -w @oneworld-explorer/schedules && npm run typecheck -w @oneworld-explorer/core && npm run typecheck -w @oneworld-explorer/schedules && npm run typecheck -w @oneworld-explorer/web",
     "validate:country-map": "tsx scripts/validate-country-map.ts",
     "validate:traceability": "tsx scripts/validate-traceability.ts",
     "validate:airports": "tsx scripts/validate-airports.ts",
