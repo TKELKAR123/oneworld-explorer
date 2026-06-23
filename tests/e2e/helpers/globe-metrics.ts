@@ -56,7 +56,7 @@ export async function dragGlobe(page: Page, dx: number, dy: number) {
   const cy = box!.y + box!.height / 2;
   await page.mouse.move(cx, cy);
   await page.mouse.down();
-  await page.mouse.move(cx + dx, cy + dy, { steps: 8 });
+  await page.mouse.move(cx + dx, cy + dy, { steps: 4 });
   await page.mouse.up();
 }
 
