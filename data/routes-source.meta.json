@@ -1,9 +1,9 @@
 {
   "source": "jonty-airline-route-data",
   "upstreamUrl": "https://raw.githubusercontent.com/Jonty/airline-route-data/main/airline_routes.json",
-  "fetchedAt": "2026-06-21T04:32:35.055Z",
+  "fetchedAt": "2026-06-29T07:32:31.956Z",
   "sha256": "0f9f46427de98eb0d1544818c6c1b619f800f38e1469b8acb711de7ba710c2db",
   "airportCount": 3908,
   "eligiblePairCount": 6807,
-  "builtAt": "2026-06-21T04:32:58.694Z"
+  "builtAt": "2026-06-29T07:32:33.417Z"
 }
